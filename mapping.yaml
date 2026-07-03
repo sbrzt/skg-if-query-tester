@@ -1,0 +1,115 @@
+prefixes:
+  fabio: http://purl.org/spar/fabio/
+  datacite: http://purl.org/spar/datacite/
+  literal: http://www.essepuntato.it/2010/06/literalreification/
+  cito: http://purl.org/spar/cito/
+  foaf: http://xmlns.com/foaf/0.1/
+  pro: http://purl.org/spar/pro/
+
+mappings:
+  document:
+    sources:
+      - ['dataset.json~jsonpath', '$[?(@.record_type=="document")]']
+    s: https://doi.org/$(doi)
+    po:
+      - [a, fabio:ScholarlyWork]
+      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+
+  dataset:
+    sources:
+      - ['dataset.json~jsonpath', '$[?(@.record_type=="dataset")]']
+    s: https://doi.org/$(doi)
+    po:
+      - [a, fabio:Dataset]
+      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+
+  work_identifier:
+    sources:
+      - ['dataset.json~jsonpath', '$[*]']
+    s: https://example.org/$(doi)/identifier
+    po:
+      - [a, datacite:Identifier]
+      - [datacite:usesIdentifierScheme, datacite:doi]
+      - [literal:hasLiteralValue, $(doi)]
+
+  citing_entity:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
+    s: https://doi.org/$(doi)
+    po:
+      - [a, fabio:ScholarlyWork]
+      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+
+  citing_identifier:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
+    s: https://example.org/$(doi)/identifier~iri
+    po:
+      - [a, datacite:Identifier]
+      - [datacite:usesIdentifierScheme, datacite:doi]
+      - [literal:hasLiteralValue, $(doi)]
+
+  cited_entity:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
+    s: https://doi.org/$(doi)
+    po:
+      - [a, fabio:ScholarlyWork]
+      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+
+  cited_identifier:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
+    s: https://example.org/$(doi)/identifier
+    po:
+      - [a, datacite:Identifier]
+      - [datacite:usesIdentifierScheme, datacite:doi]
+      - [literal:hasLiteralValue, $(doi)]
+
+  is_cited_by_relation:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
+    s: https://doi.org/$(related_doi)
+    po: 
+      - [cito:cites, https://doi.org/$(doi)~iri]
+  
+  cites_relation:
+    sources: 
+      - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
+    s: https://doi.org/$(doi)~iri
+    po:
+      - [cito:cites, https://doi.org/$(related_doi)]
+
+  author:
+    sources: 
+      - ['dataset.json~jsonpath', '$[*].authors[*]']
+    s: https://orcid.org/$(orcid)~iri
+    po:
+      - [a, foaf:Person]
+      - [foaf:name, $(full_name)]
+      - [datacite:hasIdentifier, https://example.org/$(orcid)/identifier~iri]
+
+  author_identifier:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].authors[*]']
+    s: https://example.org/$(orcid)/identifier~iri
+    po:
+      - [a, datacite:Identifier]
+      - [datacite:usesIdentifierScheme, datacite:orcid]
+      - [literal:hasLiteralValue, $(orcid)]
+
+  author_role:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].authors[*]']
+    s: https://example.org/$(orcid)/role~iri
+    po:
+      - [a, pro:RoleInTime]
+      - [pro:withRole, pro:author]
+      - [pro:isHeldBy, https://orcid.org/$(orcid)~iri]
+
+  author_role_relation:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].authors[*]']
+    s: https://doi.org/$(related_doi)
+    po:
+      - [pro:isRelatedToRoleInTime, 'https://example.org/$(orcid)/role~iri']

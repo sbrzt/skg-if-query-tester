@@ -1,7 +1,0 @@
-sources:
-- name: gotriple
-  api: 
-  query: 
-- name: opencitations
-  api: https://api.opencitations.net/meta/v1/metadata/
-  query: doi:
