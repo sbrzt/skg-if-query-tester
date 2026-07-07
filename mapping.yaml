@@ -1,32 +1,50 @@
 prefixes:
+  bido: http://purl.org/spar/bido/
   fabio: http://purl.org/spar/fabio/
   datacite: http://purl.org/spar/datacite/
+  dcterms: http://purl.org/dc/terms/
   literal: http://www.essepuntato.it/2010/06/literalreification/
   cito: http://purl.org/spar/cito/
   foaf: http://xmlns.com/foaf/0.1/
+  frbr: http://purl.org/vocab/frbr/core#
   pro: http://purl.org/spar/pro/
+  pso: http://purl.org/spar/pso/
+  skos: http://www.w3.org/2004/02/skos/core#
 
 mappings:
-  document:
+  work:
     sources:
       - ['dataset.json~jsonpath', '$[?(@.record_type=="document")]']
-    s: https://doi.org/$(doi)
+    s: https://example.org/wrk/$(doi)~iri
     po:
       - [a, fabio:ScholarlyWork]
-      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+      - [dcterms:title, $(title)]
+      - [dcterms:issued, $(date_issued)]
+      - [frbr:realization, https://example.org/exp/$(doi)~iri]
+      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
+
+  expression:
+    sources:
+      - ['dataset.json~jsonpath', '$[*]']
+    s: https://example.org/exp/$(doi)~iri
+    po:
+      - [a, fabio:Expression]
+      - [pso:holdsStatusInTime, https://example.org/pst/$(doi)~iri]
 
   dataset:
     sources:
       - ['dataset.json~jsonpath', '$[?(@.record_type=="dataset")]']
-    s: https://doi.org/$(doi)
+    s: https://example.org/wrk/$(doi)~iri
     po:
       - [a, fabio:Dataset]
-      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+      - [dcterms:title, $(title)]
+      - [dcterms:issued, $(date_issued)]
+      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
 
   work_identifier:
     sources:
       - ['dataset.json~jsonpath', '$[*]']
-    s: https://example.org/$(doi)/identifier
+    s: https://example.org/idt/$(doi)~iri
     po:
       - [a, datacite:Identifier]
       - [datacite:usesIdentifierScheme, datacite:doi]
@@ -35,15 +53,15 @@ mappings:
   citing_entity:
     sources:
       - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
-    s: https://doi.org/$(doi)
+    s: https://example.org/wrk/$(doi)~iri
     po:
       - [a, fabio:ScholarlyWork]
-      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
 
   citing_identifier:
     sources:
       - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
-    s: https://example.org/$(doi)/identifier~iri
+    s: https://example.org/idt/$(doi)~iri
     po:
       - [a, datacite:Identifier]
       - [datacite:usesIdentifierScheme, datacite:doi]
@@ -52,15 +70,15 @@ mappings:
   cited_entity:
     sources:
       - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
-    s: https://doi.org/$(doi)
+    s: https://example.org/wrk/$(doi)~iri
     po:
       - [a, fabio:ScholarlyWork]
-      - [datacite:hasIdentifier, https://example.org/$(doi)/identifier~iri]
+      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
 
   cited_identifier:
     sources:
       - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
-    s: https://example.org/$(doi)/identifier
+    s: https://example.org/idt/$(doi)~iri
     po:
       - [a, datacite:Identifier]
       - [datacite:usesIdentifierScheme, datacite:doi]
@@ -69,30 +87,30 @@ mappings:
   is_cited_by_relation:
     sources:
       - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
-    s: https://doi.org/$(related_doi)
+    s: https://example.org/wrk/$(related_doi)~iri
     po: 
-      - [cito:cites, https://doi.org/$(doi)~iri]
+      - [cito:cites, https://example.org/wrk/$(doi)~iri]
   
   cites_relation:
     sources: 
       - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
-    s: https://doi.org/$(doi)~iri
+    s: https://example.org/wrk/$(doi)~iri
     po:
-      - [cito:cites, https://doi.org/$(related_doi)]
+      - [cito:cites, https://example.org/wrk/$(related_doi)]
 
   author:
     sources: 
       - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://orcid.org/$(orcid)~iri
+    s: https://example.org/ppl/$(orcid)~iri
     po:
       - [a, foaf:Person]
       - [foaf:name, $(full_name)]
-      - [datacite:hasIdentifier, https://example.org/$(orcid)/identifier~iri]
+      - [datacite:hasIdentifier, https://example.org/idt/$(orcid)~iri]
 
   author_identifier:
     sources:
       - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://example.org/$(orcid)/identifier~iri
+    s: https://example.org/idt/$(orcid)~iri
     po:
       - [a, datacite:Identifier]
       - [datacite:usesIdentifierScheme, datacite:orcid]
@@ -101,15 +119,55 @@ mappings:
   author_role:
     sources:
       - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://example.org/$(orcid)/role~iri
+    s: https://example.org/prl/$(orcid)~iri
     po:
       - [a, pro:RoleInTime]
       - [pro:withRole, pro:author]
-      - [pro:isHeldBy, https://orcid.org/$(orcid)~iri]
+      - [pro:isHeldBy, https://example.org/ppl/$(orcid)~iri]
 
   author_role_relation:
     sources:
       - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://doi.org/$(related_doi)
+    s: https://example.org/wrk/$(related_doi)~iri
     po:
-      - [pro:isRelatedToRoleInTime, 'https://example.org/$(orcid)/role~iri']
+      - [pro:isRelatedToRoleInTime, 'https://example.org/prl/$(orcid)~iri']
+
+  topic:
+    sources: 
+      - ['dataset.json~jsonpath', '$[*].topics[*]']
+    s: https://example.org/tpc/$(slug)~iri
+    po:
+      - [a, skos:Concept]
+      - [skos:prefLabel, $(label)]
+
+  bibliometric_data_topic:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].topics[*]']
+    s: https://example.org/bdt/$(slug)~iri
+    po:
+      - [a, bido:BibliometricDataInTime]
+      - [bido:withBibliometricData, https://example.org/tpc/$(slug)~iri]
+
+  dataset_bibdata_relation:
+    sources:
+      - ['dataset.json~jsonpath', '$[*].topics[*]']
+    s: https://example.org/wrk/$(related_doi)~iri
+    po:
+      - [bido:holdsBibliometricDataInTime, https://example.org/bdt/$(slug)~iri]
+
+  is_open_access:
+    sources:
+      - ['dataset.json~jsonpath', '$[?(@.is_open_access==True)]']
+    s: https://example.org/pst/$(doi)~iri
+    po:
+      - [a, pso:StatusInTime]
+      - [pso:withStatus, pso:open-access]
+
+  not_open_access:
+    sources:
+      - ['dataset.json~jsonpath', '$[?(@.is_open_access==False)]']
+    s: https://example.org/pst/$(doi)~iri
+    po:
+      - [a, pso:StatusInTime]
+      - [pso:withStatus, pso:closed-access]
+
