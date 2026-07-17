@@ -10,11 +10,13 @@ License: ISC License
 
 ## Description
 
-An ETL pipeline for building a Scholarly Knowledge Graph from data extracted from GoTriple and OpenCitations APIs.
+An ETL pipeline for building a scholarly knowledge graph for testing from data extracted from GoTriple and OpenCitations APIs.
 
-It fetches bibliographic data from external APIs in JSON format and converts it into RDF triples using declarative mapping rules.
+First, it fetches bibliographic data from external APIs in JSON format and converts it into RDF triples using declarative mapping rules.
 
-It generates a structured knowledge graph that models relationships between publications, datasets, authors, and identifiers using the SKG-IF model, based on standard Semantic Web ontologies (such as FABIO, DataCite, and PRO).
+Then, it generates a structured knowledge graph that models relationships between publications, datasets, authors, and identifiers using the SKG-IF model, based on standard Semantic Web ontologies (such as FABIO, DataCite, and PRO).
+
+Finally, it tests the knowledge graph against a set of Competency Questions expressed as SPARQL queries.
 
 ## How to run
 
