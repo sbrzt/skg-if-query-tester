@@ -18,6 +18,8 @@ class BaseSKGProvider(ABC):
         self.capabilities = {
             c.lower() for c in config.get("capabilities", [])
         }
+        # optional providers enrich a record when they know it, but never cause it to be dropped
+        self.required = config.get("required", True)
 
     def stream_records(
         self, 

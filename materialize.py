@@ -19,6 +19,10 @@ prefixes = {
     "pro": "http://purl.org/spar/pro/",
     "pso": "http://purl.org/spar/pso/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    "frapo": "http://purl.org/cerif/frapo/",
+    "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+    "co": "http://purl.org/co/",
+    "ti": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#",
 }
 
 for prefix, uri in prefixes.items():

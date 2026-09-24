@@ -22,34 +22,47 @@ class Harvester:
                 "No stream provider"
             )
 
+    def _lookup_missing(
+        self,
+        bundle: dict[str, Any]
+        ) -> dict[str, Any]:
+        for p in self.lookups:
+            if p.name in bundle["sources"]:
+                continue
+            data = p.fetch_by_doi(bundle["doi"])
+            if data:
+                bundle["sources"][p.name] = data
+        return bundle
+
     def _enrich_single_doi(
         self,
         doi: str,
         initial_source: str,
         initial_data: dict[str, Any]
         ) -> dict[str, Any] | None:
-        bundle: dict[str, Any] = {
+        bundle = self._lookup_missing({
             "doi": doi,
             "sources": {
                 initial_source: initial_data
             }
-        }
-        for p in tqdm(self.lookups):
-            if p.name == initial_source:
-                continue
-            data = p.fetch_by_doi(doi)
-            if data:
-                bundle["sources"][p.name] = data
+        })
+        # only required providers decide whether a record is kept
+        required = {l.name for l in self.lookups if l.required} | {initial_source}
+        matched = required & bundle["sources"].keys()
         mode = self.policy_config.get("mode", "all")
-        matched_count = len(bundle["sources"])
-        required_count = len(self.lookups) + (
-            1 if initial_source not in [l.name for l in self.lookups] else 0
-        )
-        if mode == "all" and matched_count >= required_count:
+        if mode == "all" and matched == required:
             return bundle
-        if mode == "any" and matched_count > 1:
+        if mode == "any" and len(matched) > 1:
             return bundle
         return None
+
+    def enrich(
+        self,
+        bundles: list[dict[str, Any]]
+        ) -> list[dict[str, Any]]:
+        """Complete already harvested records with the lookup providers they are missing."""
+        with ThreadPoolExecutor(max_workers=self.workers) as executor:
+            return list(tqdm(executor.map(self._lookup_missing, bundles), total=len(bundles)))
 
     def run(
         self,

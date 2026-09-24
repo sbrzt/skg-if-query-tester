@@ -24,6 +24,15 @@ providers:
       resolver: /meta/v1/metadata/doi:{doi}
       record: /skg-if/v1/products/https://w3id.org/oc/meta/{local_id}
 
+  - name: openaire
+    enabled: true
+    required: false
+    capabilities: [lookup]
+    base_url: https://api.openaire.eu/graph/skg-if/v1
+    endpoints:
+      search: /products
+      grant: /grants/{local_id}
+
 http:
   headers:
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36

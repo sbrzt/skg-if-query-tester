@@ -2,11 +2,12 @@ from typing import Any
 from tqdm import tqdm
 import requests
 from src.base import BaseSKGProvider
-from src.providers import GoTripleProvider, OpenCitationsProvider
+from src.providers import GoTripleProvider, OpenCitationsProvider, OpenAIREProvider
 
 REGISTRY: dict[str, type[BaseSKGProvider]] = {
     "gotriple": GoTripleProvider,
     "opencitations": OpenCitationsProvider,
+    "openaire": OpenAIREProvider,
 }
 
 

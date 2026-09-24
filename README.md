@@ -10,22 +10,13 @@ License: ISC License
 
 ## Description
 
-An ETL pipeline for building a scholarly knowledge graph for testing from data extracted from GoTriple and OpenCitations APIs.
+An ETL pipeline for building a scholarly knowledge graph for testing from data extracted from the GoTriple, OpenCitations and OpenAIRE SKG-IF APIs.
 
 First, it fetches bibliographic data from external APIs in JSON format and converts it into RDF triples using declarative mapping rules.
 
 Then, it generates a structured knowledge graph that models relationships between publications, datasets, authors, and identifiers using the SKG-IF model, based on standard Semantic Web ontologies (such as FABIO, DataCite, and PRO).
 
 Finally, it tests the knowledge graph against a set of Competency Questions expressed as SPARQL queries.
-
-### Seed generation
-
-A list of _K_ (e.g., 1000) PIDs (e.g., DOIs) is generated as a seed index containing a reasonable amount of works that should be recorded in SKG-IF APIs, by sending a one-shot request to Crossref API using this code:
-
-```bash
-curl -s "https://api.crossref.org/works?filter=has-funder:true,has-abstract:true,has-references:true&rows=1000"   | jq -r '.message.items[].DOI' > seeds.txt
-```
-
 
 ## How to run
 
@@ -40,3 +31,19 @@ Then run the orchestrator:
 ```bash
 uv run main.py
 ```
+
+Providers are configured in `config.yaml`. Products are streamed from GoTriple and looked up by DOI in the other providers; a provider with `required: false` (OpenAIRE, which also resolves the grants in `funding`) enriches the records it knows without causing any record to be dropped.
+
+To complete an existing `data.json` with the providers it is missing (e.g. after adding a new one) without harvesting new records:
+
+```bash
+uv run main.py --enrich
+```
+
+Finally, build the knowledge graph (`data.ttl`) from `data.json` with `mapping.yaml`:
+
+```bash
+uv run materialize.py
+```
+
+The same product, contributor, venue and topic coming from several providers is materialized once: works are matched by DOI, contributors by name within the same work and role, venues by ISSN, topics by term. When providers disagree on a single-valued field, OpenCitations wins over OpenAIRE, which wins over GoTriple.
