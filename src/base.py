@@ -14,7 +14,8 @@ class BaseSKGProvider(ABC):
         self.name = name
         self.config = config
         self.session = session
-        self.timeout = timeout
+        # a provider may override the global timeout (e.g. for slow citation searches)
+        self.timeout = config.get("timeout", timeout)
         self.capabilities = {
             c.lower() for c in config.get("capabilities", [])
         }
@@ -37,4 +38,11 @@ class BaseSKGProvider(ABC):
         self, 
         doi: str
         ) -> dict[str, Any] | None:
+        raise NotImplementedError()
+
+    def fetch_citations(
+        self,
+        record: dict[str, Any]
+        ) -> list[dict[str, Any]] | None:
+        """Products citing, or cited by, one of this provider's records (None if the search failed)."""
         raise NotImplementedError()

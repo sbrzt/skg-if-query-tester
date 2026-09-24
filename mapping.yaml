@@ -435,9 +435,10 @@ mappings:
             UNION ALL SELECT v_iri, i.value FROM ven, json_each((CASE WHEN json_type(json_extract(v, '$.identifiers')) = 'ARRAY' THEN json_extract(v, '$.identifiers') WHEN json_extract(v, '$.identifiers') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(v, '$.identifiers')) END)) AS i
           )
           SELECT COALESCE(CAST(holder AS VARCHAR), '') AS holder,
-                 'https://example.org/skg-if/data/identifier/' || url_encode(json_extract_string(i, '$.scheme')) || '/' || url_encode(json_extract_string(i, '$.value')) AS ident,
+                 'https://example.org/skg-if/data/identifier/' || url_encode(json_extract_string(i, '$.scheme')) || '/' || url_encode((CASE WHEN json_extract_string(i, '$.scheme') = 'doi' THEN lower(trim(json_extract_string(i, '$.value'))) ELSE json_extract_string(i, '$.value') END)) AS ident,
                  'http://purl.org/spar/datacite/' || json_extract_string(i, '$.scheme') AS scheme,
-                 json_extract_string(i, '$.value') AS val
+                 -- DOIs are case-insensitive: one lowercase identifier whatever the source's spelling
+                 (CASE WHEN json_extract_string(i, '$.scheme') = 'doi' THEN lower(trim(json_extract_string(i, '$.value'))) ELSE json_extract_string(i, '$.value') END) AS val
           FROM h
           WHERE json_extract_string(i, '$.scheme') IS NOT NULL AND json_extract_string(i, '$.value') IS NOT NULL
     s: $(holder)

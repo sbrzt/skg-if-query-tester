@@ -1,0 +1,26 @@
+# id: CQ_043
+# question:
+#   I want the list of journal papers which metadata consist the keywords
+#   {diamond oa, diamond Open Access model, Diamond business model}.
+
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+
+SELECT DISTINCT ?work ?title ?keyword
+WHERE {
+    ?work a fabio:ScholarlyWork ;
+        prism:keyword ?keyword ;                 # ⚠ prism:keyword on a Work = proposed SKG-IF extension
+        dcterms:title ?title ;
+        frbr:realization [
+            frbr:partOf [ a fabio:ExpressionCollection ]       # restrict to journal papers -> changed from fabio:Journal to fabio:ExpressionCollection
+        ] .
+    FILTER ( LCASE(STR(?keyword)) IN (
+        "diamond oa", "diamond open access model", "diamond business model"
+    ) )
+}
+ORDER BY ?title
+
+### added some keywords manually

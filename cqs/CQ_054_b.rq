@@ -1,0 +1,19 @@
+# id: CQ_054_b
+# question:
+#   Which outputs in the system are classified under Library and Information Science?
+
+
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX lcc: <http://id.loc.gov/authorities/classification/>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+
+SELECT DISTINCT ?work ?title
+WHERE {
+    ?ds a dcat:DataService ;
+        dcterms:subject lcc:Z ;                  # confirm the exact LCC code for LIS
+        odrl:hasPolicy [ odrl:target ?work ] .
+    ?work a fabio:Work .
+    OPTIONAL { ?work dcterms:title ?title }
+}

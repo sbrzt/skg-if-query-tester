@@ -40,10 +40,33 @@ To complete an existing `data.json` with the providers it is missing (e.g. after
 uv run main.py --enrich
 ```
 
+A provider with the `citations` capability (OpenCitations) also adds, for each harvested product, the products citing it and cited by it, through the SKG-IF citation filters (`citation_filters` in `config.yaml`). They are stored in `data.json` as single-source records marked with `"context": "citation"`, so that citations can be resolved (e.g. the DOIs and types of cited works) without enriching these products with the other providers. The citation searches are slow (up to minutes per product): a search that fails is not recorded as done, so running `uv run main.py --enrich` again retries it.
+
 Finally, build the knowledge graph (`data.ttl`) from `data.json` with `mapping.yaml`:
 
 ```bash
 uv run materialize.py
 ```
 
-The same product, contributor, venue and topic coming from several providers is materialized once: works are matched by DOI, contributors by name within the same work and role, venues by ISSN, topics by term. When providers disagree on a single-valued field, OpenCitations wins over OpenAIRE, which wins over GoTriple.
+The same product, contributor, venue and topic coming from several providers is materialized once: works are matched by DOI (DOIs are lowercased, as they are case-insensitive), contributors by name within the same work and role, venues by ISSN, topics by term. When providers disagree on a single-valued field, OpenCitations wins over OpenAIRE, which wins over GoTriple.
+
+### Competency questions
+
+Each competency question is a SPARQL query in its own file in `cqs/` (e.g. `cqs/CQ_001.rq`), headed by comment lines with its identifier and the question in natural language:
+
+```sparql
+# id: CQ_014
+# question:
+#   What are the topics and scientific domains covered in these graphs?
+
+PREFIX ...
+SELECT ...
+```
+
+To add a competency question, add a new `.rq` file. To run them all against `data.ttl`:
+
+```bash
+uv run run_cqs.py
+```
+
+Each result is printed as a table and the full results are written to `cq_results.json`, together with the status of each competency question (`answered`, `empty` or `error`). Use `--only CQ_001 CQ_014` to run some of them, `--data` to query another Turtle file, and `--strict` to exit with an error when a competency question has no results (the command always fails when a query is malformed).

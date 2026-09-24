@@ -1,0 +1,15 @@
+# id: CQ_014
+# question:
+#   What are the topics and scientific domains covered in these graphs?
+
+PREFIX bido: <http://purl.org/spar/bido/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?topic_label
+WHERE {
+    ?work bido:holdsBibliometricDataInTime [
+         bido:withBibliometricData [
+             skos:prefLabel ?topic_label
+         ]
+    ] .
+}

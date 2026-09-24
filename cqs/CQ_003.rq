@@ -1,0 +1,25 @@
+# id: CQ_003
+# question:
+#   Give me the list of identifiers of all the available datasets related to topic X.
+
+PREFIX bido: <http://purl.org/spar/bido/>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?pid_value
+WHERE {
+    VALUES ?topic_label {"01 natural sciences"}
+    ?dataset a fabio:Dataset ;
+        bido:holdsBibliometricDataInTime [
+            bido:withBibliometricData [
+                skos:prefLabel ?topic_label
+            ]
+        ] ;
+        datacite:hasIdentifier [
+            datacite:usesIdentifierScheme datacite:doi ;
+            literal:hasLiteralValue ?pid_value
+        ] .
+}

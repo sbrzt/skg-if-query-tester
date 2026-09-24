@@ -1,0 +1,30 @@
+# id: CQ_002
+# question:
+#   Given an author, return all documents where one of his/her work is cited.
+
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+
+SELECT DISTINCT ?pid_value
+WHERE {
+    VALUES ?author_id_value {"0000-0001-9820-9272"}
+    ?author datacite:hasIdentifier [
+        literal:hasLiteralValue ?author_id_value ;
+        datacite:usesIdentifierScheme datacite:orcid
+    ] ;
+    ^pro:isHeldBy [
+        pro:withRole pro:author ;
+        ^pro:isRelatedToRoleInTime [
+            ^cito:cites [
+                datacite:hasIdentifier [
+                    literal:hasLiteralValue ?pid_value ;
+            datacite:usesIdentifierScheme datacite:doi 
+                ]
+             ]
+         ]
+    ] .
+}

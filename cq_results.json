@@ -1,0 +1,3213 @@
+{
+  "data": "data.ttl",
+  "summary": {
+    "answered": 12,
+    "empty": 1,
+    "error": 0
+  },
+  "results": [
+    {
+      "id": "CQ_001",
+      "question": "Given a publication PID, find all articles that cite it plus those cited in the publication itself.",
+      "file": "cqs/CQ_001.rq",
+      "status": "answered",
+      "seconds": 0.42,
+      "count": 322,
+      "variables": [
+        "pid_value"
+      ],
+      "rows": [
+        {
+          "pid_value": "10.1021/acs.est.4c06008"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2020.137480"
+        },
+        {
+          "pid_value": "10.31219/osf.io/fqmdu"
+        },
+        {
+          "pid_value": "10.1101/2025.04.17.25326034"
+        },
+        {
+          "pid_value": "10.1016/j.envpol.2020.115490"
+        },
+        {
+          "pid_value": "10.1093/exposome/osag002"
+        },
+        {
+          "pid_value": "10.1016/j.saa.2024.124842"
+        },
+        {
+          "pid_value": "10.1007/s40726-021-00211-6"
+        },
+        {
+          "pid_value": "10.1016/j.molstruc.2023.137468"
+        },
+        {
+          "pid_value": "10.1098/rsos.181836"
+        },
+        {
+          "pid_value": "10.1038/s41370-021-00332-6"
+        },
+        {
+          "pid_value": "10.1016/j.saa.2024.125669"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2022.107397"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2023.108297"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2020.105499"
+        },
+        {
+          "pid_value": "10.1016/j.envpol.2025.126839"
+        },
+        {
+          "pid_value": "10.1016/j.jhazmat.2022.128658"
+        },
+        {
+          "pid_value": "10.1007/698_2019_434"
+        },
+        {
+          "pid_value": "10.1016/j.yrtph.2025.105972"
+        },
+        {
+          "pid_value": "10.1016/j.dyepig.2022.110253"
+        },
+        {
+          "pid_value": "10.1007/s40572-023-00392-w"
+        },
+        {
+          "pid_value": "10.1088/2515-7620/adc547"
+        },
+        {
+          "pid_value": "10.1021/acs.est.9b07909"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2022.107226"
+        },
+        {
+          "pid_value": "10.1002/9781394158355.ch07"
+        },
+        {
+          "pid_value": "10.1021/acs.jafc.0c05577"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2022.107339"
+        },
+        {
+          "pid_value": "10.1016/j.saa.2023.122721"
+        },
+        {
+          "pid_value": "10.1093/ntr/ntaa140"
+        },
+        {
+          "pid_value": "10.1016/j.envpol.2023.123069"
+        },
+        {
+          "pid_value": "10.1021/acs.est.8b06220"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2022.107524"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2024.172187"
+        },
+        {
+          "pid_value": "10.1371/journal.pone.0297638"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2022.155237"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2019.105104"
+        },
+        {
+          "pid_value": "10.1021/acs.estlett.2c00489"
+        },
+        {
+          "pid_value": "10.1021/acs.est.8b03755"
+        },
+        {
+          "pid_value": "10.1021/acs.est.0c05972"
+        },
+        {
+          "pid_value": "10.1016/j.chemosphere.2019.04.043"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2022.113981"
+        },
+        {
+          "pid_value": "10.1002/rcm.9048"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2024.108457"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2025.109734"
+        },
+        {
+          "pid_value": "10.1016/j.envpol.2024.123877"
+        },
+        {
+          "pid_value": "10.1021/acs.estlett.9b00800"
+        },
+        {
+          "pid_value": "10.1016/j.chroma.2018.12.041"
+        },
+        {
+          "pid_value": "10.1371/journal.pone.0260952"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2024.109021"
+        },
+        {
+          "pid_value": "10.1016/j.molstruc.2025.141945"
+        },
+        {
+          "pid_value": "10.33540/1943"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2024.118537"
+        },
+        {
+          "pid_value": "10.3390/ijerph19041935"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2024.120107"
+        },
+        {
+          "pid_value": "10.1021/acs.est.9b02226"
+        },
+        {
+          "pid_value": "10.1021/acs.est.1c06819"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2018.06.150"
+        },
+        {
+          "pid_value": "10.3389/fpubh.2020.547239"
+        },
+        {
+          "pid_value": "10.1038/s41370-021-00359-9"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2020.140136"
+        },
+        {
+          "pid_value": "10.1016/b978-0-12-821842-6.00022-1"
+        },
+        {
+          "pid_value": "10.1080/10807039.2018.1528860"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2021.152330"
+        },
+        {
+          "pid_value": "10.1016/b978-0-323-85419-1.00002-5"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2023.115412"
+        },
+        {
+          "pid_value": "10.1016/j.trac.2022.116669"
+        },
+        {
+          "pid_value": "10.1021/jacsau.5c00092"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2023.117216"
+        },
+        {
+          "pid_value": "10.3390/vetsci7030086"
+        },
+        {
+          "pid_value": "10.1038/s41370-019-0116-7"
+        },
+        {
+          "pid_value": "10.1371/journal.pone.0259748"
+        },
+        {
+          "pid_value": "W2178955723"
+        },
+        {
+          "pid_value": "26437174"
+        },
+        {
+          "pid_value": "10.1080/15287394.2015.1076363"
+        },
+        {
+          "pid_value": "W2053031219"
+        },
+        {
+          "pid_value": "10.1016/j.ijheh.2013.06.003"
+        },
+        {
+          "pid_value": "23871272"
+        },
+        {
+          "pid_value": "28063657"
+        },
+        {
+          "pid_value": "W2570670335"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2016.11.054"
+        },
+        {
+          "pid_value": "27588700"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2016.08.027"
+        },
+        {
+          "pid_value": "W2507870605"
+        },
+        {
+          "pid_value": "W2738753086"
+        },
+        {
+          "pid_value": "10.1038/jes.2017.12"
+        },
+        {
+          "pid_value": "28745304"
+        },
+        {
+          "pid_value": "10.1155/2016/1624643"
+        },
+        {
+          "pid_value": "27800487"
+        },
+        {
+          "pid_value": "W2528551412"
+        },
+        {
+          "pid_value": "W2507630586"
+        },
+        {
+          "pid_value": "27992727"
+        },
+        {
+          "pid_value": "10.1146/annurev-publhealth-031816-044437"
+        },
+        {
+          "pid_value": "19731660"
+        },
+        {
+          "pid_value": "W2057923096"
+        },
+        {
+          "pid_value": "10.1021/es901292a"
+        },
+        {
+          "pid_value": "10.1021/acs.est.6b00030"
+        },
+        {
+          "pid_value": "26975559"
+        },
+        {
+          "pid_value": "W2299077788"
+        },
+        {
+          "pid_value": "10.1016/j.watres.2017.05.044"
+        },
+        {
+          "pid_value": "W2618923860"
+        },
+        {
+          "pid_value": "28554112"
+        },
+        {
+          "pid_value": "W2594263910"
+        },
+        {
+          "pid_value": "28274271"
+        },
+        {
+          "pid_value": "10.1186/s12940-017-0224-6"
+        },
+        {
+          "pid_value": "W2066365610"
+        },
+        {
+          "pid_value": "18951632"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2008.09.003"
+        },
+        {
+          "pid_value": "W167247360"
+        },
+        {
+          "pid_value": "10.1093/jaoac/88.6.1822"
+        },
+        {
+          "pid_value": "25687022"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2015.01.016"
+        },
+        {
+          "pid_value": "W2013184003"
+        },
+        {
+          "pid_value": "10.1080/02652030701854741"
+        },
+        {
+          "pid_value": "W1972449112"
+        },
+        {
+          "pid_value": "18569004"
+        },
+        {
+          "pid_value": "10.5604/12321966.1167718"
+        },
+        {
+          "pid_value": "W2417620610"
+        },
+        {
+          "pid_value": "26403119"
+        },
+        {
+          "pid_value": "27105165"
+        },
+        {
+          "pid_value": "W2338371217"
+        },
+        {
+          "pid_value": "10.1016/j.envpol.2016.04.025"
+        },
+        {
+          "pid_value": "10.1016/j.chemosphere.2015.05.082"
+        },
+        {
+          "pid_value": "26070147"
+        },
+        {
+          "pid_value": "W619250214"
+        },
+        {
+          "pid_value": "W2025388400"
+        },
+        {
+          "pid_value": "10.13031/2013.28886"
+        },
+        {
+          "pid_value": "19967906"
+        },
+        {
+          "pid_value": "W2592161073"
+        },
+        {
+          "pid_value": "28284640"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2017.03.017"
+        },
+        {
+          "pid_value": "W2040326296"
+        },
+        {
+          "pid_value": "10.1021/es902512h"
+        },
+        {
+          "pid_value": "20369874"
+        },
+        {
+          "pid_value": "W2015702628"
+        },
+        {
+          "pid_value": "18046699"
+        },
+        {
+          "pid_value": "10.1002/jat.1321"
+        },
+        {
+          "pid_value": "W2039317838"
+        },
+        {
+          "pid_value": "10.1890/0012-9615(1997)067[0345:saaist]2.0.co;2"
+        },
+        {
+          "pid_value": "W1958964692"
+        },
+        {
+          "pid_value": "10.1002/ijc.29631"
+        },
+        {
+          "pid_value": "26061779"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2017.07.023"
+        },
+        {
+          "pid_value": "W2744732861"
+        },
+        {
+          "pid_value": "28802169"
+        },
+        {
+          "pid_value": "10.1177/1178630217715237"
+        },
+        {
+          "pid_value": "28690397"
+        },
+        {
+          "pid_value": "W2642613295"
+        },
+        {
+          "pid_value": "W2016637959"
+        },
+        {
+          "pid_value": "10.1016/j.teac.2014.03.002"
+        },
+        {
+          "pid_value": "25752424"
+        },
+        {
+          "pid_value": "10.1016/j.pestbp.2014.10.013"
+        },
+        {
+          "pid_value": "W2074109756"
+        },
+        {
+          "pid_value": "W2171982641"
+        },
+        {
+          "pid_value": "26324808"
+        },
+        {
+          "pid_value": "10.1183/16000617.00006114"
+        },
+        {
+          "pid_value": "22595191"
+        },
+        {
+          "pid_value": "W2027590120"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2012.02.001"
+        },
+        {
+          "pid_value": "27425442"
+        },
+        {
+          "pid_value": "W2475161514"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2016.07.042"
+        },
+        {
+          "pid_value": "10.1136/oem.2010.059469"
+        },
+        {
+          "pid_value": "W2158359967"
+        },
+        {
+          "pid_value": "21257983"
+        },
+        {
+          "pid_value": "W4246849528"
+        },
+        {
+          "pid_value": "10.1021/bk-1988-0382.ch001"
+        },
+        {
+          "pid_value": "W2171744427"
+        },
+        {
+          "pid_value": "10.1080/03601234.2011.534413"
+        },
+        {
+          "pid_value": "21191868"
+        },
+        {
+          "pid_value": "W2281206835"
+        },
+        {
+          "pid_value": "17539531"
+        },
+        {
+          "pid_value": "17539500"
+        },
+        {
+          "pid_value": "10.1021/es0618447"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2017.05.018"
+        },
+        {
+          "pid_value": "28623811"
+        },
+        {
+          "pid_value": "W2626587624"
+        },
+        {
+          "pid_value": "22935766"
+        },
+        {
+          "pid_value": "W2021236787"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2012.07.009"
+        },
+        {
+          "pid_value": "W2209901864"
+        },
+        {
+          "pid_value": "10.1016/j.ijheh.2015.06.006"
+        },
+        {
+          "pid_value": "26141242"
+        },
+        {
+          "pid_value": "10.1016/j.ijheh.2012.08.006"
+        },
+        {
+          "pid_value": "23021945"
+        },
+        {
+          "pid_value": "W1986110475"
+        },
+        {
+          "pid_value": "21057782"
+        },
+        {
+          "pid_value": "W2144786108"
+        },
+        {
+          "pid_value": "10.1007/s00244-010-9611-5"
+        },
+        {
+          "pid_value": "W1971349322"
+        },
+        {
+          "pid_value": "25660522"
+        },
+        {
+          "pid_value": "10.1016/j.chroma.2015.01.040"
+        },
+        {
+          "pid_value": "24657944"
+        },
+        {
+          "pid_value": "W1986987824"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2014.02.009"
+        },
+        {
+          "pid_value": "10.1016/j.aca.2015.03.007"
+        },
+        {
+          "pid_value": "W2066079354"
+        },
+        {
+          "pid_value": "25911425"
+        },
+        {
+          "pid_value": "26945619"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2016.02.034"
+        },
+        {
+          "pid_value": "W2292911436"
+        },
+        {
+          "pid_value": "10.1542/peds.2010-0133"
+        },
+        {
+          "pid_value": "21300677"
+        },
+        {
+          "pid_value": "W2148921329"
+        },
+        {
+          "pid_value": "10.1021/tx980157t"
+        },
+        {
+          "pid_value": "9860498"
+        },
+        {
+          "pid_value": "W2067394682"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2017.03.001"
+        },
+        {
+          "pid_value": "W2595598475"
+        },
+        {
+          "pid_value": "28319818"
+        },
+        {
+          "pid_value": "16526467"
+        },
+        {
+          "pid_value": "W2619535035"
+        },
+        {
+          "pid_value": "10.1016/j.forsciint.2017.05.016"
+        },
+        {
+          "pid_value": "28609661"
+        },
+        {
+          "pid_value": "27613627"
+        },
+        {
+          "pid_value": "10.1007/s11356-016-7571-7"
+        },
+        {
+          "pid_value": "W2518484086"
+        },
+        {
+          "pid_value": "W2736987290"
+        },
+        {
+          "pid_value": "28745305"
+        },
+        {
+          "pid_value": "10.1038/jes.2017.9"
+        },
+        {
+          "pid_value": "W2049407696"
+        },
+        {
+          "pid_value": "10.1007/s11356-012-0815-2"
+        },
+        {
+          "pid_value": "22767285"
+        },
+        {
+          "pid_value": "W2593057501"
+        },
+        {
+          "pid_value": "28250046"
+        },
+        {
+          "pid_value": "10.1136/oemed-2016-104035"
+        },
+        {
+          "pid_value": "26451881"
+        },
+        {
+          "pid_value": "W1948068236"
+        },
+        {
+          "pid_value": "10.1016/j.envres.2015.09.027"
+        },
+        {
+          "pid_value": "10.1021/jf0628734"
+        },
+        {
+          "pid_value": "17263481"
+        },
+        {
+          "pid_value": "W2074513681"
+        },
+        {
+          "pid_value": "W2516297588"
+        },
+        {
+          "pid_value": "27853621"
+        },
+        {
+          "pid_value": "10.1098/rsos.160433"
+        },
+        {
+          "pid_value": "27187793"
+        },
+        {
+          "pid_value": "W2391634362"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2016.04.007"
+        },
+        {
+          "pid_value": "W1972754618"
+        },
+        {
+          "pid_value": "24548134"
+        },
+        {
+          "pid_value": "10.1021/es405022f"
+        },
+        {
+          "pid_value": "16755599"
+        },
+        {
+          "pid_value": "W2008914876"
+        },
+        {
+          "pid_value": "10.1002/mas.20091"
+        },
+        {
+          "pid_value": "26431856"
+        },
+        {
+          "pid_value": "W2124696110"
+        },
+        {
+          "pid_value": "10.1016/j.chroma.2015.09.070"
+        },
+        {
+          "pid_value": "10.1002/em.21676"
+        },
+        {
+          "pid_value": "22389207"
+        },
+        {
+          "pid_value": "W2081928855"
+        },
+        {
+          "pid_value": "28677675"
+        },
+        {
+          "pid_value": "10.1038/jes.2017.7"
+        },
+        {
+          "pid_value": "W2724472340"
+        },
+        {
+          "pid_value": "W2169180589"
+        },
+        {
+          "pid_value": "25487643"
+        },
+        {
+          "pid_value": "10.1179/2049396714y.0000000098"
+        },
+        {
+          "pid_value": "12442503"
+        },
+        {
+          "pid_value": "10.1007/978-1-4899-7283-5_1"
+        },
+        {
+          "pid_value": "W158344378"
+        },
+        {
+          "pid_value": "28704700"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2017.07.001"
+        },
+        {
+          "pid_value": "W2736196856"
+        },
+        {
+          "pid_value": "8917493"
+        },
+        {
+          "pid_value": "W2061465090"
+        },
+        {
+          "pid_value": "10.1073/pnas.93.23.12764"
+        },
+        {
+          "pid_value": "W2148739622"
+        },
+        {
+          "pid_value": "10.1093/aje/kws225"
+        },
+        {
+          "pid_value": "23171882"
+        },
+        {
+          "pid_value": "10.1016/j.scitotenv.2016.11.114"
+        },
+        {
+          "pid_value": "W2560840052"
+        },
+        {
+          "pid_value": "27932214"
+        },
+        {
+          "pid_value": "W1995661294"
+        },
+        {
+          "pid_value": "10.1016/j.envpol.2014.06.019"
+        },
+        {
+          "pid_value": "25009960"
+        },
+        {
+          "pid_value": "W2106645066"
+        },
+        {
+          "pid_value": "11043653"
+        },
+        {
+          "pid_value": "10.1093/jat/24.7.509"
+        },
+        {
+          "pid_value": "W2614096916"
+        },
+        {
+          "pid_value": "28505067"
+        },
+        {
+          "pid_value": "10.3390/ijerph14050526"
+        },
+        {
+          "pid_value": "10.2903/sp.efsa.2013.en-497"
+        },
+        {
+          "pid_value": "W2516616258"
+        },
+        {
+          "pid_value": "27539251"
+        },
+        {
+          "pid_value": "10.1002/tox.22337"
+        },
+        {
+          "pid_value": "W2515736350"
+        },
+        {
+          "pid_value": "8889674"
+        },
+        {
+          "pid_value": "10.1093/jat/20.6.393"
+        },
+        {
+          "pid_value": "W2105588659"
+        },
+        {
+          "pid_value": "W2296864613"
+        },
+        {
+          "pid_value": "10.1002/bdra.23459"
+        },
+        {
+          "pid_value": "26689858"
+        },
+        {
+          "pid_value": "W2078879677"
+        },
+        {
+          "pid_value": "10.1016/j.pestbp.2010.12.007"
+        },
+        {
+          "pid_value": "W2327183422"
+        },
+        {
+          "pid_value": "22242791"
+        },
+        {
+          "pid_value": "10.1021/es202904x"
+        },
+        {
+          "pid_value": "10.1080/03601234.2012.706548"
+        },
+        {
+          "pid_value": "22938575"
+        },
+        {
+          "pid_value": "W2090344051"
+        },
+        {
+          "pid_value": "W2615294921"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2017.04.012"
+        },
+        {
+          "pid_value": "28521191"
+        },
+        {
+          "pid_value": "10.1016/j.envint.2016.09.004"
+        },
+        {
+          "pid_value": "W2519539778"
+        },
+        {
+          "pid_value": "27639850"
+        },
+        {
+          "pid_value": "10.1021/es104190k"
+        },
+        {
+          "pid_value": "21517066"
+        },
+        {
+          "pid_value": "W2332670072"
+        },
+        {
+          "pid_value": "10.3390/ijerph8051402"
+        },
+        {
+          "pid_value": "21655127"
+        },
+        {
+          "pid_value": "W2050676639"
+        },
+        {
+          "pid_value": "10.1093/clinchem/43.5.736"
+        },
+        {
+          "pid_value": "W2160951877"
+        },
+        {
+          "pid_value": "10.1186/s12940-017-0255-z"
+        },
+        {
+          "pid_value": "28514952"
+        },
+        {
+          "pid_value": "W2614303441"
+        },
+        {
+          "pid_value": "9166224"
+        },
+        {
+          "pid_value": "10.1016/j.aca.2016.07.023"
+        },
+        {
+          "pid_value": "W2507069976"
+        },
+        {
+          "pid_value": "27566339"
+        },
+        {
+          "pid_value": "10.3390/ijerph13100943"
+        },
+        {
+          "pid_value": "27669276"
+        },
+        {
+          "pid_value": "W2522180333"
+        }
+      ]
+    },
+    {
+      "id": "CQ_002",
+      "question": "Given an author, return all documents where one of his/her work is cited.",
+      "file": "cqs/CQ_002.rq",
+      "status": "answered",
+      "seconds": 0.013,
+      "count": 60,
+      "variables": [
+        "pid_value"
+      ],
+      "rows": [
+        {
+          "pid_value": "10.1007/s10980-026-02296-0"
+        },
+        {
+          "pid_value": "10.1038/s43247-024-01416-5"
+        },
+        {
+          "pid_value": "10.1088/1755-1315/1415/1/012048"
+        },
+        {
+          "pid_value": "10.21203/rs.3.rs-6262217/v1"
+        },
+        {
+          "pid_value": "10.1016/j.forpol.2025.103669"
+        },
+        {
+          "pid_value": "10.1016/j.jnc.2025.127202"
+        },
+        {
+          "pid_value": "10.21203/rs.3.rs-1952235/v1"
+        },
+        {
+          "pid_value": "10.1007/s13280-024-02050-3"
+        },
+        {
+          "pid_value": "10.4000/12ppc"
+        },
+        {
+          "pid_value": "10.1111/gcb.70147"
+        },
+        {
+          "pid_value": "10.53846/goediss-9639"
+        },
+        {
+          "pid_value": "10.1088/1748-9326/adf861"
+        },
+        {
+          "pid_value": "10.31548/forest/1.2024.89"
+        },
+        {
+          "pid_value": "10.1016/j.fecs.2023.100128"
+        },
+        {
+          "pid_value": "10.1007/978-3-662-68236-4_7"
+        },
+        {
+          "pid_value": "10.1016/j.jasrep.2025.105495"
+        },
+        {
+          "pid_value": "10.30970/sbi.1901.807"
+        },
+        {
+          "pid_value": "10.3390/land11091550"
+        },
+        {
+          "pid_value": "10.3390/land13040428"
+        },
+        {
+          "pid_value": "10.17011/10.17011/jyx/slj/2021/4"
+        },
+        {
+          "pid_value": "10.1038/s41598-026-37378-1"
+        },
+        {
+          "pid_value": "10.1016/j.rser.2023.113274"
+        },
+        {
+          "pid_value": "10.1016/j.jasrep.2025.105133"
+        },
+        {
+          "pid_value": "10.1111/cobi.14404"
+        },
+        {
+          "pid_value": "10.31857/s2587556623040064"
+        },
+        {
+          "pid_value": "10.3389/ffgc.2022.1070372"
+        },
+        {
+          "pid_value": "10.1016/j.foreco.2022.120272"
+        },
+        {
+          "pid_value": "10.3389/ffgc.2022.818474"
+        },
+        {
+          "pid_value": "10.1126/science.adh2303"
+        },
+        {
+          "pid_value": "10.1101/2022.12.21.521439"
+        },
+        {
+          "pid_value": "10.1016/j.landusepol.2024.107277"
+        },
+        {
+          "pid_value": "10.3390/f14040742"
+        },
+        {
+          "pid_value": "10.1109/igarss55030.2025.11243780"
+        },
+        {
+          "pid_value": "10.1007/978-3-030-99184-5_3"
+        },
+        {
+          "pid_value": "10.1016/j.fecs.2025.100365"
+        },
+        {
+          "pid_value": "10.3390/f17020178"
+        },
+        {
+          "pid_value": "10.3390/f13101732"
+        },
+        {
+          "pid_value": "10.1007/s10342-025-01766-5"
+        },
+        {
+          "pid_value": "10.1038/s43247-024-01325-7"
+        },
+        {
+          "pid_value": "10.1109/access.2021.3134375"
+        },
+        {
+          "pid_value": "10.1002/ecs2.70235"
+        },
+        {
+          "pid_value": "10.1016/j.rse.2024.114590"
+        },
+        {
+          "pid_value": "10.3390/f15010032"
+        },
+        {
+          "pid_value": "10.1007/s13280-025-02318-2"
+        },
+        {
+          "pid_value": "10.1186/s13595-024-01248-5"
+        },
+        {
+          "pid_value": "10.1111/mec.70260"
+        },
+        {
+          "pid_value": "10.1016/j.foreco.2024.122229"
+        },
+        {
+          "pid_value": "10.17164/ek.2024.11"
+        },
+        {
+          "pid_value": "10.3390/f13050747"
+        },
+        {
+          "pid_value": "10.1038/s41467-023-39434-0"
+        },
+        {
+          "pid_value": "10.31219/osf.io/ynqfx"
+        },
+        {
+          "pid_value": "10.1016/j.dib.2023.108929"
+        },
+        {
+          "pid_value": "10.1101/2024.04.20.590405"
+        },
+        {
+          "pid_value": "10.3832/efor4110-019"
+        },
+        {
+          "pid_value": "10.1080/02827581.2025.2519143"
+        },
+        {
+          "pid_value": "10.1007/s10113-022-01881-8"
+        },
+        {
+          "pid_value": "10.1016/j.biocon.2023.110015"
+        },
+        {
+          "pid_value": "10.1016/j.oneear.2025.101313"
+        },
+        {
+          "pid_value": "10.1016/j.ecolind.2024.112690"
+        },
+        {
+          "pid_value": "10.1080/27658511.2026.2616124"
+        }
+      ]
+    },
+    {
+      "id": "CQ_003",
+      "question": "Give me the list of identifiers of all the available datasets related to topic X.",
+      "file": "cqs/CQ_003.rq",
+      "status": "answered",
+      "seconds": 0.041,
+      "count": 10,
+      "variables": [
+        "pid_value"
+      ],
+      "rows": [
+        {
+          "pid_value": "10.5061/dryad.4g9g0"
+        },
+        {
+          "pid_value": "10.5258/soton/d2413"
+        },
+        {
+          "pid_value": "10.14288/1.0398036"
+        },
+        {
+          "pid_value": "10.5061/dryad.d1f0d"
+        },
+        {
+          "pid_value": "10.25500/edata.bham.00000306"
+        },
+        {
+          "pid_value": "10.5061/dryad.75j0k9c"
+        },
+        {
+          "pid_value": "10.5258/soton/d2414"
+        },
+        {
+          "pid_value": "10.5061/dryad.4s7t3"
+        },
+        {
+          "pid_value": "10.5683/sp2/zdf9rp"
+        },
+        {
+          "pid_value": "10.5061/dryad.2jk717g"
+        }
+      ]
+    },
+    {
+      "id": "CQ_007",
+      "question": "Given the PID of a publication, I want to align its bibliographic metadata across graphs, by also removing duplicated elements.",
+      "file": "cqs/CQ_007.rq",
+      "status": "answered",
+      "seconds": 0.254,
+      "count": 6,
+      "variables": [
+        "field",
+        "canonicalValue"
+      ],
+      "rows": [
+        {
+          "field": "creator",
+          "canonicalValue": "https://w3id.org/oc/meta/ra/0690670536"
+        },
+        {
+          "field": "creator",
+          "canonicalValue": "orcid:0000-0003-1288-4256"
+        },
+        {
+          "field": "identifier",
+          "canonicalValue": "10.1108/sjme-04-2020-0074"
+        },
+        {
+          "field": "identifier",
+          "canonicalValue": "W3115926918"
+        },
+        {
+          "field": "identifier",
+          "canonicalValue": "ftunivmalta:oai:www.um.edu.mt:123456789_63918"
+        },
+        {
+          "field": "title",
+          "canonicalValue": "Understanding motivations to use online streaming services : integrating the technology acceptance model (TAM) and the uses and gratifications theory (UGT)"
+        }
+      ]
+    },
+    {
+      "id": "CQ_014",
+      "question": "What are the topics and scientific domains covered in these graphs?",
+      "file": "cqs/CQ_014.rq",
+      "status": "answered",
+      "seconds": 0.012,
+      "count": 520,
+      "variables": [
+        "topic_label"
+      ],
+      "rows": [
+        {
+          "topic_label": "000"
+        },
+        {
+          "topic_label": "004"
+        },
+        {
+          "topic_label": "006"
+        },
+        {
+          "topic_label": "0503 education"
+        },
+        {
+          "topic_label": "0504 sociology"
+        },
+        {
+          "topic_label": "0505 law"
+        },
+        {
+          "topic_label": "0604 arts"
+        },
+        {
+          "topic_label": "1. No poverty"
+        },
+        {
+          "topic_label": "2. Zero hunger"
+        },
+        {
+          "topic_label": "3. Good health"
+        },
+        {
+          "topic_label": "300"
+        },
+        {
+          "topic_label": "310"
+        },
+        {
+          "topic_label": "330"
+        },
+        {
+          "topic_label": "333"
+        },
+        {
+          "topic_label": "370"
+        },
+        {
+          "topic_label": "370: Erziehung"
+        },
+        {
+          "topic_label": "4. Education"
+        },
+        {
+          "topic_label": "570"
+        },
+        {
+          "topic_label": "577"
+        },
+        {
+          "topic_label": "6. Clean water"
+        },
+        {
+          "topic_label": "613"
+        },
+        {
+          "topic_label": "80 and over"
+        },
+        {
+          "topic_label": "Acting"
+        },
+        {
+          "topic_label": "Adult"
+        },
+        {
+          "topic_label": "Affari"
+        },
+        {
+          "topic_label": "Aged"
+        },
+        {
+          "topic_label": "Anglo-Saxon"
+        },
+        {
+          "topic_label": "Animal Welfare"
+        },
+        {
+          "topic_label": "Animals"
+        },
+        {
+          "topic_label": "Antwort"
+        },
+        {
+          "topic_label": "Arctic Regions"
+        },
+        {
+          "topic_label": "Arsenic"
+        },
+        {
+          "topic_label": "Arte"
+        },
+        {
+          "topic_label": "Arti"
+        },
+        {
+          "topic_label": "Aufmerksamkeit"
+        },
+        {
+          "topic_label": "Batalha"
+        },
+        {
+          "topic_label": "Bernstein"
+        },
+        {
+          "topic_label": "Beverages"
+        },
+        {
+          "topic_label": "Bevölkerung"
+        },
+        {
+          "topic_label": "Biodiversity"
+        },
+        {
+          "topic_label": "Biology"
+        },
+        {
+          "topic_label": "Biomass"
+        },
+        {
+          "topic_label": "Burden test"
+        },
+        {
+          "topic_label": "Bücher"
+        },
+        {
+          "topic_label": "CCG"
+        },
+        {
+          "topic_label": "CPNP"
+        },
+        {
+          "topic_label": "California"
+        },
+        {
+          "topic_label": "Canada"
+        },
+        {
+          "topic_label": "Caseins"
+        },
+        {
+          "topic_label": "Cattle"
+        },
+        {
+          "topic_label": "Change"
+        },
+        {
+          "topic_label": "Chemistry"
+        },
+        {
+          "topic_label": "Civiltà"
+        },
+        {
+          "topic_label": "Cohort Studies"
+        },
+        {
+          "topic_label": "Comercio"
+        },
+        {
+          "topic_label": "Consistency"
+        },
+        {
+          "topic_label": "Cost of Illness"
+        },
+        {
+          "topic_label": "Data Descriptor"
+        },
+        {
+          "topic_label": "Demografia"
+        },
+        {
+          "topic_label": "Development"
+        },
+        {
+          "topic_label": "Diabetes"
+        },
+        {
+          "topic_label": "Dietary Sucrose"
+        },
+        {
+          "topic_label": "Digital media"
+        },
+        {
+          "topic_label": "Digitale Medien"
+        },
+        {
+          "topic_label": "Disease burden"
+        },
+        {
+          "topic_label": "Dizajn"
+        },
+        {
+          "topic_label": "Documentación"
+        },
+        {
+          "topic_label": "Ecology"
+        },
+        {
+          "topic_label": "Economia"
+        },
+        {
+          "topic_label": "Economic growth"
+        },
+        {
+          "topic_label": "Ecosystem"
+        },
+        {
+          "topic_label": "Education"
+        },
+        {
+          "topic_label": "Educazione"
+        },
+        {
+          "topic_label": "Emotions"
+        },
+        {
+          "topic_label": "Energy Intake"
+        },
+        {
+          "topic_label": "Epigenetics"
+        },
+        {
+          "topic_label": "Equality"
+        },
+        {
+          "topic_label": "Ethiopia"
+        },
+        {
+          "topic_label": "Eurace@unibi"
+        },
+        {
+          "topic_label": "Europe"
+        },
+        {
+          "topic_label": "Exchange"
+        },
+        {
+          "topic_label": "F1201-3799"
+        },
+        {
+          "topic_label": "Familien"
+        },
+        {
+          "topic_label": "Female"
+        },
+        {
+          "topic_label": "Finances"
+        },
+        {
+          "topic_label": "Firearms"
+        },
+        {
+          "topic_label": "Fisheries"
+        },
+        {
+          "topic_label": "Fishes"
+        },
+        {
+          "topic_label": "Food habits"
+        },
+        {
+          "topic_label": "Forest ecology"
+        },
+        {
+          "topic_label": "Forestry"
+        },
+        {
+          "topic_label": "Forests"
+        },
+        {
+          "topic_label": "Fresh Water"
+        },
+        {
+          "topic_label": "Förderschüler"
+        },
+        {
+          "topic_label": "GE1-350"
+        },
+        {
+          "topic_label": "GIS"
+        },
+        {
+          "topic_label": "Geo-statistics"
+        },
+        {
+          "topic_label": "Geography"
+        },
+        {
+          "topic_label": "Geschiedenis"
+        },
+        {
+          "topic_label": "Global Health"
+        },
+        {
+          "topic_label": "Groundwater"
+        },
+        {
+          "topic_label": "HA Statistics"
+        },
+        {
+          "topic_label": "HF5410-5417.5"
+        },
+        {
+          "topic_label": "Hand Injuries"
+        },
+        {
+          "topic_label": "Health"
+        },
+        {
+          "topic_label": "Health Services"
+        },
+        {
+          "topic_label": "Health Status"
+        },
+        {
+          "topic_label": "Homo Sapiens"
+        },
+        {
+          "topic_label": "Humans"
+        },
+        {
+          "topic_label": "Huwelijk"
+        },
+        {
+          "topic_label": "Igualtat"
+        },
+        {
+          "topic_label": "Improvements"
+        },
+        {
+          "topic_label": "Intuicija"
+        },
+        {
+          "topic_label": "Iron"
+        },
+        {
+          "topic_label": "Kalanchoe"
+        },
+        {
+          "topic_label": "Kapitał"
+        },
+        {
+          "topic_label": "Kazneno djelo"
+        },
+        {
+          "topic_label": "Kind"
+        },
+        {
+          "topic_label": "Kriging"
+        },
+        {
+          "topic_label": "LC-MS/MS"
+        },
+        {
+          "topic_label": "Lactoglobulins"
+        },
+        {
+          "topic_label": "Lehren"
+        },
+        {
+          "topic_label": "Lernen"
+        },
+        {
+          "topic_label": "Lezen"
+        },
+        {
+          "topic_label": "Literatuur"
+        },
+        {
+          "topic_label": "Logistic Models"
+        },
+        {
+          "topic_label": "Légendes"
+        },
+        {
+          "topic_label": "Macroéconomie"
+        },
+        {
+          "topic_label": "Male"
+        },
+        {
+          "topic_label": "Marine Biology"
+        },
+        {
+          "topic_label": "Marketing"
+        },
+        {
+          "topic_label": "Mass media"
+        },
+        {
+          "topic_label": "Medicine"
+        },
+        {
+          "topic_label": "Melhoramentos"
+        },
+        {
+          "topic_label": "Mexico"
+        },
+        {
+          "topic_label": "Middle Aged"
+        },
+        {
+          "topic_label": "Middle English"
+        },
+        {
+          "topic_label": "Milk"
+        },
+        {
+          "topic_label": "Milk Proteins"
+        },
+        {
+          "topic_label": "Monte Carlo"
+        },
+        {
+          "topic_label": "Mortality"
+        },
+        {
+          "topic_label": "Museu-casa"
+        },
+        {
+          "topic_label": "Museum object"
+        },
+        {
+          "topic_label": "Museália"
+        },
+        {
+          "topic_label": "Médias sociaux"
+        },
+        {
+          "topic_label": "Narrativa"
+        },
+        {
+          "topic_label": "Nauka i sztuka"
+        },
+        {
+          "topic_label": "Nephila spp."
+        },
+        {
+          "topic_label": "Obesity"
+        },
+        {
+          "topic_label": "Oceans and Seas"
+        },
+        {
+          "topic_label": "Ontología"
+        },
+        {
+          "topic_label": "Oppiminen"
+        },
+        {
+          "topic_label": "Otolith"
+        },
+        {
+          "topic_label": "Participation"
+        },
+        {
+          "topic_label": "Passeio"
+        },
+        {
+          "topic_label": "Peer Group"
+        },
+        {
+          "topic_label": "Pesticides"
+        },
+        {
+          "topic_label": "Phenotype"
+        },
+        {
+          "topic_label": "Phosphorus"
+        },
+        {
+          "topic_label": "Pisanje"
+        },
+        {
+          "topic_label": "Population"
+        },
+        {
+          "topic_label": "Predicación"
+        },
+        {
+          "topic_label": "Primary forests"
+        },
+        {
+          "topic_label": "Property"
+        },
+        {
+          "topic_label": "Publicações"
+        },
+        {
+          "topic_label": "Q"
+        },
+        {
+          "topic_label": "QA Mathematics"
+        },
+        {
+          "topic_label": "QALD"
+        },
+        {
+          "topic_label": "QH540-549.5"
+        },
+        {
+          "topic_label": "Quality of Life"
+        },
+        {
+          "topic_label": "Quality of life"
+        },
+        {
+          "topic_label": "R"
+        },
+        {
+          "topic_label": "Regression"
+        },
+        {
+          "topic_label": "Risk Factors"
+        },
+        {
+          "topic_label": "Rizik"
+        },
+        {
+          "topic_label": "République"
+        },
+        {
+          "topic_label": "Science"
+        },
+        {
+          "topic_label": "Sidewalk"
+        },
+        {
+          "topic_label": "Silicones"
+        },
+        {
+          "topic_label": "Smoking"
+        },
+        {
+          "topic_label": "Social Sciences"
+        },
+        {
+          "topic_label": "Stato"
+        },
+        {
+          "topic_label": "Sub-national"
+        },
+        {
+          "topic_label": "Superstizione"
+        },
+        {
+          "topic_label": "São Paulo"
+        },
+        {
+          "topic_label": "Tales"
+        },
+        {
+          "topic_label": "Teatteritaide"
+        },
+        {
+          "topic_label": "Technology"
+        },
+        {
+          "topic_label": "Time Factors"
+        },
+        {
+          "topic_label": "Trošak"
+        },
+        {
+          "topic_label": "Umfrage"
+        },
+        {
+          "topic_label": "Urbanization"
+        },
+        {
+          "topic_label": "Urbanização"
+        },
+        {
+          "topic_label": "Valeur"
+        },
+        {
+          "topic_label": "Verkiezing"
+        },
+        {
+          "topic_label": "Viewpoint"
+        },
+        {
+          "topic_label": "Violence"
+        },
+        {
+          "topic_label": "Waarde"
+        },
+        {
+          "topic_label": "Weapons"
+        },
+        {
+          "topic_label": "World Wide Web"
+        },
+        {
+          "topic_label": "arsenate"
+        },
+        {
+          "topic_label": "arsenic"
+        },
+        {
+          "topic_label": "biodiversity"
+        },
+        {
+          "topic_label": "biomass"
+        },
+        {
+          "topic_label": "broadcast media"
+        },
+        {
+          "topic_label": "climate change"
+        },
+        {
+          "topic_label": "climate policy"
+        },
+        {
+          "topic_label": "covid-19"
+        },
+        {
+          "topic_label": "cura pastorale"
+        },
+        {
+          "topic_label": "database"
+        },
+        {
+          "topic_label": "ddc:000"
+        },
+        {
+          "topic_label": "ddc:004"
+        },
+        {
+          "topic_label": "ddc:006"
+        },
+        {
+          "topic_label": "ddc:330"
+        },
+        {
+          "topic_label": "ddc:370"
+        },
+        {
+          "topic_label": "ddc:550"
+        },
+        {
+          "topic_label": "ddc:570"
+        },
+        {
+          "topic_label": "ddc:577"
+        },
+        {
+          "topic_label": "ddc:620"
+        },
+        {
+          "topic_label": "deliberation"
+        },
+        {
+          "topic_label": "diet"
+        },
+        {
+          "topic_label": "efficiency"
+        },
+        {
+          "topic_label": "environment"
+        },
+        {
+          "topic_label": "epidemiology"
+        },
+        {
+          "topic_label": "epigenetics"
+        },
+        {
+          "topic_label": "equality"
+        },
+        {
+          "topic_label": "fish biomass"
+        },
+        {
+          "topic_label": "forest ecology"
+        },
+        {
+          "topic_label": "forest science"
+        },
+        {
+          "topic_label": "forestry"
+        },
+        {
+          "topic_label": "genome-wide"
+        },
+        {
+          "topic_label": "influenza"
+        },
+        {
+          "topic_label": "intuition"
+        },
+        {
+          "topic_label": "iron"
+        },
+        {
+          "topic_label": "iron oxidation"
+        },
+        {
+          "topic_label": "kriging"
+        },
+        {
+          "topic_label": "lung function"
+        },
+        {
+          "topic_label": "metabolic range"
+        },
+        {
+          "topic_label": "milk quality"
+        },
+        {
+          "topic_label": "neurons"
+        },
+        {
+          "topic_label": "obesity"
+        },
+        {
+          "topic_label": "otolith"
+        },
+        {
+          "topic_label": "patents"
+        },
+        {
+          "topic_label": "phosphate"
+        },
+        {
+          "topic_label": "phosphorus"
+        },
+        {
+          "topic_label": "primary forests"
+        },
+        {
+          "topic_label": "public health"
+        },
+        {
+          "topic_label": "quiz"
+        },
+        {
+          "topic_label": "regression"
+        },
+        {
+          "topic_label": "sem-pls"
+        },
+        {
+          "topic_label": "sequestration"
+        },
+        {
+          "topic_label": "social history"
+        },
+        {
+          "topic_label": "stato"
+        },
+        {
+          "topic_label": "streaming video"
+        },
+        {
+          "topic_label": "surveillance"
+        },
+        {
+          "topic_label": "syntax"
+        },
+        {
+          "topic_label": "tam"
+        },
+        {
+          "topic_label": "technology"
+        },
+        {
+          "topic_label": "ugt"
+        },
+        {
+          "topic_label": "Σχέδιο"
+        },
+        {
+          "topic_label": "Драма"
+        },
+        {
+          "topic_label": "620: Ingenieurwissenschaften"
+        },
+        {
+          "topic_label": "climate change adaptation"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/socio"
+        },
+        {
+          "topic_label": "Συσκευές (Εραλδική)"
+        },
+        {
+          "topic_label": "Biofouling, Non-native species, Climate change, Assemblage structure, Plymouth"
+        },
+        {
+          "topic_label": "Web-based instruction"
+        },
+        {
+          "topic_label": "12. Responsible consumption"
+        },
+        {
+          "topic_label": "Familienforschung"
+        },
+        {
+          "topic_label": "Models, Statistical"
+        },
+        {
+          "topic_label": "statistical machine learning"
+        },
+        {
+          "topic_label": "silicone wristband"
+        },
+        {
+          "topic_label": "population, School-Age Population, Spatial dataset, Human population"
+        },
+        {
+          "topic_label": "technological capabilities"
+        },
+        {
+          "topic_label": "Erziehung, Schul- und Bildungswesen"
+        },
+        {
+          "topic_label": "Technology and civilization"
+        },
+        {
+          "topic_label": "Poverty Indicators"
+        },
+        {
+          "topic_label": "Argyrodes miniaceus"
+        },
+        {
+          "topic_label": "Innovation diffusion"
+        },
+        {
+          "topic_label": "AGR/15 Scienze e tecnologie alimentari"
+        },
+        {
+          "topic_label": "02 engineering and technology"
+        },
+        {
+          "topic_label": "11. Sustainability"
+        },
+        {
+          "topic_label": "Milk quality; statistical machine learning; Fourier-transform mid-infrared spectroscopy"
+        },
+        {
+          "topic_label": "user centered design"
+        },
+        {
+          "topic_label": "integrated model"
+        },
+        {
+          "topic_label": "Preuve (philosophie)"
+        },
+        {
+          "topic_label": "Devices (Heraldry)"
+        },
+        {
+          "topic_label": "Population Growth"
+        },
+        {
+          "topic_label": "14. Life underwater"
+        },
+        {
+          "topic_label": "Documentação museológica"
+        },
+        {
+          "topic_label": "absorptive capacity"
+        },
+        {
+          "topic_label": "0502 economics and business"
+        },
+        {
+          "topic_label": "Antarctic Regions"
+        },
+        {
+          "topic_label": "15. Life on land"
+        },
+        {
+          "topic_label": "06 humanities and the arts"
+        },
+        {
+          "topic_label": "0404 agricultural biotechnology"
+        },
+        {
+          "topic_label": "0105 earth and related environmental sciences"
+        },
+        {
+          "topic_label": "04 agricultural and veterinary sciences"
+        },
+        {
+          "topic_label": "5. Gender equality"
+        },
+        {
+          "topic_label": "Conservation biology"
+        },
+        {
+          "topic_label": "Dipterocarpaceae"
+        },
+        {
+          "topic_label": "Plants, Medicinal"
+        },
+        {
+          "topic_label": "Mortality -- trends"
+        },
+        {
+          "topic_label": "Gramática, comparativa e geral"
+        },
+        {
+          "topic_label": "Obesity -- economics -- epidemiology -- etiology"
+        },
+        {
+          "topic_label": "0303 health sciences"
+        },
+        {
+          "topic_label": "Gulf of California"
+        },
+        {
+          "topic_label": "Fourier transform mid-infrared spectroscopy"
+        },
+        {
+          "topic_label": "Structural optimization"
+        },
+        {
+          "topic_label": "agricultural intensification"
+        },
+        {
+          "topic_label": "Pesticide Residues"
+        },
+        {
+          "topic_label": "Environmental Monitoring"
+        },
+        {
+          "topic_label": "16. Peace & justice"
+        },
+        {
+          "topic_label": "Omitted Variable Bias"
+        },
+        {
+          "topic_label": "Sugar -- Health aspects"
+        },
+        {
+          "topic_label": "Schul- und Bildungswesen"
+        },
+        {
+          "topic_label": "Prediction accuracy"
+        },
+        {
+          "topic_label": "Difusão de inovações"
+        },
+        {
+          "topic_label": "Colecionadores e coleção"
+        },
+        {
+          "topic_label": "phenotypic performance"
+        },
+        {
+          "topic_label": "info:eu-repo/classification/ddc/577"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/scipo"
+        },
+        {
+          "topic_label": "Tandem Mass Spectrometry"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/edu"
+        },
+        {
+          "topic_label": "0211 other engineering and technologies"
+        },
+        {
+          "topic_label": "aktive Schulschwänzer"
+        },
+        {
+          "topic_label": "Agent (filozofia)"
+        },
+        {
+          "topic_label": "Chromatography, Liquid"
+        },
+        {
+          "topic_label": "Historic house museum"
+        },
+        {
+          "topic_label": "Кінематограф та мистецтво"
+        },
+        {
+          "topic_label": "01 natural sciences"
+        },
+        {
+          "topic_label": "mounted horse accident"
+        },
+        {
+          "topic_label": "Декламація"
+        },
+        {
+          "topic_label": "habitat complexity"
+        },
+        {
+          "topic_label": "Museum documentation"
+        },
+        {
+          "topic_label": "Urban development"
+        },
+        {
+          "topic_label": "Communication écrite"
+        },
+        {
+          "topic_label": "Selektionsmaßnahmen"
+        },
+        {
+          "topic_label": "Obras particulares (fonte)"
+        },
+        {
+          "topic_label": "Crime and Safety"
+        },
+        {
+          "topic_label": "no-take marine reserves"
+        },
+        {
+          "topic_label": "conservation biology"
+        },
+        {
+          "topic_label": "Exome sequencing"
+        },
+        {
+          "topic_label": "Λαογραφία"
+        },
+        {
+          "topic_label": "question answering"
+        },
+        {
+          "topic_label": "Interpersonal Relations"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/demo"
+        },
+        {
+          "topic_label": "0601 history and archaeology"
+        },
+        {
+          "topic_label": "Abhängigkeit des Bildungserfolgs von der sozialen Herkunft"
+        },
+        {
+          "topic_label": "Climate economics"
+        },
+        {
+          "topic_label": "Aged, 80 and over"
+        },
+        {
+          "topic_label": "semantic parsing"
+        },
+        {
+          "topic_label": "Ήθη και έθιμα"
+        },
+        {
+          "topic_label": "Conservation of Natural Resources"
+        },
+        {
+          "topic_label": "Gaussian process"
+        },
+        {
+          "topic_label": "Agent-based computational economics"
+        },
+        {
+          "topic_label": "03 medical and health sciences"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/droit"
+        },
+        {
+          "topic_label": "Obesity/economics/epidemiology/etiology"
+        },
+        {
+          "topic_label": "stable oxygen isotope"
+        },
+        {
+          "topic_label": "gene/protein recognition named entity recognition gene/protein name abbreviations natural language processing machine learning life sciences"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/art"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/anthro-se"
+        },
+        {
+          "topic_label": "Fourier-transform mid-infrared spectroscopy"
+        },
+        {
+          "topic_label": "Misspecification"
+        },
+        {
+          "topic_label": "M-PED/03 Didattica e pedagogia speciale"
+        },
+        {
+          "topic_label": "Dietary Sucrose/adverse effects/economics"
+        },
+        {
+          "topic_label": "Nutrition Surveys"
+        },
+        {
+          "topic_label": "prediction accuracy"
+        },
+        {
+          "topic_label": "innovation policy design"
+        },
+        {
+          "topic_label": "Linguaggio e linguaggi"
+        },
+        {
+          "topic_label": "Social Environment"
+        },
+        {
+          "topic_label": "Ekonomski razvoj"
+        },
+        {
+          "topic_label": "phosphorus removal"
+        },
+        {
+          "topic_label": "Συνήθεια"
+        },
+        {
+          "topic_label": "8. Economic growth"
+        },
+        {
+          "topic_label": "Fixed Effects Estimation"
+        },
+        {
+          "topic_label": "correlation function"
+        },
+        {
+          "topic_label": "Політологія"
+        },
+        {
+          "topic_label": "0405 other agricultural sciences"
+        },
+        {
+          "topic_label": "Bayesian inference"
+        },
+        {
+          "topic_label": "knowledge exchange"
+        },
+        {
+          "topic_label": "Surveys and Questionnaires"
+        },
+        {
+          "topic_label": "Utilisation du sol"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/phil"
+        },
+        {
+          "topic_label": "Sciences bio-médicales et agricoles"
+        },
+        {
+          "topic_label": "knowledge production"
+        },
+        {
+          "topic_label": "Information Systems"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/geo"
+        },
+        {
+          "topic_label": "Population Dynamics"
+        },
+        {
+          "topic_label": "Théorie de la connaissance"
+        },
+        {
+          "topic_label": "Sweetening Agents -- adverse effects -- economics"
+        },
+        {
+          "topic_label": "Directed technological change"
+        },
+        {
+          "topic_label": "Creixement econòmic"
+        },
+        {
+          "topic_label": "Machine Learning"
+        },
+        {
+          "topic_label": "Inflammatory Bowel Disease"
+        },
+        {
+          "topic_label": "13. Climate action"
+        },
+        {
+          "topic_label": "Εισόδημα"
+        },
+        {
+          "topic_label": "historical linguistics"
+        },
+        {
+          "topic_label": "selective logging"
+        },
+        {
+          "topic_label": "Population distribution"
+        },
+        {
+          "topic_label": "technology-science links"
+        },
+        {
+          "topic_label": "0101 mathematics"
+        },
+        {
+          "topic_label": "metacarpal trauma"
+        },
+        {
+          "topic_label": "Technological capabilities"
+        },
+        {
+          "topic_label": "pesticide residue"
+        },
+        {
+          "topic_label": "Computer Science Applications"
+        },
+        {
+          "topic_label": "dual process models"
+        },
+        {
+          "topic_label": "Statistics and Probability"
+        },
+        {
+          "topic_label": "Citizen forecasting; election forecasting; US presidential elections"
+        },
+        {
+          "topic_label": "Desenvolupament urbà"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/psy"
+        },
+        {
+          "topic_label": "Alzheimer's disease"
+        },
+        {
+          "topic_label": "Marketing. Distribution of products"
+        },
+        {
+          "topic_label": "Supervisionsentzug"
+        },
+        {
+          "topic_label": "online streaming"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/archi"
+        },
+        {
+          "topic_label": "Landsat satellite"
+        },
+        {
+          "topic_label": "Nutrition Surveys/economics/trends"
+        },
+        {
+          "topic_label": "personal passive sampling device"
+        },
+        {
+          "topic_label": "diabetes mellitus"
+        },
+        {
+          "topic_label": "0509 other social sciences"
+        },
+        {
+          "topic_label": "0508 media and communications"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/hisphilso"
+        },
+        {
+          "topic_label": "cardiovascular diseases"
+        },
+        {
+          "topic_label": "0305 other medical science"
+        },
+        {
+          "topic_label": "JF Political institutions (General)"
+        },
+        {
+          "topic_label": "Beverages/adverse effects/economics"
+        },
+        {
+          "topic_label": "Nutrition Surveys -- economics -- trends"
+        },
+        {
+          "topic_label": "Sweetening Agents"
+        },
+        {
+          "topic_label": "Qualitative Studie"
+        },
+        {
+          "topic_label": "stable carbon isotope"
+        },
+        {
+          "topic_label": "550 Geowissenschaften"
+        },
+        {
+          "topic_label": "Food -- Sugar content"
+        },
+        {
+          "topic_label": "Γραφικές τέχνες"
+        },
+        {
+          "topic_label": "Obras particulares (source)"
+        },
+        {
+          "topic_label": "Kalanchoe petitiana"
+        },
+        {
+          "topic_label": "HB Economic Theory"
+        },
+        {
+          "topic_label": "Cabo Pulmo National Park"
+        },
+        {
+          "topic_label": "technology diffusion"
+        },
+        {
+          "topic_label": "Global Health/economics/trends"
+        },
+        {
+          "topic_label": "Eltern-Kind-Beziehung"
+        },
+        {
+          "topic_label": "Σημασιολογία"
+        },
+        {
+          "topic_label": "Technological learning"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/info"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/eco"
+        },
+        {
+          "topic_label": "Biofouling, Community composition and diversity, community trajectory, California"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/lang"
+        },
+        {
+          "topic_label": "Plots (Drama, novel, etc.)"
+        },
+        {
+          "topic_label": "Tehnologija i civilizacija"
+        },
+        {
+          "topic_label": "Technology transition"
+        },
+        {
+          "topic_label": "Dasymetric disaggregation"
+        },
+        {
+          "topic_label": "Medicine, Traditional"
+        },
+        {
+          "topic_label": "cleptoparasite density"
+        },
+        {
+          "topic_label": "0302 clinical medicine"
+        },
+        {
+          "topic_label": "Autonomieentwicklung"
+        },
+        {
+          "topic_label": "Mortality/trends"
+        },
+        {
+          "topic_label": "Ingenieurwissenschaften"
+        },
+        {
+          "topic_label": "Statistics, Probability and Uncertainty"
+        },
+        {
+          "topic_label": "forest management"
+        },
+        {
+          "topic_label": "Sociale geschiedenis"
+        },
+        {
+          "topic_label": "Sweetening Agents/adverse effects/economics"
+        },
+        {
+          "topic_label": "[SDV.EE] Life Sciences [q-bio]/Ecology, environment"
+        },
+        {
+          "topic_label": "wilderness wound care"
+        },
+        {
+          "topic_label": "0506 political science"
+        },
+        {
+          "topic_label": "Global Health -- economics -- trends"
+        },
+        {
+          "topic_label": "Research Article"
+        },
+        {
+          "topic_label": "Beverages -- adverse effects -- economics"
+        },
+        {
+          "topic_label": "0602 languages and literature"
+        },
+        {
+          "topic_label": "agent-based model"
+        },
+        {
+          "topic_label": "Dietary Sucrose -- adverse effects -- economics"
+        },
+        {
+          "topic_label": "aquatic chemistry"
+        },
+        {
+          "topic_label": "Liberdade (neighborhood)"
+        },
+        {
+          "topic_label": "environmental science"
+        },
+        {
+          "topic_label": "0106 biological sciences"
+        },
+        {
+          "topic_label": "Teologia pastorale"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/manag"
+        },
+        {
+          "topic_label": "Das Neue <Philosophie>"
+        },
+        {
+          "topic_label": "LB Theory and practice of education"
+        },
+        {
+          "topic_label": "Cardiovascular system -- Diseases"
+        },
+        {
+          "topic_label": "Early Childhood Education and Care (ECEC) - Compulsory School Education (CSE) - transitions - European Member States"
+        },
+        {
+          "topic_label": "Prospective Studies"
+        },
+        {
+          "topic_label": "0507 social and economic geography"
+        },
+        {
+          "topic_label": "Sinais e símbolos"
+        },
+        {
+          "topic_label": "environmental exposure"
+        },
+        {
+          "topic_label": "Aptenodytes forsteri"
+        },
+        {
+          "topic_label": "history of emotions"
+        },
+        {
+          "topic_label": "knowledge mobilization"
+        },
+        {
+          "topic_label": "Water Pollutants, Chemical"
+        },
+        {
+          "topic_label": "Inflammatory Bowel Diseases"
+        },
+        {
+          "topic_label": "0501 psychology and cognitive sciences"
+        },
+        {
+          "topic_label": "Energy and Environment"
+        },
+        {
+          "topic_label": "European primary forest"
+        },
+        {
+          "topic_label": "Correlation function"
+        },
+        {
+          "topic_label": "05 social sciences"
+        },
+        {
+          "topic_label": "Environmental sciences"
+        },
+        {
+          "topic_label": "Εμπειρία"
+        },
+        {
+          "topic_label": "Design of statistical experiments"
+        },
+        {
+          "topic_label": "Соціальні науки"
+        },
+        {
+          "topic_label": "Заможність"
+        },
+        {
+          "topic_label": "technology acceptance model"
+        },
+        {
+          "topic_label": "Sabah Biodiversity Experiment"
+        },
+        {
+          "topic_label": "Tehničko obrazovanje"
+        },
+        {
+          "topic_label": "Gaussian processes"
+        },
+        {
+          "topic_label": "0301 basic medicine"
+        },
+        {
+          "topic_label": "Навчальні системи"
+        },
+        {
+          "topic_label": "Latin America. Spanish America"
+        },
+        {
+          "topic_label": "Sugars in human nutrition"
+        },
+        {
+          "topic_label": "uses and gratifications theory"
+        },
+        {
+          "topic_label": "0401 agriculture, forestry, and fisheries"
+        },
+        {
+          "topic_label": "Library and Information Sciences"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/stat"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/envir"
+        },
+        {
+          "topic_label": "Computers and Technology"
+        },
+        {
+          "topic_label": "Liberdade (bairro)"
+        },
+        {
+          "topic_label": "Databases, Factual"
+        },
+        {
+          "topic_label": "Databases, Factual; Europe; Conservation of Natural Resources; Forests"
+        },
+        {
+          "topic_label": "https://gotriple.eu/ontology/triple/Discipline/museo"
+        },
+        {
+          "topic_label": "Wilderness Medicine"
+        },
+        {
+          "topic_label": "[SDV.EE]Life Sciences [q-bio]/Ecology"
+        }
+      ]
+    },
+    {
+      "id": "CQ_022",
+      "question": "I have to do a research on a specific place, or a specific geographic area, defined by keywords, and I need dataset for a specific subject, also defined by keywords. Give me the references of all the available datasets for that place and subject that are present in all the graphs.",
+      "file": "cqs/CQ_022.rq",
+      "status": "answered",
+      "seconds": 0.059,
+      "count": 1,
+      "variables": [
+        "pid_value"
+      ],
+      "rows": [
+        {
+          "pid_value": "10.5258/soton/d2414"
+        }
+      ]
+    },
+    {
+      "id": "CQ_024",
+      "question": "I want to know what authors are most key to read in relation to topic x and whom generally publish in immediate open access.",
+      "file": "cqs/CQ_024.rq",
+      "status": "answered",
+      "seconds": 2.89,
+      "count": 10,
+      "variables": [
+        "author_name",
+        "tot_citations"
+      ],
+      "rows": [
+        {
+          "author_name": "Sala, Enric",
+          "tot_citations": "536"
+        },
+        {
+          "author_name": "Watson, Reg A.",
+          "tot_citations": "317"
+        },
+        {
+          "author_name": "Pauly, Daniel",
+          "tot_citations": "317"
+        },
+        {
+          "author_name": "Swartz, Wilf",
+          "tot_citations": "317"
+        },
+        {
+          "author_name": "Watson, Robert",
+          "tot_citations": "317"
+        },
+        {
+          "author_name": "Tracey, Sean",
+          "tot_citations": "317"
+        },
+        {
+          "author_name": "Mascareñas-Osorio, Ismael",
+          "tot_citations": "219"
+        },
+        {
+          "author_name": "Galland, Grantly R.",
+          "tot_citations": "219"
+        },
+        {
+          "author_name": "Ezcurra, Exequiel",
+          "tot_citations": "219"
+        },
+        {
+          "author_name": "Erisman, Brad",
+          "tot_citations": "219"
+        }
+      ]
+    },
+    {
+      "id": "CQ_043",
+      "question": "I want the list of journal papers which metadata consist the keywords {diamond oa, diamond Open Access model, Diamond business model}.",
+      "file": "cqs/CQ_043.rq",
+      "status": "answered",
+      "seconds": 0.056,
+      "count": 6,
+      "variables": [
+        "work",
+        "title",
+        "keyword"
+      ],
+      "rows": [
+        {
+          "work": "https://w3id.org/oc/meta/br/0610328099",
+          "title": "An Analysis Of Variance Test For Normality (Complete Samples)",
+          "keyword": "diamond oa"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/0605641954",
+          "title": "Marine Prosperity Areas: A Framework For Aligning Ecological Restoration And Human Well-Being Using Area-Based Protections",
+          "keyword": "diamond oa"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/0605416599",
+          "title": "Marine Protected Areas That Preserve Trophic Cascades Promote Resilience Of Kelp Forests To Marine Heatwaves",
+          "keyword": "diamond oa"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/0605416599",
+          "title": "Marine Protected Areas That Preserve Trophic Cascades Promote Resilience Of Kelp Forests To Marine Heatwaves",
+          "keyword": "diamond open access model"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/0605416599",
+          "title": "Marine Protected Areas That Preserve Trophic Cascades Promote Resilience Of Kelp Forests To Marine Heatwaves",
+          "keyword": "diamond business model"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06101497387",
+          "title": "Multivariate Relative Importance: Extending Relative Weight Analysis To Multivariate Criterion Spaces.",
+          "keyword": "diamond business model"
+        }
+      ]
+    },
+    {
+      "id": "CQ_051",
+      "question": "Which resources in the system identify societal issues linked to the SDGs for a specific geographic area (e.g., city, country, or region)?",
+      "file": "cqs/CQ_051.rq",
+      "status": "answered",
+      "seconds": 0.01,
+      "count": 1,
+      "variables": [
+        "work",
+        "title"
+      ],
+      "rows": [
+        {
+          "work": "https://w3id.org/oc/meta/br/060293588",
+          "title": "Data from: Deliberation favours social efficiency by making people disregard their relative shares: evidence from USA and India"
+        }
+      ]
+    },
+    {
+      "id": "CQ_054_a",
+      "question": "Which outputs in the system are classified under Library and Information Science?",
+      "file": "cqs/CQ_054_a.rq",
+      "status": "answered",
+      "seconds": 8.186,
+      "count": 16,
+      "variables": [
+        "work",
+        "title",
+        "year",
+        "type"
+      ],
+      "rows": [
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-08-17T00:00:00",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-01-01",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-08-01",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-08-17",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-09-05",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-09-19",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-09-30",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "year": "2021-12-01",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-08-17T00:00:00",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-01-01",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-08-01",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-08-17",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-09-05",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-09-19",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-09-30",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "year": "2021-12-01",
+          "type": "http://purl.org/spar/fabio/ScholarlyWork"
+        }
+      ]
+    },
+    {
+      "id": "CQ_054_b",
+      "question": "Which outputs in the system are classified under Library and Information Science?",
+      "file": "cqs/CQ_054_b.rq",
+      "status": "empty",
+      "seconds": 0.0,
+      "count": 0,
+      "variables": [
+        "work",
+        "title"
+      ],
+      "rows": []
+    },
+    {
+      "id": "CQ_056",
+      "question": "Which authors are most frequently publishing on these topics?",
+      "file": "cqs/CQ_056.rq",
+      "status": "answered",
+      "seconds": 0.006,
+      "count": 20,
+      "variables": [
+        "author_name",
+        "publications"
+      ],
+      "rows": [
+        {
+          "author_name": "Sala, Enric",
+          "publications": "2"
+        },
+        {
+          "author_name": "Buchwald, Erik",
+          "publications": "1"
+        },
+        {
+          "author_name": "Atauri, José A.",
+          "publications": "1"
+        },
+        {
+          "author_name": "Pauly, Daniel",
+          "publications": "1"
+        },
+        {
+          "author_name": "Stillhard, Jonas",
+          "publications": "1"
+        },
+        {
+          "author_name": "Ibisch, Pierre L",
+          "publications": "1"
+        },
+        {
+          "author_name": "Swartz, Wilf",
+          "publications": "1"
+        },
+        {
+          "author_name": "Kiš, Alen",
+          "publications": "1"
+        },
+        {
+          "author_name": "Pisek, Rok",
+          "publications": "1"
+        },
+        {
+          "author_name": "Mikoláš, Martin",
+          "publications": "1"
+        },
+        {
+          "author_name": "Szwagrzyk, Jerzy",
+          "publications": "1"
+        },
+        {
+          "author_name": "Zagidullina, Asiya",
+          "publications": "1"
+        },
+        {
+          "author_name": "Ruete, Alejandro",
+          "publications": "1"
+        },
+        {
+          "author_name": "Diku, Abdulla",
+          "publications": "1"
+        },
+        {
+          "author_name": "Zlatanov, Tzvetan",
+          "publications": "1"
+        },
+        {
+          "author_name": "Luiz Henrique Nunes",
+          "publications": "1"
+        },
+        {
+          "author_name": "Panayotov, Momchil",
+          "publications": "1"
+        },
+        {
+          "author_name": "Garbarino, Matteo",
+          "publications": "1"
+        },
+        {
+          "author_name": "Mikac, Stjepan",
+          "publications": "1"
+        },
+        {
+          "author_name": "Larrieu, Laurent",
+          "publications": "1"
+        }
+      ]
+    },
+    {
+      "id": "CQ_060",
+      "question": "I want to find research papers (articles, books) that contain a set of keywords and were funded by the Horizon project.",
+      "file": "cqs/CQ_060.rq",
+      "status": "answered",
+      "seconds": 0.024,
+      "count": 2,
+      "variables": [
+        "work",
+        "title",
+        "project_name"
+      ],
+      "rows": [
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "project_name": "Forests and CO"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
+          "project_name": "Forests and CO"
+        }
+      ]
+    }
+  ]
+}

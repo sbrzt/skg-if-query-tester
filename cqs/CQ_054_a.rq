@@ -1,0 +1,25 @@
+# id: CQ_054_a
+# question:
+#   Which outputs in the system are classified under Library and Information Science?
+
+
+PREFIX bido: <http://purl.org/spar/bido/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?work ?title ?year ?type
+WHERE {
+    ?work a fabio:Work ;
+        bido:holdsBibliometricDataInTime [
+            bido:withBibliometricData [
+                a fabio:SubjectTerm ;
+                skos:prefLabel ?subject
+            ]
+        ] .
+    FILTER (STR(?subject) = "Library and Information Sciences" )                # had to remove LCASE and change the keyword string
+    OPTIONAL { ?work dcterms:title ?title }
+    OPTIONAL { ?work frbr:realization [ dcterms:issued ?year ] }
+    OPTIONAL { ?work a ?type FILTER(?type != fabio:Work) }
+}

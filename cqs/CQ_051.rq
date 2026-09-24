@@ -1,0 +1,21 @@
+# id: CQ_051
+# question:
+#   Which resources in the system identify societal issues linked to the SDGs for a
+#   specific geographic area (e.g., city, country, or region)?
+
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+
+SELECT DISTINCT ?work ?title
+WHERE {
+    VALUES ?sdg_keyword { "poverty" }              # e.g. "poverty", "climate action", "gender equality"
+    VALUES ?geo_keyword { "Greece" }               # e.g. "Greece", "Athens", "Mediterranean"
+    ?work a fabio:Work ;
+        prism:keyword ?sdg_keyword ;               # ⚠ prism:keyword on a Work = proposed SKG-IF extension
+        prism:keyword ?geo_keyword ;
+        dcterms:title ?title .
+}
+
+### added some keywords manually

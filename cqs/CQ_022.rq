@@ -1,0 +1,35 @@
+# id: CQ_022
+# question:
+#   I have to do a research on a specific place, or a specific geographic area, defined by
+#   keywords, and I need dataset for a specific subject, also defined by keywords. Give me the
+#   references of all the available datasets for that place and subject that are present in
+#   all the graphs.
+
+PREFIX bido: <http://purl.org/spar/bido/>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?pid_value
+WHERE {
+    VALUES ?subject_keyword {"climate"}
+    VALUES ?place_keyword {"plymouth"}
+    ?dataset a fabio:Dataset .
+     ?dataset bido:holdsBibliometricDataInTime [
+            bido:withBibliometricData [
+               skos:prefLabel ?topic_label
+            ]
+     ] .
+     FILTER(CONTAINS(LCASE(STR(?topic_label)), ?subject_keyword))
+     ?dataset bido:holdsBibliometricDataInTime [
+         bido:withBibliometricData [
+            skos:prefLabel ?place_label
+            ]
+     ] .
+     FILTER(CONTAINS(LCASE(STR(?place_label)), ?place_keyword))
+     ?dataset datacite:hasIdentifier [
+         literal:hasLiteralValue ?pid_value ;
+         datacite:usesIdentifierScheme datacite:doi
+     ] .
+}

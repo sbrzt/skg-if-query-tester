@@ -1,0 +1,25 @@
+# id: CQ_060
+# question:
+#   I want to find research papers (articles, books) that contain a set of keywords and
+#   were funded by the Horizon project.
+
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frapo: <http://purl.org/cerif/frapo/>
+PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+
+SELECT DISTINCT ?work ?title ?project_name
+WHERE {
+    VALUES ?keyword { "power" "poverty" }
+    ?work a fabio:Work ;
+        prism:keyword ?keyword ;             # ⚠ prism:keyword on a Work = proposed SKG-IF extension
+        dcterms:title ?title ;
+        frapo:isFundedBy ?grant .
+    ?grant a frapo:Grant ;
+        frapo:hasCallIdentifier ?call .      # funding stream — e.g. a Horizon Europe call
+    FILTER ( CONTAINS(STR(?call), "H2020") )                     # removed LCASE and changed keyword string to H2020
+    OPTIONAL { ?grant frapo:hasAcronym ?grant_acronym }
+    OPTIONAL { ?grant dcterms:title ?grant_title }
+    BIND ( COALESCE(?grant_acronym, ?grant_title) AS ?project_name )
+}

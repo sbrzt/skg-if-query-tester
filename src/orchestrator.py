@@ -17,6 +17,7 @@ class Harvester:
         self.workers = workers
         self.streamers = [p for p in self.providers if "stream" in p.capabilities]
         self.lookups = [p for p in self.providers if "lookup" in p.capabilities]
+        self.citers = [p for p in self.providers if "citations" in p.capabilities]
         if not self.streamers:
             raise ValueError(
                 "No stream provider"
@@ -61,13 +62,66 @@ class Harvester:
         bundles: list[dict[str, Any]]
         ) -> list[dict[str, Any]]:
         """Complete already harvested records with the lookup providers they are missing."""
+        main = [b for b in bundles if not b.get("context")]
         with ThreadPoolExecutor(max_workers=self.workers) as executor:
-            return list(tqdm(executor.map(self._lookup_missing, bundles), total=len(bundles)))
+            list(tqdm(executor.map(self._lookup_missing, main), total=len(main)))
+        return self.add_citations(bundles)
+
+    def _fetch_citations(
+        self,
+        bundle: dict[str, Any]
+        ) -> list[tuple[BaseSKGProvider, dict[str, Any]]]:
+        found = []
+        for p in self.citers:
+            record = bundle["sources"].get(p.name)
+            if record and p.name not in bundle.get("citations_from", []):
+                products = p.fetch_citations(record)
+                if products is None:  # failed: retried by the next run
+                    continue
+                found.extend((p, product) for product in products)
+                bundle.setdefault("citations_from", []).append(p.name)
+        return found
+
+    def add_citations(
+        self,
+        bundles: list[dict[str, Any]]
+        ) -> list[dict[str, Any]]:
+        """Add the products citing, or cited by, the harvested ones as citation context.
+
+        Context products are single-source records marked with "context": "citation": they
+        make citations resolvable (types, identifiers) without being enriched themselves.
+        """
+        if not self.citers:
+            return bundles
+        known = {
+            record.get("local_identifier")
+            for b in bundles for record in b["sources"].values()
+        }
+        main = [b for b in bundles if not b.get("context")]
+        with ThreadPoolExecutor(max_workers=self.workers) as executor:
+            found = list(tqdm(executor.map(self._fetch_citations, main), total=len(main)))
+        for provider, product in (pair for pairs in found for pair in pairs):
+            if product.get("local_identifier") in known:
+                continue
+            known.add(product.get("local_identifier"))
+            bundles.append({
+                "doi": provider.extract_doi(product),
+                "context": "citation",
+                "sources": {provider.name: product},
+            })
+        return bundles
 
     def run(
         self,
         target_matches: int = 50,
         page_size: int = 100
+        ) -> list[dict[str, Any]]:
+        return self.add_citations(self._harvest(target_matches, page_size))
+
+    def _harvest(
+        self,
+        target_matches: int,
+        page_size: int
         ) -> list[dict[str, Any]]:
         materialized: list[dict[str, Any]] = []
         seen_dois: set[str] = set()

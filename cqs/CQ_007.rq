@@ -1,0 +1,71 @@
+# id: CQ_007
+# question:
+#   Given the PID of a publication, I want to align its bibliographic metadata across graphs,
+#   by also removing duplicated elements.
+
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX literal:  <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX fabio:    <http://purl.org/spar/fabio/>
+PREFIX frbr:     <http://purl.org/vocab/frbr/core#>
+PREFIX pro:      <http://purl.org/spar/pro/>
+
+SELECT DISTINCT ?field ?canonicalValue
+WHERE {
+  {
+    ?id_1 a datacite:Identifier ; literal:hasLiteralValue "10.1108/sjme-04-2020-0074" .
+    ?work datacite:hasIdentifier ?id_1 ; a fabio:ScholarlyWork .
+    
+    ?work dcterms:title ?rawValue .
+    BIND("title" AS ?field)
+    BIND(REPLACE(STR(?rawValue), "^\\s+|\\s+$", "") AS ?canonicalValue)
+  }
+  UNION
+  {
+    ?id_2 a datacite:Identifier ; literal:hasLiteralValue "10.1108/sjme-04-2020-0074" .
+    ?work datacite:hasIdentifier ?id_2 ; a fabio:ScholarlyWork .
+    
+    ?work dcterms:issued ?rawValue .
+    BIND("date" AS ?field)
+    BIND(REPLACE(STR(?rawValue), "^\\s+|\\s+$", "") AS ?canonicalValue)
+  }
+  UNION
+  {
+    ?id_3 a datacite:Identifier ; literal:hasLiteralValue "10.1108/sjme-04-2020-0074" .
+    ?work datacite:hasIdentifier ?id_3 ; a fabio:ScholarlyWork .
+    
+    ?work datacite:hasIdentifier ?identifier .
+    ?identifier literal:hasLiteralValue ?rawValue .
+    BIND("identifier" AS ?field)
+    BIND(REPLACE(STR(?rawValue), "^\\s+|\\s+$", "") AS ?canonicalValue)
+  }
+  UNION
+  {
+    ?id_4 a datacite:Identifier ; literal:hasLiteralValue "10.1108/sjme-04-2020-0074" .
+    ?work datacite:hasIdentifier ?id_4 ; a fabio:ScholarlyWork .
+    
+    ?work frbr:partOf ?rawValue .
+    BIND("isPartOf" AS ?field)
+    BIND(STR(?rawValue) AS ?canonicalValue)
+  }
+  UNION
+  {
+    ?id_5 a datacite:Identifier ; literal:hasLiteralValue "10.1108/sjme-04-2020-0074" .
+    ?work datacite:hasIdentifier ?id_5 ; a fabio:ScholarlyWork .
+    
+    ?work pro:isRelatedToRoleInTime ?roleInTime .
+    ?roleInTime pro:withRole pro:author ;
+                pro:isHeldBy ?rawValue .
+
+    OPTIONAL {
+      ?rawValue datacite:hasIdentifier ?authorId .
+      ?authorId datacite:usesIdentifierScheme datacite:orcid ;
+                literal:hasLiteralValue ?orcid .
+    }
+
+    BIND("creator" AS ?field)
+    BIND(COALESCE(CONCAT("orcid:", STR(?orcid)), STR(?rawValue)) AS ?canonicalValue)
+  }
+}
+ORDER BY ?field ?canonicalValue
+LIMIT 50

@@ -18,11 +18,19 @@ providers:
   
   - name: opencitations
     enabled: true
-    capabilities: [lookup]
+    capabilities: [lookup, citations]
+    # citation searches are slow: small pages keep each request under the server's gateway timeout
+    timeout: 300
+    citations_page_size: 20
     base_url: https://api.opencitations.net
     endpoints:
       resolver: /meta/v1/metadata/doi:{doi}
       record: /skg-if/v1/products/https://w3id.org/oc/meta/{local_id}
+      search: /skg-if/v1/products
+    # products citing / cited by a harvested product ({local_id} is its OpenCitations IRI)
+    citation_filters:
+      citing: cf.cites:{local_id}
+      cited: cf.cited_by:{local_id}
 
   - name: openaire
     enabled: true

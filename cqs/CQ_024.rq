@@ -1,0 +1,54 @@
+# id: CQ_024
+# question:
+#   I want to know what authors are most key to read in relation to topic x and whom generally
+#   publish in immediate open access.
+
+PREFIX bido: <http://purl.org/spar/bido/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX datacite: <http://purl.org/spar/datacite/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX pso: <http://purl.org/spar/pso/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?author_name (SUM(?citations) AS ?tot_citations)
+WHERE {
+    # each (article, author) once, however many open-access manifestations the article has
+    {
+        SELECT DISTINCT ?article ?author_name
+        WHERE {
+            VALUES ?topic_label {"01 natural sciences"}
+            ?article bido:holdsBibliometricDataInTime [
+                    bido:withBibliometricData [
+                        skos:prefLabel ?topic_label
+                    ]
+                ] ;
+                pro:isRelatedToRoleInTime [
+                    pro:withRole pro:author ;
+                    pro:isHeldBy [
+                        foaf:name ?author_name
+                    ]
+                ] .
+            FILTER EXISTS {
+                ?article frbr:realization [
+                    pso:holdsStatusInTime [
+                        pso:withStatus pso:open-access
+                    ]
+                ] .
+            }
+        }
+    }
+    {
+        SELECT ?article (COUNT(DISTINCT ?citing) AS ?citations)
+        WHERE {
+             ?citing cito:cites ?article .
+        }
+        GROUP BY ?article
+    }
+}
+GROUP BY ?author_name
+ORDER BY DESC(?tot_citations)
+LIMIT 10

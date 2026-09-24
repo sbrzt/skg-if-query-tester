@@ -1,0 +1,30 @@
+# id: CQ_056
+# question:
+#   Which authors are most frequently publishing on these topics?
+
+
+PREFIX bido: <http://purl.org/spar/bido/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX pro: <http://purl.org/spar/pro/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?author_name (COUNT(DISTINCT ?work) AS ?publications)
+WHERE {
+    VALUES ?topic_label { "Open Science" "Science" }
+    ?work a fabio:Work ;
+        bido:holdsBibliometricDataInTime [
+            bido:withBibliometricData [
+                a fabio:SubjectTerm ;
+                skos:prefLabel ?topic_label
+            ]
+        ] ;
+        pro:isRelatedToRoleInTime [
+            pro:withRole pro:author ;
+            pro:isHeldBy ?agent
+        ] .
+    ?agent foaf:name ?author_name .
+}
+GROUP BY ?author_name
+ORDER BY DESC(?publications)
+LIMIT 20
