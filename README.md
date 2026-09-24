@@ -18,6 +18,15 @@ Then, it generates a structured knowledge graph that models relationships betwee
 
 Finally, it tests the knowledge graph against a set of Competency Questions expressed as SPARQL queries.
 
+### Seed generation
+
+A list of _K_ (e.g., 1000) PIDs (e.g., DOIs) is generated as a seed index containing a reasonable amount of works that should be recorded in SKG-IF APIs, by sending a one-shot request to Crossref API using this code:
+
+```bash
+curl -s "https://api.crossref.org/works?filter=has-funder:true,has-abstract:true,has-references:true&rows=1000"   | jq -r '.message.items[].DOI' > seeds.txt
+```
+
+
 ## How to run
 
 First install [uv](https://docs.astral.sh/uv/):

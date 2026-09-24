@@ -1,0 +1,30 @@
+execution:
+  workers: 20
+  timeout: 8
+  target_matches: 50
+  stream_batch_size: 100
+  output_path: data.json
+
+matching_policy:
+  mode: all
+
+providers:
+  - name: gotriple
+    enabled: true
+    capabilities: [stream]
+    base_url: https://api.gotriple.eu
+    endpoints:
+      stream: /api/skg-if/products?filter=product_type:research data,product_type:literature
+  
+  - name: opencitations
+    enabled: true
+    capabilities: [lookup]
+    base_url: https://api.opencitations.net
+    endpoints:
+      resolver: /meta/v1/metadata/doi:{doi}
+      record: /skg-if/v1/products/https://w3id.org/oc/meta/{local_id}
+
+http:
+  headers:
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    Accept: application/json

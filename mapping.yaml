@@ -1,173 +1,1180 @@
 prefixes:
   bido: http://purl.org/spar/bido/
-  fabio: http://purl.org/spar/fabio/
+  cito: http://purl.org/spar/cito/
+  co: http://purl.org/co/
   datacite: http://purl.org/spar/datacite/
   dcterms: http://purl.org/dc/terms/
-  literal: http://www.essepuntato.it/2010/06/literalreification/
-  cito: http://purl.org/spar/cito/
+  fabio: http://purl.org/spar/fabio/
   foaf: http://xmlns.com/foaf/0.1/
+  frapo: http://purl.org/cerif/frapo/
   frbr: http://purl.org/vocab/frbr/core#
+  literal: http://www.essepuntato.it/2010/06/literalreification/
+  prism: http://prismstandard.org/namespaces/basic/2.0/
   pro: http://purl.org/spar/pro/
+  prov: http://www.w3.org/ns/prov#
   pso: http://purl.org/spar/pso/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
 
 mappings:
-  work:
+  research_product:
     sources:
-      - ['dataset.json~jsonpath', '$[?(@.record_type=="document")]']
-    s: https://example.org/wrk/$(doi)~iri
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          )
+          SELECT w_iri,
+                 COALESCE(CAST((CASE FIRST_VALUE(json_extract_string(p, '$.product_type') IGNORE NULLS) OVER (PARTITION BY w_iri ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) WHEN 'literature' THEN 'http://purl.org/spar/fabio/ScholarlyWork' WHEN 'research data' THEN 'http://purl.org/spar/fabio/Dataset' WHEN 'research software' THEN 'http://purl.org/spar/fabio/Software' WHEN 'software' THEN 'http://purl.org/spar/fabio/Software' END) AS VARCHAR), '') AS ptype
+          FROM works
+    s: $(w_iri)
     po:
-      - [a, fabio:ScholarlyWork]
-      - [dcterms:title, $(title)]
-      - [dcterms:issued, $(date_issued)]
-      - [frbr:realization, https://example.org/exp/$(doi)~iri]
-      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
+      - [a, fabio:Work]
+      - [a, '$(ptype)~iri']
 
-  expression:
+  edges:
     sources:
-      - ['dataset.json~jsonpath', '$[*]']
-    s: https://example.org/exp/$(doi)~iri
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          ),
+          ven AS (
+            SELECT m_iri, vv AS v, (CASE WHEN (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END)) END) AS v_iri FROM mfs WHERE vv IS NOT NULL
+          ),
+          ctb0 AS (
+            SELECT rec, prio, w_iri, ct.value AS c,
+                   CAST(ct.key AS INTEGER) + 1 + c_off AS n,
+                   json_extract(ct.value, '$.by') AS byv,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END)) END) AS own_a_iri,
+                   json_extract_string(ct.value, '$.role') AS role,
+                   -- normalised name: lowercase, no accents, no parentheses, letters/commas/spaces only
+                   trim(regexp_replace(regexp_replace(strip_accents(lower(regexp_replace(COALESCE(CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.name') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END, ''), '\(.*?\)', '', 'g'))), '[^a-z, ]', '', 'g'), '\s+', ' ', 'g')) AS nn
+            FROM works, json_each(p, '$.contributions') AS ct
+          ),
+          ctbn AS (
+            SELECT *,
+                   replace(replace(nn, ' ', ''), ',', '') AS cmp,
+                   replace(fpart, ' ', '') AS fam,
+                   split_part(fpart, ' ', 1) AS fam1,
+                   (CASE WHEN NOT contains(nn, ',') AND prio > 0 THEN regexp_extract(nn, '([a-z]+)$', 1) ELSE replace(fpart, ' ', '') END) AS fam_alt
+            FROM (
+              SELECT *,
+                     -- family part: 'Family, Given'; OpenCitations 'Family Given'; otherwise 'Given Family'
+                     (CASE WHEN contains(nn, ',') THEN trim(split_part(nn, ',', 1))
+                           WHEN prio = 0 THEN split_part(nn, ' ', 1)
+                           ELSE trim(regexp_replace(nn, '^[a-z]+ ?', '')) END) AS fpart,
+                     (CASE WHEN contains(nn, ',') THEN split_part(trim(split_part(nn, ',', 2)), ' ', 1)
+                           WHEN prio = 0 THEN split_part(nn, ' ', 2)
+                           WHEN contains(nn, ' ') THEN split_part(nn, ' ', 1)
+                           ELSE '' END) AS giv
+              FROM ctb0
+            )
+          ),
+          -- a secondary-source contributor is the same agent as a primary-source one (same work,
+          -- same role) when full names coincide (score 3), or family names coincide (2) or share the
+          -- first token (1) and the given names are compatible (one is a prefix of the other, e.g.
+          -- 'p' / 'philippe'); only the unique best candidate is kept
+          cand AS (
+            SELECT g.rec, g.n AS g_n, o.n AS o_n, o.own_a_iri AS o_a_iri,
+                   (CASE WHEN g.cmp = o.cmp THEN 3
+                         WHEN (g.fam = o.fam OR g.fam_alt = o.fam) THEN 2
+                         ELSE 1 END) AS score
+            FROM ctbn g JOIN ctbn o
+              ON g.rec = o.rec AND o.prio = 0 AND g.prio > 0 AND g.role IS NOT DISTINCT FROM o.role
+             AND g.cmp <> '' AND o.own_a_iri IS NOT NULL
+             AND (g.cmp = o.cmp
+                  OR ((g.fam = o.fam OR g.fam_alt = o.fam OR (g.fam1 <> '' AND (g.fam1 = o.fam1 OR g.fam_alt = o.fam1)))
+                      AND (g.giv = '' OR o.giv = '' OR starts_with(g.giv, o.giv) OR starts_with(o.giv, g.giv))))
+          ),
+          best AS (
+            SELECT rec, g_n, o_n, o_a_iri FROM cand
+            QUALIFY score = MAX(score) OVER (PARTITION BY rec, g_n)
+                AND COUNT(*) OVER (PARTITION BY rec, g_n, score) = 1
+          ),
+          ctb AS (
+            SELECT x.w_iri, x.c,
+                   x.w_iri || '/contribution/' || CAST(COALESCE(b.o_n, x.n) AS VARCHAR) AS c_iri,
+                   x.byv,
+                   COALESCE(b.o_a_iri, x.own_a_iri) AS a_iri,
+                   (b.o_n IS NOT NULL) AS dup
+            FROM ctbn x LEFT JOIN best b ON b.rec = x.rec AND b.g_n = x.n AND x.prio > 0
+          ),
+          aff AS (
+            SELECT c_iri, da.value AS av, (CASE WHEN (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END)) END) AS af_iri
+            FROM ctb, json_each((CASE WHEN json_type(json_extract(c, '$.declared_affiliations')) = 'ARRAY' THEN json_extract(c, '$.declared_affiliations') WHEN json_extract(c, '$.declared_affiliations') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(c, '$.declared_affiliations')) END)) AS da
+          ),
+          tps AS (
+            SELECT w_iri, tp.value AS t,
+                   w_iri || '/topic/' || CAST(CAST(tp.key AS INTEGER) + 1 + t_off AS VARCHAR) AS t_iri
+            FROM works, json_each(p, '$.topics') AS tp
+          ),
+          prv AS (
+            SELECT t_iri, t, pr.value AS pv,
+                   t_iri || '/provenance/' || CAST(CAST(pr.key AS INTEGER) + 1 AS VARCHAR) AS pv_iri,
+                   json_extract(pr.value, '$.associated_with') AS pav,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END)) END) AS pa_iri
+            FROM tps, json_each((CASE WHEN json_type(json_extract(t, '$.provenance')) = 'ARRAY' THEN json_extract(t, '$.provenance') WHEN json_extract(t, '$.provenance') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(t, '$.provenance')) END)) AS pr
+          ),
+          sts AS (
+            SELECT m_iri || '/' || k AS st_iri, m_iri, k,
+                   (CASE json_extract_string(sv, '$.status')
+              WHEN 'open' THEN 'http://purl.org/spar/pso/open-access'
+              WHEN 'closed' THEN 'http://purl.org/spar/pso/closed-access'
+              WHEN 'embargoed' THEN 'http://purl.org/spar/pso/embargoed'
+              WHEN 'restricted' THEN 'http://purl.org/spar/pso/restricted-access'
+              WHEN 'retricted' THEN 'http://purl.org/spar/pso/restricted-access'
+              WHEN 'unavailable' THEN 'http://purl.org/spar/pso/unpublished'
+              WHEN 'peer reviewed' THEN 'http://purl.org/spar/pso/peer-reviewed'
+              WHEN 'under review' THEN 'http://purl.org/spar/pso/under-review'
+            END) AS status_iri,
+                   json_extract_string(sv, '$.description') AS descr
+            FROM (
+              SELECT m_iri, 'access_rights' AS k, json_extract(m, '$.access_rights') AS sv FROM mfs
+              UNION ALL
+              SELECT m_iri, 'peer_review', json_extract(m, '$.peer_review') FROM mfs
+            ) WHERE sv IS NOT NULL
+          )
+          SELECT s, pred, obj FROM (
+            -- Research product -> manifestazioni, contributi, topic
+            SELECT w_iri AS s, 'http://purl.org/vocab/frbr/core#realization' AS pred, m_iri AS obj FROM mfs
+            UNION ALL SELECT w_iri, 'http://purl.org/spar/pro/isRelatedToRoleInTime', c_iri FROM ctb WHERE NOT dup
+            UNION ALL SELECT w_iri, 'http://purl.org/spar/bido/holdsBibliometricDataInTime', t_iri FROM tps
+            -- topic -> provenance
+            UNION ALL SELECT t_iri, 'http://www.w3.org/ns/prov#wasGeneratedBy', pv_iri FROM prv
+            -- contributo -> affiliazioni dichiarate
+            UNION ALL SELECT c_iri, 'http://purl.org/spar/pro/relatesToOrganization', af_iri FROM aff
+            -- manifestazione -> tipo, venue, pagine, stati, data source
+            UNION ALL SELECT m_iri, 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', json_extract_string(m, '$.type.class') FROM mfs
+            UNION ALL SELECT m_iri, 'http://purl.org/vocab/frbr/core#partOf', v_iri FROM ven
+            UNION ALL SELECT m_iri, 'http://purl.org/vocab/frbr/core#embodiment', m_iri || '/pages'
+                      FROM mfs WHERE json_extract(m, '$.biblio.pages') IS NOT NULL
+            UNION ALL SELECT m_iri, 'http://purl.org/spar/pso/holdsStatusInTime', st_iri FROM sts
+            UNION ALL SELECT m_iri, 'http://www.w3.org/ns/dcat#accessService',
+                             (CASE WHEN (CASE WHEN json_type(json_extract(m, '$.biblio.hosting_data_source')) = 'OBJECT' THEN json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$.local_identifier') ELSE json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(m, '$.biblio.hosting_data_source')) = 'OBJECT' THEN json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$.local_identifier') ELSE json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(m, '$.biblio.hosting_data_source')) = 'OBJECT' THEN json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$.local_identifier') ELSE json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(m, '$.biblio.hosting_data_source')) = 'OBJECT' THEN json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$.local_identifier') ELSE json_extract_string(json_extract(m, '$.biblio.hosting_data_source'), '$') END)) END) FROM mfs
+            -- relazioni tra research product (related_products), finanziamenti, organizzazioni
+            UNION ALL SELECT w_iri, 'http://purl.org/spar/cito/cites', (CASE WHEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END)) END)
+                      FROM works, json_each((CASE WHEN json_type(json_extract(p, '$.related_products.cites')) = 'ARRAY' THEN json_extract(p, '$.related_products.cites') WHEN json_extract(p, '$.related_products.cites') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(p, '$.related_products.cites')) END)) AS r
+            UNION ALL SELECT w_iri, 'http://purl.org/vocab/frbr/core#supplement', (CASE WHEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END)) END)
+                      FROM works, json_each((CASE WHEN json_type(json_extract(p, '$.related_products.is_supplemented_by')) = 'ARRAY' THEN json_extract(p, '$.related_products.is_supplemented_by') WHEN json_extract(p, '$.related_products.is_supplemented_by') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(p, '$.related_products.is_supplemented_by')) END)) AS r
+            UNION ALL SELECT w_iri, 'http://purl.org/spar/cito/isDocumentedBy', (CASE WHEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END)) END)
+                      FROM works, json_each((CASE WHEN json_type(json_extract(p, '$.related_products.is_documented_by')) = 'ARRAY' THEN json_extract(p, '$.related_products.is_documented_by') WHEN json_extract(p, '$.related_products.is_documented_by') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(p, '$.related_products.is_documented_by')) END)) AS r
+            UNION ALL SELECT w_iri, 'http://purl.org/vocab/frbr/core#revisionOf', (CASE WHEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END)) END)
+                      FROM works, json_each((CASE WHEN json_type(json_extract(p, '$.related_products.is_new_version_of')) = 'ARRAY' THEN json_extract(p, '$.related_products.is_new_version_of') WHEN json_extract(p, '$.related_products.is_new_version_of') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(p, '$.related_products.is_new_version_of')) END)) AS r
+            UNION ALL SELECT w_iri, 'http://purl.org/vocab/frbr/core#partOf', (CASE WHEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END)) END)
+                      FROM works, json_each((CASE WHEN json_type(json_extract(p, '$.related_products.is_part_of')) = 'ARRAY' THEN json_extract(p, '$.related_products.is_part_of') WHEN json_extract(p, '$.related_products.is_part_of') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(p, '$.related_products.is_part_of')) END)) AS r
+            UNION ALL SELECT w_iri, 'http://purl.org/cerif/frapo/isFundedBy', (CASE WHEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END)) END)
+                      FROM works, json_each((CASE WHEN json_type(json_extract(p, '$.funding')) = 'ARRAY' THEN json_extract(p, '$.funding') WHEN json_extract(p, '$.funding') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(p, '$.funding')) END)) AS r
+            UNION ALL SELECT w_iri, 'http://purl.org/dc/terms/relation', (CASE WHEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(r.value) = 'OBJECT' THEN json_extract_string(r.value, '$.local_identifier') ELSE json_extract_string(r.value, '$') END)) END)
+                      FROM works, json_each((CASE WHEN json_type(json_extract(p, '$.relevant_organisations')) = 'ARRAY' THEN json_extract(p, '$.relevant_organisations') WHEN json_extract(p, '$.relevant_organisations') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(p, '$.relevant_organisations')) END)) AS r
+          ) WHERE s IS NOT NULL AND obj IS NOT NULL
+    s: $(s)
     po:
-      - [a, fabio:Expression]
-      - [pso:holdsStatusInTime, https://example.org/pst/$(doi)~iri]
+      - p: $(pred)
+        o: $(obj)~iri
 
-  dataset:
-    sources:
-      - ['dataset.json~jsonpath', '$[?(@.record_type=="dataset")]']
-    s: https://example.org/wrk/$(doi)~iri
+  identifier_link:
+    sources: &ids_src
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          ),
+          ven AS (
+            SELECT m_iri, vv AS v, (CASE WHEN (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END)) END) AS v_iri FROM mfs WHERE vv IS NOT NULL
+          ),
+          ctb0 AS (
+            SELECT rec, prio, w_iri, ct.value AS c,
+                   CAST(ct.key AS INTEGER) + 1 + c_off AS n,
+                   json_extract(ct.value, '$.by') AS byv,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END)) END) AS own_a_iri,
+                   json_extract_string(ct.value, '$.role') AS role,
+                   -- normalised name: lowercase, no accents, no parentheses, letters/commas/spaces only
+                   trim(regexp_replace(regexp_replace(strip_accents(lower(regexp_replace(COALESCE(CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.name') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END, ''), '\(.*?\)', '', 'g'))), '[^a-z, ]', '', 'g'), '\s+', ' ', 'g')) AS nn
+            FROM works, json_each(p, '$.contributions') AS ct
+          ),
+          ctbn AS (
+            SELECT *,
+                   replace(replace(nn, ' ', ''), ',', '') AS cmp,
+                   replace(fpart, ' ', '') AS fam,
+                   split_part(fpart, ' ', 1) AS fam1,
+                   (CASE WHEN NOT contains(nn, ',') AND prio > 0 THEN regexp_extract(nn, '([a-z]+)$', 1) ELSE replace(fpart, ' ', '') END) AS fam_alt
+            FROM (
+              SELECT *,
+                     -- family part: 'Family, Given'; OpenCitations 'Family Given'; otherwise 'Given Family'
+                     (CASE WHEN contains(nn, ',') THEN trim(split_part(nn, ',', 1))
+                           WHEN prio = 0 THEN split_part(nn, ' ', 1)
+                           ELSE trim(regexp_replace(nn, '^[a-z]+ ?', '')) END) AS fpart,
+                     (CASE WHEN contains(nn, ',') THEN split_part(trim(split_part(nn, ',', 2)), ' ', 1)
+                           WHEN prio = 0 THEN split_part(nn, ' ', 2)
+                           WHEN contains(nn, ' ') THEN split_part(nn, ' ', 1)
+                           ELSE '' END) AS giv
+              FROM ctb0
+            )
+          ),
+          -- a secondary-source contributor is the same agent as a primary-source one (same work,
+          -- same role) when full names coincide (score 3), or family names coincide (2) or share the
+          -- first token (1) and the given names are compatible (one is a prefix of the other, e.g.
+          -- 'p' / 'philippe'); only the unique best candidate is kept
+          cand AS (
+            SELECT g.rec, g.n AS g_n, o.n AS o_n, o.own_a_iri AS o_a_iri,
+                   (CASE WHEN g.cmp = o.cmp THEN 3
+                         WHEN (g.fam = o.fam OR g.fam_alt = o.fam) THEN 2
+                         ELSE 1 END) AS score
+            FROM ctbn g JOIN ctbn o
+              ON g.rec = o.rec AND o.prio = 0 AND g.prio > 0 AND g.role IS NOT DISTINCT FROM o.role
+             AND g.cmp <> '' AND o.own_a_iri IS NOT NULL
+             AND (g.cmp = o.cmp
+                  OR ((g.fam = o.fam OR g.fam_alt = o.fam OR (g.fam1 <> '' AND (g.fam1 = o.fam1 OR g.fam_alt = o.fam1)))
+                      AND (g.giv = '' OR o.giv = '' OR starts_with(g.giv, o.giv) OR starts_with(o.giv, g.giv))))
+          ),
+          best AS (
+            SELECT rec, g_n, o_n, o_a_iri FROM cand
+            QUALIFY score = MAX(score) OVER (PARTITION BY rec, g_n)
+                AND COUNT(*) OVER (PARTITION BY rec, g_n, score) = 1
+          ),
+          ctb AS (
+            SELECT x.w_iri, x.c,
+                   x.w_iri || '/contribution/' || CAST(COALESCE(b.o_n, x.n) AS VARCHAR) AS c_iri,
+                   x.byv,
+                   COALESCE(b.o_a_iri, x.own_a_iri) AS a_iri,
+                   (b.o_n IS NOT NULL) AS dup
+            FROM ctbn x LEFT JOIN best b ON b.rec = x.rec AND b.g_n = x.n AND x.prio > 0
+          ),
+          aff AS (
+            SELECT c_iri, da.value AS av, (CASE WHEN (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END)) END) AS af_iri
+            FROM ctb, json_each((CASE WHEN json_type(json_extract(c, '$.declared_affiliations')) = 'ARRAY' THEN json_extract(c, '$.declared_affiliations') WHEN json_extract(c, '$.declared_affiliations') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(c, '$.declared_affiliations')) END)) AS da
+          ),
+          tps AS (
+            SELECT w_iri, tp.value AS t,
+                   w_iri || '/topic/' || CAST(CAST(tp.key AS INTEGER) + 1 + t_off AS VARCHAR) AS t_iri
+            FROM works, json_each(p, '$.topics') AS tp
+          ),
+          prv AS (
+            SELECT t_iri, t, pr.value AS pv,
+                   t_iri || '/provenance/' || CAST(CAST(pr.key AS INTEGER) + 1 AS VARCHAR) AS pv_iri,
+                   json_extract(pr.value, '$.associated_with') AS pav,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END)) END) AS pa_iri
+            FROM tps, json_each((CASE WHEN json_type(json_extract(t, '$.provenance')) = 'ARRAY' THEN json_extract(t, '$.provenance') WHEN json_extract(t, '$.provenance') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(t, '$.provenance')) END)) AS pr
+          ),
+          ags AS (
+            SELECT a_iri, byv AS a FROM ctb WHERE a_iri IS NOT NULL
+            UNION ALL
+            SELECT pa_iri, pav FROM prv WHERE pa_iri IS NOT NULL
+            UNION ALL
+            SELECT af_iri, av FROM aff WHERE af_iri IS NOT NULL
+          ),
+          h AS (
+            SELECT w_iri AS holder, i.value AS i FROM works, json_each(p, '$.identifiers') AS i
+            UNION ALL SELECT m_iri, i.value FROM mfs, json_each(m, '$.identifiers') AS i
+            UNION ALL SELECT a_iri, i.value FROM ags, json_each((CASE WHEN json_type(json_extract(a, '$.identifiers')) = 'ARRAY' THEN json_extract(a, '$.identifiers') WHEN json_extract(a, '$.identifiers') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(a, '$.identifiers')) END)) AS i
+            UNION ALL SELECT v_iri, i.value FROM ven, json_each((CASE WHEN json_type(json_extract(v, '$.identifiers')) = 'ARRAY' THEN json_extract(v, '$.identifiers') WHEN json_extract(v, '$.identifiers') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(v, '$.identifiers')) END)) AS i
+          )
+          SELECT COALESCE(CAST(holder AS VARCHAR), '') AS holder,
+                 'https://example.org/skg-if/data/identifier/' || url_encode(json_extract_string(i, '$.scheme')) || '/' || url_encode(json_extract_string(i, '$.value')) AS ident,
+                 'http://purl.org/spar/datacite/' || json_extract_string(i, '$.scheme') AS scheme,
+                 json_extract_string(i, '$.value') AS val
+          FROM h
+          WHERE json_extract_string(i, '$.scheme') IS NOT NULL AND json_extract_string(i, '$.value') IS NOT NULL
+    s: $(holder)
     po:
-      - [a, fabio:Dataset]
-      - [dcterms:title, $(title)]
-      - [dcterms:issued, $(date_issued)]
-      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
-
-  work_identifier:
-    sources:
-      - ['dataset.json~jsonpath', '$[*]']
-    s: https://example.org/idt/$(doi)~iri
+      - [datacite:hasIdentifier, '$(ident)~iri']
+ 
+  identifier:
+    sources: *ids_src
+    s: $(ident)
     po:
       - [a, datacite:Identifier]
-      - [datacite:usesIdentifierScheme, datacite:doi]
-      - [literal:hasLiteralValue, $(doi)]
+      - [datacite:usesIdentifierScheme, '$(scheme)~iri']
+      - [literal:hasLiteralValue, $(val)]
 
-  citing_entity:
+  contribution:
     sources:
-      - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
-    s: https://example.org/wrk/$(doi)~iri
-    po:
-      - [a, fabio:ScholarlyWork]
-      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
-
-  citing_identifier:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
-    s: https://example.org/idt/$(doi)~iri
-    po:
-      - [a, datacite:Identifier]
-      - [datacite:usesIdentifierScheme, datacite:doi]
-      - [literal:hasLiteralValue, $(doi)]
-
-  cited_entity:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
-    s: https://example.org/wrk/$(doi)~iri
-    po:
-      - [a, fabio:ScholarlyWork]
-      - [datacite:hasIdentifier, https://example.org/idt/$(doi)~iri]
-
-  cited_identifier:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
-    s: https://example.org/idt/$(doi)~iri
-    po:
-      - [a, datacite:Identifier]
-      - [datacite:usesIdentifierScheme, datacite:doi]
-      - [literal:hasLiteralValue, $(doi)]
-
-  is_cited_by_relation:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].citing_dois[*]']
-    s: https://example.org/wrk/$(related_doi)~iri
-    po: 
-      - [cito:cites, https://example.org/wrk/$(doi)~iri]
-  
-  cites_relation:
-    sources: 
-      - ['dataset.json~jsonpath', '$[*].cited_dois[*]']
-    s: https://example.org/wrk/$(doi)~iri
-    po:
-      - [cito:cites, https://example.org/wrk/$(related_doi)]
-
-  author:
-    sources: 
-      - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://example.org/ppl/$(orcid)~iri
-    po:
-      - [a, foaf:Person]
-      - [foaf:name, $(full_name)]
-      - [datacite:hasIdentifier, https://example.org/idt/$(orcid)~iri]
-
-  author_identifier:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://example.org/idt/$(orcid)~iri
-    po:
-      - [a, datacite:Identifier]
-      - [datacite:usesIdentifierScheme, datacite:orcid]
-      - [literal:hasLiteralValue, $(orcid)]
-
-  author_role:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://example.org/prl/$(orcid)~iri
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          ctb0 AS (
+            SELECT rec, prio, w_iri, ct.value AS c,
+                   CAST(ct.key AS INTEGER) + 1 + c_off AS n,
+                   json_extract(ct.value, '$.by') AS byv,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END)) END) AS own_a_iri,
+                   json_extract_string(ct.value, '$.role') AS role,
+                   -- normalised name: lowercase, no accents, no parentheses, letters/commas/spaces only
+                   trim(regexp_replace(regexp_replace(strip_accents(lower(regexp_replace(COALESCE(CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.name') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END, ''), '\(.*?\)', '', 'g'))), '[^a-z, ]', '', 'g'), '\s+', ' ', 'g')) AS nn
+            FROM works, json_each(p, '$.contributions') AS ct
+          ),
+          ctbn AS (
+            SELECT *,
+                   replace(replace(nn, ' ', ''), ',', '') AS cmp,
+                   replace(fpart, ' ', '') AS fam,
+                   split_part(fpart, ' ', 1) AS fam1,
+                   (CASE WHEN NOT contains(nn, ',') AND prio > 0 THEN regexp_extract(nn, '([a-z]+)$', 1) ELSE replace(fpart, ' ', '') END) AS fam_alt
+            FROM (
+              SELECT *,
+                     -- family part: 'Family, Given'; OpenCitations 'Family Given'; otherwise 'Given Family'
+                     (CASE WHEN contains(nn, ',') THEN trim(split_part(nn, ',', 1))
+                           WHEN prio = 0 THEN split_part(nn, ' ', 1)
+                           ELSE trim(regexp_replace(nn, '^[a-z]+ ?', '')) END) AS fpart,
+                     (CASE WHEN contains(nn, ',') THEN split_part(trim(split_part(nn, ',', 2)), ' ', 1)
+                           WHEN prio = 0 THEN split_part(nn, ' ', 2)
+                           WHEN contains(nn, ' ') THEN split_part(nn, ' ', 1)
+                           ELSE '' END) AS giv
+              FROM ctb0
+            )
+          ),
+          -- a secondary-source contributor is the same agent as a primary-source one (same work,
+          -- same role) when full names coincide (score 3), or family names coincide (2) or share the
+          -- first token (1) and the given names are compatible (one is a prefix of the other, e.g.
+          -- 'p' / 'philippe'); only the unique best candidate is kept
+          cand AS (
+            SELECT g.rec, g.n AS g_n, o.n AS o_n, o.own_a_iri AS o_a_iri,
+                   (CASE WHEN g.cmp = o.cmp THEN 3
+                         WHEN (g.fam = o.fam OR g.fam_alt = o.fam) THEN 2
+                         ELSE 1 END) AS score
+            FROM ctbn g JOIN ctbn o
+              ON g.rec = o.rec AND o.prio = 0 AND g.prio > 0 AND g.role IS NOT DISTINCT FROM o.role
+             AND g.cmp <> '' AND o.own_a_iri IS NOT NULL
+             AND (g.cmp = o.cmp
+                  OR ((g.fam = o.fam OR g.fam_alt = o.fam OR (g.fam1 <> '' AND (g.fam1 = o.fam1 OR g.fam_alt = o.fam1)))
+                      AND (g.giv = '' OR o.giv = '' OR starts_with(g.giv, o.giv) OR starts_with(o.giv, g.giv))))
+          ),
+          best AS (
+            SELECT rec, g_n, o_n, o_a_iri FROM cand
+            QUALIFY score = MAX(score) OVER (PARTITION BY rec, g_n)
+                AND COUNT(*) OVER (PARTITION BY rec, g_n, score) = 1
+          ),
+          ctb AS (
+            SELECT x.w_iri, x.c,
+                   x.w_iri || '/contribution/' || CAST(COALESCE(b.o_n, x.n) AS VARCHAR) AS c_iri,
+                   x.byv,
+                   COALESCE(b.o_a_iri, x.own_a_iri) AS a_iri,
+                   (b.o_n IS NOT NULL) AS dup
+            FROM ctbn x LEFT JOIN best b ON b.rec = x.rec AND b.g_n = x.n AND x.prio > 0
+          )
+          SELECT c_iri,
+                 COALESCE(CAST(a_iri AS VARCHAR), '') AS agent,
+                 COALESCE(CAST((CASE json_extract_string(c, '$.role') WHEN 'author' THEN 'http://purl.org/spar/pro/author' WHEN 'editor' THEN 'http://purl.org/spar/pro/editor' WHEN 'publisher' THEN 'http://purl.org/spar/pro/publisher' END) AS VARCHAR), '') AS role,
+                 COALESCE(CAST(json_extract_string(c, '$.rank') AS VARCHAR), '') AS rank
+          FROM ctb WHERE NOT dup
+    s: $(c_iri)
     po:
       - [a, pro:RoleInTime]
-      - [pro:withRole, pro:author]
-      - [pro:isHeldBy, https://example.org/ppl/$(orcid)~iri]
+      - [pro:isHeldBy, '$(agent)~iri']
+      - [pro:withRole, '$(role)~iri']
+      - [co:index, $(rank), xsd:positiveInteger]
 
-  author_role_relation:
+  agent:
     sources:
-      - ['dataset.json~jsonpath', '$[*].authors[*]']
-    s: https://example.org/wrk/$(related_doi)~iri
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          ctb0 AS (
+            SELECT rec, prio, w_iri, ct.value AS c,
+                   CAST(ct.key AS INTEGER) + 1 + c_off AS n,
+                   json_extract(ct.value, '$.by') AS byv,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.local_identifier') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END)) END) AS own_a_iri,
+                   json_extract_string(ct.value, '$.role') AS role,
+                   -- normalised name: lowercase, no accents, no parentheses, letters/commas/spaces only
+                   trim(regexp_replace(regexp_replace(strip_accents(lower(regexp_replace(COALESCE(CASE WHEN json_type(json_extract(ct.value, '$.by')) = 'OBJECT' THEN json_extract_string(json_extract(ct.value, '$.by'), '$.name') ELSE json_extract_string(json_extract(ct.value, '$.by'), '$') END, ''), '\(.*?\)', '', 'g'))), '[^a-z, ]', '', 'g'), '\s+', ' ', 'g')) AS nn
+            FROM works, json_each(p, '$.contributions') AS ct
+          ),
+          ctbn AS (
+            SELECT *,
+                   replace(replace(nn, ' ', ''), ',', '') AS cmp,
+                   replace(fpart, ' ', '') AS fam,
+                   split_part(fpart, ' ', 1) AS fam1,
+                   (CASE WHEN NOT contains(nn, ',') AND prio > 0 THEN regexp_extract(nn, '([a-z]+)$', 1) ELSE replace(fpart, ' ', '') END) AS fam_alt
+            FROM (
+              SELECT *,
+                     -- family part: 'Family, Given'; OpenCitations 'Family Given'; otherwise 'Given Family'
+                     (CASE WHEN contains(nn, ',') THEN trim(split_part(nn, ',', 1))
+                           WHEN prio = 0 THEN split_part(nn, ' ', 1)
+                           ELSE trim(regexp_replace(nn, '^[a-z]+ ?', '')) END) AS fpart,
+                     (CASE WHEN contains(nn, ',') THEN split_part(trim(split_part(nn, ',', 2)), ' ', 1)
+                           WHEN prio = 0 THEN split_part(nn, ' ', 2)
+                           WHEN contains(nn, ' ') THEN split_part(nn, ' ', 1)
+                           ELSE '' END) AS giv
+              FROM ctb0
+            )
+          ),
+          -- a secondary-source contributor is the same agent as a primary-source one (same work,
+          -- same role) when full names coincide (score 3), or family names coincide (2) or share the
+          -- first token (1) and the given names are compatible (one is a prefix of the other, e.g.
+          -- 'p' / 'philippe'); only the unique best candidate is kept
+          cand AS (
+            SELECT g.rec, g.n AS g_n, o.n AS o_n, o.own_a_iri AS o_a_iri,
+                   (CASE WHEN g.cmp = o.cmp THEN 3
+                         WHEN (g.fam = o.fam OR g.fam_alt = o.fam) THEN 2
+                         ELSE 1 END) AS score
+            FROM ctbn g JOIN ctbn o
+              ON g.rec = o.rec AND o.prio = 0 AND g.prio > 0 AND g.role IS NOT DISTINCT FROM o.role
+             AND g.cmp <> '' AND o.own_a_iri IS NOT NULL
+             AND (g.cmp = o.cmp
+                  OR ((g.fam = o.fam OR g.fam_alt = o.fam OR (g.fam1 <> '' AND (g.fam1 = o.fam1 OR g.fam_alt = o.fam1)))
+                      AND (g.giv = '' OR o.giv = '' OR starts_with(g.giv, o.giv) OR starts_with(o.giv, g.giv))))
+          ),
+          best AS (
+            SELECT rec, g_n, o_n, o_a_iri FROM cand
+            QUALIFY score = MAX(score) OVER (PARTITION BY rec, g_n)
+                AND COUNT(*) OVER (PARTITION BY rec, g_n, score) = 1
+          ),
+          ctb AS (
+            SELECT x.w_iri, x.c,
+                   x.w_iri || '/contribution/' || CAST(COALESCE(b.o_n, x.n) AS VARCHAR) AS c_iri,
+                   x.byv,
+                   COALESCE(b.o_a_iri, x.own_a_iri) AS a_iri,
+                   (b.o_n IS NOT NULL) AS dup
+            FROM ctbn x LEFT JOIN best b ON b.rec = x.rec AND b.g_n = x.n AND x.prio > 0
+          ),
+          aff AS (
+            SELECT c_iri, da.value AS av, (CASE WHEN (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(da.value) = 'OBJECT' THEN json_extract_string(da.value, '$.local_identifier') ELSE json_extract_string(da.value, '$') END)) END) AS af_iri
+            FROM ctb, json_each((CASE WHEN json_type(json_extract(c, '$.declared_affiliations')) = 'ARRAY' THEN json_extract(c, '$.declared_affiliations') WHEN json_extract(c, '$.declared_affiliations') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(c, '$.declared_affiliations')) END)) AS da
+          ),
+          tps AS (
+            SELECT w_iri, tp.value AS t,
+                   w_iri || '/topic/' || CAST(CAST(tp.key AS INTEGER) + 1 + t_off AS VARCHAR) AS t_iri
+            FROM works, json_each(p, '$.topics') AS tp
+          ),
+          prv AS (
+            SELECT t_iri, t, pr.value AS pv,
+                   t_iri || '/provenance/' || CAST(CAST(pr.key AS INTEGER) + 1 AS VARCHAR) AS pv_iri,
+                   json_extract(pr.value, '$.associated_with') AS pav,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END)) END) AS pa_iri
+            FROM tps, json_each((CASE WHEN json_type(json_extract(t, '$.provenance')) = 'ARRAY' THEN json_extract(t, '$.provenance') WHEN json_extract(t, '$.provenance') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(t, '$.provenance')) END)) AS pr
+          ),
+          ags AS (
+            SELECT a_iri, byv AS a FROM ctb WHERE a_iri IS NOT NULL AND NOT dup
+            UNION ALL
+            SELECT pa_iri, pav FROM prv WHERE pa_iri IS NOT NULL
+            UNION ALL
+            SELECT af_iri, av FROM aff WHERE af_iri IS NOT NULL
+          )
+          SELECT a_iri,
+                 COALESCE(CAST((CASE json_extract_string(a, '$.entity_type') WHEN 'person' THEN 'http://xmlns.com/foaf/0.1/Person' WHEN 'organisation' THEN 'http://xmlns.com/foaf/0.1/Organization' END) AS VARCHAR), '') AS atype,
+                 COALESCE(CAST((CASE WHEN json_type(a) = 'OBJECT' THEN json_extract_string(a, '$.name') ELSE json_extract_string(a, '$') END) AS VARCHAR), '') AS name,
+                 COALESCE(CAST(json_extract_string(a, '$.given_name') AS VARCHAR), '') AS given,
+                 COALESCE(CAST(json_extract_string(a, '$.family_name') AS VARCHAR), '') AS family
+          FROM ags
+    s: $(a_iri)
     po:
-      - [pro:isRelatedToRoleInTime, 'https://example.org/prl/$(orcid)~iri']
-
+      - [a, foaf:Agent]
+      - [a, '$(atype)~iri']
+      - [foaf:name, $(name)]
+      - [foaf:givenName, $(given)]
+      - [foaf:familyName, $(family)]
+ 
+  # --- Topic: bido:BibliometricDataInTime -> fabio:SubjectTerm, con provenance ---
   topic:
-    sources: 
-      - ['dataset.json~jsonpath', '$[*].topics[*]']
-    s: https://example.org/tpc/$(slug)~iri
-    po:
-      - [a, skos:Concept]
-      - [skos:prefLabel, $(label)]
-
-  bibliometric_data_topic:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].topics[*]']
-    s: https://example.org/bdt/$(slug)~iri
+    sources: &topic_src
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          tps AS (
+            SELECT w_iri, tp.value AS t,
+                   w_iri || '/topic/' || CAST(CAST(tp.key AS INTEGER) + 1 + t_off AS VARCHAR) AS t_iri
+            FROM works, json_each(p, '$.topics') AS tp
+          )
+          SELECT t_iri, COALESCE(CAST((CASE WHEN json_extract_string(t, '$.term') LIKE 'http://%' OR json_extract_string(t, '$.term') LIKE 'https://%' THEN json_extract_string(t, '$.term') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(t, '$.term')) END) AS VARCHAR), '') AS term,
+                 COALESCE(CAST(json_extract_string(t, '$.term') AS VARCHAR), '') AS term_label
+          FROM tps
+    s: $(t_iri)
     po:
       - [a, bido:BibliometricDataInTime]
-      - [bido:withBibliometricData, https://example.org/tpc/$(slug)~iri]
-
-  dataset_bibdata_relation:
-    sources:
-      - ['dataset.json~jsonpath', '$[*].topics[*]']
-    s: https://example.org/wrk/$(related_doi)~iri
+      - [bido:withBibliometricData, '$(term)~iri']
+ 
+  topic_term:
+    sources: *topic_src
+    s: $(term)
     po:
-      - [bido:holdsBibliometricDataInTime, https://example.org/bdt/$(slug)~iri]
-
-  is_open_access:
+      - [a, fabio:SubjectTerm]
+      - [skos:prefLabel, $(term_label)]
+ 
+  provenance:
     sources:
-      - ['dataset.json~jsonpath', '$[?(@.is_open_access==True)]']
-    s: https://example.org/pst/$(doi)~iri
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          tps AS (
+            SELECT w_iri, tp.value AS t,
+                   w_iri || '/topic/' || CAST(CAST(tp.key AS INTEGER) + 1 + t_off AS VARCHAR) AS t_iri
+            FROM works, json_each(p, '$.topics') AS tp
+          ),
+          prv AS (
+            SELECT t_iri, t, pr.value AS pv,
+                   t_iri || '/provenance/' || CAST(CAST(pr.key AS INTEGER) + 1 AS VARCHAR) AS pv_iri,
+                   json_extract(pr.value, '$.associated_with') AS pav,
+                   (CASE WHEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'http://%' OR (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(json_extract(pr.value, '$.associated_with')) = 'OBJECT' THEN json_extract_string(json_extract(pr.value, '$.associated_with'), '$.local_identifier') ELSE json_extract_string(json_extract(pr.value, '$.associated_with'), '$') END)) END) AS pa_iri
+            FROM tps, json_each((CASE WHEN json_type(json_extract(t, '$.provenance')) = 'ARRAY' THEN json_extract(t, '$.provenance') WHEN json_extract(t, '$.provenance') IS NULL THEN CAST('[]' AS JSON) ELSE json_array(json_extract(t, '$.provenance')) END)) AS pr
+          )
+          SELECT pv_iri, COALESCE(CAST(pa_iri AS VARCHAR), '') AS agent, COALESCE(CAST(json_extract_string(pv, '$.trust') AS VARCHAR), '') AS trust FROM prv
+    s: $(pv_iri)
+    po:
+      - [a, prov:Activity]
+      - [prov:wasAssociatedWith, '$(agent)~iri']
+      - [rdf:value, $(trust), xsd:float]
+
+  manifestation:
+    sources:
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          )
+          SELECT m_iri,
+                 COALESCE(CAST(json_extract_string(m, '$.type.class') AS VARCHAR), '') AS mtype,
+                 COALESCE(CAST(json_extract_string(m, '$.biblio.volume') AS VARCHAR), '') AS volume,
+                 COALESCE(CAST(json_extract_string(m, '$.biblio.issue') AS VARCHAR), '') AS issue,
+                 COALESCE(CAST(json_extract_string(m, '$.biblio.edition') AS VARCHAR), '') AS edition,
+                 COALESCE(CAST(json_extract_string(m, '$.biblio.number') AS VARCHAR), '') AS number,
+                 COALESCE(CAST(COALESCE(json_extract_string(m, '$.version'), json_extract_string(m, '$.biblio.version')) AS VARCHAR), '') AS version,
+                 COALESCE(CAST((CASE WHEN COALESCE(json_extract_string(m, '$.license'), json_extract_string(m, '$.licence')) LIKE 'http://%' OR COALESCE(json_extract_string(m, '$.license'), json_extract_string(m, '$.licence')) LIKE 'https://%' THEN COALESCE(json_extract_string(m, '$.license'), json_extract_string(m, '$.licence')) ELSE 'https://example.org/skg-if/data/' || url_encode(COALESCE(json_extract_string(m, '$.license'), json_extract_string(m, '$.licence'))) END) AS VARCHAR), '') AS license
+          FROM mfs
+    s: $(m_iri)
+    po:
+      - [a, fabio:Expression]
+      - [prism:volume, $(volume)]
+      - [prism:issueIdentifier, $(issue)]
+      - [prism:edition, $(edition)]
+      - [fabio:hasSequenceIdentifier, $(number)]
+      - [prism:versionIdentifier, $(version)]
+      - [dcterms:license, '$(license)~iri']
+ 
+  manifestation_type:
+    sources: &concept_src
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          )
+          SELECT COALESCE(CAST(json_extract_string(m, '$.type.class') AS VARCHAR), '') AS concept,
+                 COALESCE(CAST(json_extract_string(m, '$.type.defined_in') AS VARCHAR), '') AS scheme
+          FROM mfs
+    s: $(concept)
+    po:
+      - [a, skos:Concept]
+      - [skos:inScheme, '$(scheme)~iri']
+ 
+  manifestation_type_scheme:
+    sources: *concept_src
+    s: $(scheme)
+    po:
+      - [a, skos:ConceptScheme]
+
+  manifestation_dates_datetime:
+    sources: &dates_src
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          ),
+          d AS (
+            SELECT m_iri, (CASE dk.key
+              WHEN 'acceptance' THEN 'http://purl.org/dc/terms/dateAccepted'
+              WHEN 'access' THEN 'http://purl.org/spar/fabio/hasAccessDate'
+              WHEN 'copyright' THEN 'http://purl.org/dc/terms/dateCopyrighted'
+              WHEN 'correction' THEN 'http://purl.org/spar/fabio/hasCorrectionDate'
+              WHEN 'creation' THEN 'http://purl.org/dc/terms/created'
+              WHEN 'collected' THEN 'http://purl.org/spar/fabio/hasDateCollected'
+              WHEN 'received' THEN 'http://purl.org/spar/fabio/hasDateReceived'
+              WHEN 'decision' THEN 'http://purl.org/spar/fabio/hasDecisionDate'
+              WHEN 'deposit' THEN 'http://purl.org/spar/fabio/hasDepositDate'
+              WHEN 'embargo' THEN 'http://purl.org/spar/fabio/hasEmbargoDate'
+              WHEN 'modified' THEN 'http://purl.org/dc/terms/modified'
+              WHEN 'distribution' THEN 'http://purl.org/spar/fabio/hasDistributionDate'
+              WHEN 'publication' THEN 'http://purl.org/dc/terms/issued'
+              WHEN 'request' THEN 'http://purl.org/spar/fabio/hasRequestDate'
+              WHEN 'retraction' THEN 'http://purl.org/spar/fabio/hasRetractionDate'
+              WHEN 'validity' THEN 'http://purl.org/dc/terms/valid'
+            END) AS pred, json_extract_string(dv.value, '$') AS val
+            FROM mfs,
+                 json_each(m, '$.dates') AS dk,
+                 json_each((CASE WHEN json_type(dk.value) = 'ARRAY' THEN dk.value WHEN dk.value IS NULL THEN CAST('[]' AS JSON) ELSE json_array(dk.value) END)) AS dv
+          ),
+          k AS (
+            SELECT m_iri, pred, val,
+                   (CASE WHEN regexp_matches(val, '^[0-9]{4}-[0-9]{2}-[0-9]{2}T') THEN 'dt'
+                         WHEN regexp_matches(val, '^[0-9]{4}-[0-9]{2}-[0-9]{2}$') THEN 'd'
+                         WHEN regexp_matches(val, '^[0-9]{4}-[0-9]{2}$') THEN 'ym'
+                         WHEN regexp_matches(val, '^[0-9]{4}$') THEN 'y'
+                         ELSE 'other' END) AS kind
+            FROM d WHERE pred IS NOT NULL AND val IS NOT NULL
+          )
+          SELECT pred, val,
+                 CASE WHEN kind = 'dt' THEN m_iri ELSE '' END AS s_dt,
+                 CASE WHEN kind = 'd' THEN m_iri ELSE '' END AS s_d,
+                 CASE WHEN kind = 'ym' THEN m_iri ELSE '' END AS s_ym,
+                 CASE WHEN kind = 'y' THEN m_iri ELSE '' END AS s_y,
+                 CASE WHEN kind = 'other' THEN m_iri ELSE '' END AS s_other
+          FROM k
+    s: $(s_dt)
+    po:
+      - p: $(pred)
+        o:
+          value: $(val)
+          datatype: xsd:dateTime
+ 
+  manifestation_dates_date:
+    sources: *dates_src
+    s: $(s_d)
+    po:
+      - p: $(pred)
+        o:
+          value: $(val)
+          datatype: xsd:date
+ 
+  manifestation_dates_yearmonth:
+    sources: *dates_src
+    s: $(s_ym)
+    po:
+      - p: $(pred)
+        o:
+          value: $(val)
+          datatype: xsd:gYearMonth
+ 
+  manifestation_dates_year:
+    sources: *dates_src
+    s: $(s_y)
+    po:
+      - p: $(pred)
+        o:
+          value: $(val)
+          datatype: xsd:gYear
+ 
+  manifestation_dates_other:
+    sources: *dates_src
+    s: $(s_other)
+    po:
+      - p: $(pred)
+        o: $(val)
+ 
+  manifestation_status:
+    sources:
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          ),
+          sts AS (
+            SELECT m_iri || '/' || k AS st_iri, m_iri, k,
+                   (CASE json_extract_string(sv, '$.status')
+              WHEN 'open' THEN 'http://purl.org/spar/pso/open-access'
+              WHEN 'closed' THEN 'http://purl.org/spar/pso/closed-access'
+              WHEN 'embargoed' THEN 'http://purl.org/spar/pso/embargoed'
+              WHEN 'restricted' THEN 'http://purl.org/spar/pso/restricted-access'
+              WHEN 'retricted' THEN 'http://purl.org/spar/pso/restricted-access'
+              WHEN 'unavailable' THEN 'http://purl.org/spar/pso/unpublished'
+              WHEN 'peer reviewed' THEN 'http://purl.org/spar/pso/peer-reviewed'
+              WHEN 'under review' THEN 'http://purl.org/spar/pso/under-review'
+            END) AS status_iri,
+                   json_extract_string(sv, '$.description') AS descr
+            FROM (
+              SELECT m_iri, 'access_rights' AS k, json_extract(m, '$.access_rights') AS sv FROM mfs
+              UNION ALL
+              SELECT m_iri, 'peer_review', json_extract(m, '$.peer_review') FROM mfs
+            ) WHERE sv IS NOT NULL
+          )
+          SELECT st_iri, COALESCE(CAST(status_iri AS VARCHAR), '') AS status, COALESCE(CAST(descr AS VARCHAR), '') AS descr FROM sts
+    s: $(st_iri)
     po:
       - [a, pso:StatusInTime]
-      - [pso:withStatus, pso:open-access]
-
-  not_open_access:
+      - [pso:withStatus, '$(status)~iri']
+      - [dcterms:description, $(descr)]
+ 
+  manifestation_pages:
     sources:
-      - ['dataset.json~jsonpath', '$[?(@.is_open_access==False)]']
-    s: https://example.org/pst/$(doi)~iri
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          )
+          SELECT m_iri || '/pages' AS pages_iri,
+                 COALESCE(CAST(json_extract_string(m, '$.biblio.pages.first') AS VARCHAR), '') AS first,
+                 COALESCE(CAST(json_extract_string(m, '$.biblio.pages.last') AS VARCHAR), '') AS last
+          FROM mfs WHERE json_extract(m, '$.biblio.pages') IS NOT NULL
+    s: $(pages_iri)
     po:
-      - [a, pso:StatusInTime]
-      - [pso:withStatus, pso:closed-access]
+      - [a, fabio:Manifestation]
+      - [prism:startingPage, $(first)]
+      - [prism:endingPage, $(last)]
 
+  venue:
+    sources:
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          ),
+          ven AS (
+            SELECT m_iri, vv AS v, (CASE WHEN (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) LIKE 'http://%' OR (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) LIKE 'https://%' THEN (CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END) ELSE 'https://example.org/skg-if/data/' || url_encode((CASE WHEN json_type(vv) = 'OBJECT' THEN json_extract_string(vv, '$.local_identifier') ELSE json_extract_string(vv, '$') END)) END) AS v_iri FROM mfs WHERE vv IS NOT NULL
+          )
+          SELECT v_iri,
+                 COALESCE(CAST((CASE json_extract_string(v, '$.type') WHEN 'journal' THEN 'http://purl.org/spar/fabio/Journal' WHEN 'repository' THEN 'http://purl.org/spar/fabio/Repository' WHEN 'conference' THEN 'http://purl.org/spar/fabio/ConferenceProceedings' WHEN 'book' THEN 'http://purl.org/spar/fabio/Book' END) AS VARCHAR), '') AS vtype,
+                 COALESCE(CAST(COALESCE(json_extract_string(v, '$.title'), json_extract_string(v, '$.name')) AS VARCHAR), '') AS title
+          FROM ven
+    s: $(v_iri)
+    po:
+      - [a, fabio:ExpressionCollection]
+      - [a, '$(vtype)~iri']
+      - [dcterms:title, $(title)]
+
+  text_en:
+    sources: &lang_src
+      - query: |
+          WITH src AS (
+            SELECT lower(json_extract_string(j.json, '$.doi')) AS doi, s.key AS srck, s.value AS p
+            FROM read_json_objects('data.json', format='auto') AS j,
+                 json_each(j.json, '$.sources') AS s
+          ),
+          -- one record = the same product described by several sources (matched by DOI):
+          -- all sources share one work IRI, taken from the primary source (OpenCitations first)
+          works0 AS (
+            SELECT p, srck, (CASE srck WHEN 'opencitations' THEN 0 ELSE 1 END) AS prio,
+                   (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END) AS own_iri,
+                   COALESCE(doi, (CASE WHEN json_extract_string(p, '$.local_identifier') LIKE 'http://%' OR json_extract_string(p, '$.local_identifier') LIKE 'https://%' THEN json_extract_string(p, '$.local_identifier') ELSE 'https://example.org/skg-if/data/' || url_encode(json_extract_string(p, '$.local_identifier')) END)) AS rec
+            FROM src
+          ),
+          works AS (
+            SELECT p, srck, prio, own_iri, rec,
+                   FIRST_VALUE(own_iri) OVER (PARTITION BY rec ORDER BY prio, srck) AS w_iri,
+                   (ROW_NUMBER() OVER (PARTITION BY rec ORDER BY prio, srck) = 1) AS is_primary,
+                   -- offsets keep manifestation/topic/contribution numbering unique across sources
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.manifestations'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS m_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.topics'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS t_off,
+                   CAST(COALESCE(SUM(COALESCE(json_array_length(p, '$.contributions'), 0)) OVER (PARTITION BY rec ORDER BY prio, srck ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS INTEGER) AS c_off
+            FROM works0
+          ),
+          mfs AS (
+            SELECT w_iri, mf.value AS m,
+                   w_iri || '/manifestation/' || CAST(CAST(mf.key AS INTEGER) + 1 + m_off AS VARCHAR) AS m_iri,
+                   json_extract(mf.value, '$.biblio.in') AS vv
+            FROM works, json_each(p, '$.manifestations') AS mf
+          ),
+          txt AS (
+            SELECT w_iri AS subj, 'http://purl.org/dc/terms/title' AS pred, l.key AS lang, json_extract_string(t.value, '$') AS txt
+            FROM works, json_each(p, '$.titles') AS l, json_each((CASE WHEN json_type(l.value) = 'ARRAY' THEN l.value WHEN l.value IS NULL THEN CAST('[]' AS JSON) ELSE json_array(l.value) END)) AS t
+            UNION ALL
+            SELECT w_iri, 'http://purl.org/dc/terms/abstract', l.key, json_extract_string(t.value, '$')
+            FROM works, json_each(p, '$.abstracts') AS l, json_each((CASE WHEN json_type(l.value) = 'ARRAY' THEN l.value WHEN l.value IS NULL THEN CAST('[]' AS JSON) ELSE json_array(l.value) END)) AS t
+            UNION ALL
+            SELECT json_extract_string(m, '$.type.class'), 'http://www.w3.org/2004/02/skos/core#prefLabel', l.key, json_extract_string(t.value, '$')
+            FROM mfs, json_each(m, '$.type.labels') AS l, json_each((CASE WHEN json_type(l.value) = 'ARRAY' THEN l.value WHEN l.value IS NULL THEN CAST('[]' AS JSON) ELSE json_array(l.value) END)) AS t
+          )
+          SELECT pred, txt,
+                 CASE WHEN lang = 'en' THEN subj ELSE '' END AS s_en,
+                 CASE WHEN lang = 'it' THEN subj ELSE '' END AS s_it,
+                 CASE WHEN lang = 'fr' THEN subj ELSE '' END AS s_fr,
+                 CASE WHEN lang = 'de' THEN subj ELSE '' END AS s_de,
+                 CASE WHEN lang = 'es' THEN subj ELSE '' END AS s_es,
+                 CASE WHEN lang = 'pt' THEN subj ELSE '' END AS s_pt,
+                 CASE WHEN lang = 'nl' THEN subj ELSE '' END AS s_nl,
+                 CASE WHEN lang = 'ru' THEN subj ELSE '' END AS s_ru,
+                 CASE WHEN lang = 'zh' THEN subj ELSE '' END AS s_zh,
+                 CASE WHEN lang = 'ja' THEN subj ELSE '' END AS s_ja,
+                 CASE WHEN lang = 'none' THEN subj ELSE '' END AS s_none,
+                 CASE WHEN lang NOT IN ('en', 'it', 'fr', 'de', 'es', 'pt', 'nl', 'ru', 'zh', 'ja', 'none') THEN subj ELSE '' END AS s_other
+          FROM txt WHERE subj IS NOT NULL AND txt IS NOT NULL
+    s: $(s_en)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: en
+ 
+  text_it:
+    sources: *lang_src
+    s: $(s_it)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: it
+ 
+  text_fr:
+    sources: *lang_src
+    s: $(s_fr)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: fr
+ 
+  text_de:
+    sources: *lang_src
+    s: $(s_de)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: de
+ 
+  text_es:
+    sources: *lang_src
+    s: $(s_es)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: es
+ 
+  text_pt:
+    sources: *lang_src
+    s: $(s_pt)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: pt
+ 
+  text_nl:
+    sources: *lang_src
+    s: $(s_nl)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: nl
+ 
+  text_ru:
+    sources: *lang_src
+    s: $(s_ru)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: ru
+ 
+  text_zh:
+    sources: *lang_src
+    s: $(s_zh)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: zh
+ 
+  text_ja:
+    sources: *lang_src
+    s: $(s_ja)
+    po:
+      - p: $(pred)
+        o:
+          value: $(txt)
+          language: ja
+ 
+  text_none:
+    sources: *lang_src
+    s: $(s_none)
+    po:
+      - p: $(pred)
+        o: $(txt)
+ 
+  text_other:
+    sources: *lang_src
+    s: $(s_other)
+    po:
+      - p: $(pred)
+        o: $(txt)
