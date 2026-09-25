@@ -534,8 +534,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Anais do Museu Paulista: História e Cultura Material",
-                "local_identifier": "doajarticles::556ae0e766dea3587880d1d0c86644a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -589,8 +591,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Anais do Museu Paulista: História e Cultura Material",
-                "local_identifier": "doajarticles::556ae0e766dea3587880d1d0c86644a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -639,8 +643,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -708,8 +714,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "LAReferencia - Red Federada de Repositorios Institucionales de Publicaciones Científicas Latinoamericanas",
-                "local_identifier": "opendoar____::dc6e224a8d74ce03bf301152d6e33e97",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::dc6e224a8d74ce03bf301152d6e33e97",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -777,8 +785,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Scientific Electronic Library Online - Brazil",
-                "local_identifier": "opendoar____::996a7fa078cc36c46d02f9af3bef918b",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::996a7fa078cc36c46d02f9af3bef918b",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -827,8 +837,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -1455,8 +1467,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Anais do Museu Paulista: História e Cultura Material",
-                "local_identifier": "doajarticles::556ae0e766dea3587880d1d0c86644a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -1510,8 +1524,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Anais do Museu Paulista: História e Cultura Material",
-                "local_identifier": "doajarticles::556ae0e766dea3587880d1d0c86644a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -1579,8 +1595,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Anais do Museu Paulista: História e Cultura Material",
-                "local_identifier": "doajarticles::556ae0e766dea3587880d1d0c86644a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -1629,8 +1647,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -1698,8 +1718,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Scientific Electronic Library Online - Brazil",
-                "local_identifier": "opendoar____::996a7fa078cc36c46d02f9af3bef918b",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::996a7fa078cc36c46d02f9af3bef918b",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -1748,8 +1770,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -2113,10 +2137,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.t2e1ss"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010051"
+                  }
+                ],
                 "name": "Harvard Dataverse",
-                "local_identifier": "re3data_____::eb2df13ed4d743c1c15ea7353525124a",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::eb2df13ed4d743c1c15ea7353525124a",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -3301,8 +3336,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "JMIR Public Health and Surveillance",
-                "local_identifier": "doajarticles::47b6384965a3bce4aa0c8ab5297997a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::47b6384965a3bce4aa0c8ab5297997a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -3355,8 +3392,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "JMIR Public Health and Surveillance",
-                "local_identifier": "doajarticles::47b6384965a3bce4aa0c8ab5297997a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::47b6384965a3bce4aa0c8ab5297997a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -3413,8 +3452,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "JMIR Public Health and Surveillance",
-                "local_identifier": "doajarticles::47b6384965a3bce4aa0c8ab5297997a2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::47b6384965a3bce4aa0c8ab5297997a2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -3479,10 +3520,17 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wpt5mp"
+                  }
+                ],
                 "name": "PubMed Central",
-                "local_identifier": "opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -3530,8 +3578,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -3602,9 +3652,11 @@
               },
               "hosting_data_source": {
                 "identifiers": null,
-                "name": "NOVA: The University of Newcastle Research Online (Australia)",
-                "local_identifier": "opendoar____::7bb060764a818184ebb1cc0d43d382aa",
-                "entity_type": "datasource"
+                "name": "Open Research Newcastle",
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::7bb060764a818184ebb1cc0d43d382aa",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -3652,8 +3704,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -4540,8 +4594,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Epidemiologic Reviews",
-                "local_identifier": "issn___print::de6f4a3280d009aa6b607094dd019840",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::de6f4a3280d009aa6b607094dd019840",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -4598,8 +4654,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Epidemiologic Reviews",
-                "local_identifier": "issn___print::de6f4a3280d009aa6b607094dd019840",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::de6f4a3280d009aa6b607094dd019840",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -4679,8 +4737,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Epidemiologic Reviews",
-                "local_identifier": "issn___print::de6f4a3280d009aa6b607094dd019840",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::de6f4a3280d009aa6b607094dd019840",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -4732,8 +4792,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -4785,8 +4847,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -6858,8 +6922,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Spanish Journal of Marketing-ESIC",
-                "local_identifier": "doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -6912,8 +6978,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Spanish Journal of Marketing-ESIC",
-                "local_identifier": "doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -6980,8 +7048,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Spanish Journal of Marketing-ESIC",
-                "local_identifier": "doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -7029,8 +7099,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -7097,8 +7169,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "OAR@UM",
-                "local_identifier": "opendoar____::db98dc0dbafde48e8f74c0de001d35e4",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::db98dc0dbafde48e8f74c0de001d35e4",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -7146,8 +7220,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -8285,8 +8361,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Ecological Solutions and Evidence",
-                "local_identifier": "doajarticles::6156306167f41a4329043cdbd8cd4dd2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::6156306167f41a4329043cdbd8cd4dd2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -8340,8 +8418,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Ecological Solutions and Evidence",
-                "local_identifier": "doajarticles::6156306167f41a4329043cdbd8cd4dd2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::6156306167f41a4329043cdbd8cd4dd2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -8409,8 +8489,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Ecological Solutions and Evidence",
-                "local_identifier": "doajarticles::6156306167f41a4329043cdbd8cd4dd2",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::6156306167f41a4329043cdbd8cd4dd2",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -8459,8 +8541,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -8509,8 +8593,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -9961,8 +10047,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Wilderness and Environmental Medicine",
-                "local_identifier": "issn___print::bae2c2d837774afff9b58d692b5a0e60",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::bae2c2d837774afff9b58d692b5a0e60",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -10019,8 +10107,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Wilderness and Environmental Medicine",
-                "local_identifier": "issn___print::bae2c2d837774afff9b58d692b5a0e60",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::bae2c2d837774afff9b58d692b5a0e60",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -10096,8 +10186,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -10149,8 +10241,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -10202,8 +10296,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -10765,10 +10861,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.t2e1ss"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010051"
+                  }
+                ],
                 "name": "Harvard Dataverse",
-                "local_identifier": "re3data_____::eb2df13ed4d743c1c15ea7353525124a",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::eb2df13ed4d743c1c15ea7353525124a",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -11750,8 +11857,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Statistical Science",
-                "local_identifier": "issn___print::d29c9040884413bd83e8081724ad39a3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d29c9040884413bd83e8081724ad39a3",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -11801,8 +11910,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Statistical Science",
-                "local_identifier": "issn___print::d29c9040884413bd83e8081724ad39a3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d29c9040884413bd83e8081724ad39a3",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -11871,8 +11982,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -11934,10 +12047,17 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.b17c70"
+                  }
+                ],
                 "name": "zbMATH Open",
-                "local_identifier": "openaire____::1c7cbe234effd9945d7a4fefb90be48e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::1c7cbe234effd9945d7a4fefb90be48e",
+                "entity_type": "datasource",
+                "data_source_classification": "scientific database",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -11982,8 +12102,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -12047,8 +12169,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Project Euclid",
-                "local_identifier": "openaire____::f19d2f12ac82ff06994dd8efb73a2178",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::f19d2f12ac82ff06994dd8efb73a2178",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -12115,10 +12239,17 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100011121"
+                  }
+                ],
                 "name": "cIRcle",
-                "local_identifier": "re3data_____::89b3e06dddf04c8b54897f832bdf5505",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::89b3e06dddf04c8b54897f832bdf5505",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -12163,8 +12294,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -13488,8 +13621,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Quality of Life Research",
-                "local_identifier": "issn___print::0a1ed0a34ad8bd077d4ef39072706e2f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0a1ed0a34ad8bd077d4ef39072706e2f",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -13546,8 +13681,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Quality of Life Research",
-                "local_identifier": "issn___print::0a1ed0a34ad8bd077d4ef39072706e2f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0a1ed0a34ad8bd077d4ef39072706e2f",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -13623,8 +13760,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Quality of Life Research",
-                "local_identifier": "issn___print::0a1ed0a34ad8bd077d4ef39072706e2f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0a1ed0a34ad8bd077d4ef39072706e2f",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -13676,8 +13815,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -13729,8 +13870,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15357,8 +15500,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Circulation",
-                "local_identifier": "issn___print::e19a3f639325224687547c932d5b7c32",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::e19a3f639325224687547c932d5b7c32",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15415,8 +15560,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Circulation",
-                "local_identifier": "issn___print::e19a3f639325224687547c932d5b7c32",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::e19a3f639325224687547c932d5b7c32",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15496,8 +15643,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Circulation",
-                "local_identifier": "issn___print::e19a3f639325224687547c932d5b7c32",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::e19a3f639325224687547c932d5b7c32",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15549,8 +15698,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15621,8 +15772,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Gazi Üniversitesi - AVESIS",
-                "local_identifier": "opendoar____::827a9e878169d065f4a9a6c451ba0207",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::827a9e878169d065f4a9a6c451ba0207",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15693,8 +15846,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Archive ouverte UNIGE",
-                "local_identifier": "opendoar____::f0dd4a99fba6075a9494772b58f95280",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::f0dd4a99fba6075a9494772b58f95280",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15770,8 +15925,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "DI-fusion",
-                "local_identifier": "opendoar____::c5866e93cab1776890fe343c9e7063fb",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c5866e93cab1776890fe343c9e7063fb",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15842,8 +15999,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "OAR@UM",
-                "local_identifier": "opendoar____::db98dc0dbafde48e8f74c0de001d35e4",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::db98dc0dbafde48e8f74c0de001d35e4",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15918,9 +16077,11 @@
               },
               "hosting_data_source": {
                 "identifiers": null,
-                "name": "DI-fusion : dépôt institutionnel de l'Université libre de Bruxelles (ULB)",
-                "local_identifier": "opendoar____::c5866e93cab1776890fe343c9e7063fb",
-                "entity_type": "datasource"
+                "name": "DI-fusion",
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c5866e93cab1776890fe343c9e7063fb",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -15972,8 +16133,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -17974,8 +18137,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -18364,10 +18529,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100012604"
+                  }
+                ],
                 "name": "AMS Acta",
-                "local_identifier": "opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -18401,8 +18573,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -18453,10 +18627,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100012604"
+                  }
+                ],
                 "name": "AMS Acta",
-                "local_identifier": "opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -19065,8 +19246,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -19119,8 +19302,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "BiPrints",
-                "local_identifier": "opendoar____::536a76f94cf7535158f66cfbd4b113b6",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -19171,10 +19356,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.x68mjp"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010750"
+                  }
+                ],
                 "name": "Publications at Bielefeld University",
-                "local_identifier": "opendoar____::229754d7799160502a143a72f6789927",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -19629,10 +19825,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100011245"
+                  }
+                ],
                 "name": "e-Prints Soton",
-                "local_identifier": "opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -21333,10 +21536,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -21370,8 +21584,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -21424,8 +21640,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -21459,8 +21677,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -23298,10 +23518,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -23354,8 +23585,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -25903,8 +26136,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -25962,8 +26197,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -26021,8 +26258,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -31562,10 +31801,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -31618,8 +31868,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -33308,8 +33560,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Journal of Dairy Science",
-                "local_identifier": "doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -33362,8 +33616,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Journal of Dairy Science",
-                "local_identifier": "doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -33435,8 +33691,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Journal of Dairy Science",
-                "local_identifier": "doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -33484,8 +33742,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -33557,8 +33817,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Archivio Istituzionale Università di Bergamo",
-                "local_identifier": "opendoar____::88a199611ac2b85bd3f76e8ee7e55650",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::88a199611ac2b85bd3f76e8ee7e55650",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -33630,8 +33892,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "T-Stór",
-                "local_identifier": "opendoar____::b5baa9c23ac3e015ad287b17a3d4afa3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::b5baa9c23ac3e015ad287b17a3d4afa3",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -33679,8 +33943,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -34524,8 +34790,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -34564,8 +34832,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -35230,8 +35500,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -35284,8 +35556,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "BiPrints",
-                "local_identifier": "opendoar____::536a76f94cf7535158f66cfbd4b113b6",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -35336,10 +35610,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.x68mjp"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010750"
+                  }
+                ],
                 "name": "Publications at Bielefeld University",
-                "local_identifier": "opendoar____::229754d7799160502a143a72f6789927",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36179,8 +36464,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Regional Studies",
-                "local_identifier": "issn___print::0f456ec08b6dc2bb479aec28bd461385",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0f456ec08b6dc2bb479aec28bd461385",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36237,8 +36524,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Regional Studies",
-                "local_identifier": "issn___print::0f456ec08b6dc2bb479aec28bd461385",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0f456ec08b6dc2bb479aec28bd461385",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36312,10 +36601,21 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.drtwnh"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010066"
+                  }
+                ],
                 "name": "figshare",
-                "local_identifier": "fairsharing_::4888241374e8c62ddd9b4c3cfd091f96",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::4888241374e8c62ddd9b4c3cfd091f96",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36389,10 +36689,21 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.drtwnh"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010066"
+                  }
+                ],
                 "name": "figshare",
-                "local_identifier": "fairsharing_::4888241374e8c62ddd9b4c3cfd091f96",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::4888241374e8c62ddd9b4c3cfd091f96",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36468,8 +36779,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Recolector de Ciencia Abierta, RECOLECTA",
-                "local_identifier": "openaire____::4cb2a3eb94033446c37331f60fad0847",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::4cb2a3eb94033446c37331f60fad0847",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36521,8 +36834,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36598,8 +36913,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Research Repository of Catalonia",
-                "local_identifier": "opendoar____::7a614fd06c325499f1680b9896beedeb",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::7a614fd06c325499f1680b9896beedeb",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36675,8 +36992,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Diposit Digital de la Universitat de Barcelona",
-                "local_identifier": "opendoar____::1ce927f875864094e3906a4a0b5ece68",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::1ce927f875864094e3906a4a0b5ece68",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -36728,8 +37047,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -37431,8 +37752,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "TUHH Open Research - Research Data TUHH",
-                "local_identifier": "re3data_____::b3e274fae7bd155cc59d79428066e38f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::b3e274fae7bd155cc59d79428066e38f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -37466,8 +37789,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "TUHH Open Research (TORE)",
-                "local_identifier": "eurocrisdris::9ae43d14471c4b33661fedda6f06b539",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/eurocrisdris::9ae43d14471c4b33661fedda6f06b539",
+                "entity_type": "datasource",
+                "data_source_classification": "cris system",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -38168,10 +38493,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100012604"
+                  }
+                ],
                 "name": "AMS Acta",
-                "local_identifier": "opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -38205,8 +38537,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -38257,10 +38591,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100012604"
+                  }
+                ],
                 "name": "AMS Acta",
-                "local_identifier": "opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -38683,8 +39024,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -38737,8 +39080,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "BiPrints",
-                "local_identifier": "opendoar____::536a76f94cf7535158f66cfbd4b113b6",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -38789,10 +39134,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.x68mjp"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010750"
+                  }
+                ],
                 "name": "Publications at Bielefeld University",
-                "local_identifier": "opendoar____::229754d7799160502a143a72f6789927",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -39433,8 +39789,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -39473,8 +39831,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -40750,10 +41110,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -40806,8 +41177,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -41760,8 +42133,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -41812,10 +42187,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.x68mjp"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010750"
+                  }
+                ],
                 "name": "Publications at Bielefeld University",
-                "local_identifier": "opendoar____::229754d7799160502a143a72f6789927",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -42380,8 +42766,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -42434,8 +42822,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "BiPrints",
-                "local_identifier": "opendoar____::536a76f94cf7535158f66cfbd4b113b6",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -42486,10 +42876,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.x68mjp"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010750"
+                  }
+                ],
                 "name": "Publications at Bielefeld University",
-                "local_identifier": "opendoar____::229754d7799160502a143a72f6789927",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -43028,8 +43429,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -43080,10 +43483,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.x68mjp"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010750"
+                  }
+                ],
                 "name": "Publications at Bielefeld University",
-                "local_identifier": "opendoar____::229754d7799160502a143a72f6789927",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -43743,8 +44157,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -43797,8 +44213,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "BiPrints",
-                "local_identifier": "opendoar____::536a76f94cf7535158f66cfbd4b113b6",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -43849,10 +44267,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.x68mjp"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010750"
+                  }
+                ],
                 "name": "Publications at Bielefeld University",
-                "local_identifier": "opendoar____::229754d7799160502a143a72f6789927",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -44459,8 +44888,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Digital Scholarship in the Humanities",
-                "local_identifier": "issn___print::9c2ffbdfdc48f6df69a6a3e6a280fae1",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::9c2ffbdfdc48f6df69a6a3e6a280fae1",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -44531,8 +44962,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "DBLP",
-                "local_identifier": "openaire____::d8b68cc0a53121f6f896883a7d60c1db",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::d8b68cc0a53121f6f896883a7d60c1db",
+                "entity_type": "datasource",
+                "data_source_classification": null,
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -44584,8 +45017,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -44637,8 +45072,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -45229,10 +45666,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100011245"
+                  }
+                ],
                 "name": "e-Prints Soton",
-                "local_identifier": "opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -45949,10 +46393,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -46005,8 +46460,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -46886,10 +47343,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -46942,8 +47410,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -49098,8 +49568,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -49155,10 +49627,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -49214,10 +49697,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.kwzydf"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100010691"
+                  }
+                ],
                 "name": "Borealis, the Canadian Dataverse Repository",
-                "local_identifier": "fairsharing_::c3a690be93aa602ee2dc0ccab5b7b67e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::c3a690be93aa602ee2dc0ccab5b7b67e",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -49270,8 +49764,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -52320,10 +52816,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -52376,8 +52883,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -53688,10 +54197,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100011245"
+                  }
+                ],
                 "name": "e-Prints Soton",
-                "local_identifier": "opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -54672,8 +55188,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Environmental Science & Technology",
-                "local_identifier": "issn___print::d427a43caf29f5729a2d4cabfa776360",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -54730,8 +55248,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Environmental Science & Technology",
-                "local_identifier": "issn___print::d427a43caf29f5729a2d4cabfa776360",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -54807,8 +55327,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Environmental Science & Technology",
-                "local_identifier": "issn___print::d427a43caf29f5729a2d4cabfa776360",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -54860,8 +55382,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -54937,8 +55461,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Institutional Repository Universiteit Antwerpen",
-                "local_identifier": "opendoar____::a03fa30821986dff10fc66647c84c9c3",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::a03fa30821986dff10fc66647c84c9c3",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -54990,8 +55516,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -57972,8 +58500,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58023,8 +58553,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58093,8 +58625,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58167,8 +58701,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58230,10 +58766,17 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wpt5mp"
+                  }
+                ],
                 "name": "PubMed Central",
-                "local_identifier": "opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58297,8 +58840,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58362,8 +58907,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58427,8 +58974,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58492,8 +59041,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58538,8 +59089,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58608,8 +59161,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Archivio istituzionale della ricerca - Alma Mater Studiorum Università di Bologna",
-                "local_identifier": "opendoar____::64c53a52cb3bd1a01c03a64db985c0cc",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::64c53a52cb3bd1a01c03a64db985c0cc",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58678,8 +59233,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Digital Object Repository at WSL",
-                "local_identifier": "opendoar____::1eaa260fddcc15e3c1f09453b8d5bd92",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::1eaa260fddcc15e3c1f09453b8d5bd92",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58743,8 +59300,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Български портал за отворена наука",
-                "local_identifier": "opendoar____::649d45bf179296e31731adfd4df25588",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::649d45bf179296e31731adfd4df25588",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58808,8 +59367,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "HAL INRAE",
-                "local_identifier": "opendoar____::c7a9f13a6c0940277d46706c7ca32601",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c7a9f13a6c0940277d46706c7ca32601",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58873,8 +59434,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "edoc-Server. Open-Access-Publikationsserver der Humboldt-Universität zu Berlin ",
-                "local_identifier": "opendoar____::9fc3d7152ba9336a670e36d0ed79bc43",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::9fc3d7152ba9336a670e36d0ed79bc43",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -58943,8 +59506,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Archivio Istituzionale della Ricerca (AperTO) - Università di Torino",
-                "local_identifier": "opendoar____::89fcd07f20b6785b92134bd6c1d0fa42",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::89fcd07f20b6785b92134bd6c1d0fa42",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -59008,8 +59573,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Share_it",
-                "local_identifier": "re3data_____::a0c4f0c7cd984472a012978e412b8a4f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::a0c4f0c7cd984472a012978e412b8a4f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -59073,8 +59640,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Research.fi",
-                "local_identifier": "openaire____::ddcdf7dcef98c2a7626bbb11d1a7b534",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::ddcdf7dcef98c2a7626bbb11d1a7b534",
+                "entity_type": "datasource",
+                "data_source_classification": null,
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -59138,8 +59707,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Share_it",
-                "local_identifier": "re3data_____::a0c4f0c7cd984472a012978e412b8a4f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::a0c4f0c7cd984472a012978e412b8a4f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -59202,9 +59773,11 @@
               },
               "hosting_data_source": {
                 "identifiers": null,
-                "name": "Institut National de la Recherche Agronomique: ProdINRA",
-                "local_identifier": "opendoar____::b710915795b9e9c02cf10d6d2bdb688c",
-                "entity_type": "datasource"
+                "name": "ProdInra",
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::b710915795b9e9c02cf10d6d2bdb688c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -59249,8 +59822,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -64641,10 +65216,21 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wkggtx"
+                  },
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100000044"
+                  }
+                ],
                 "name": "DRYAD",
-                "local_identifier": "re3data_____::94816e6421eeb072e7742ce6a9decc5f",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -64702,8 +65288,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Recolector de Ciencia Abierta, RECOLECTA",
-                "local_identifier": "openaire____::4cb2a3eb94033446c37331f60fad0847",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::4cb2a3eb94033446c37331f60fad0847",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -64737,8 +65325,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -64791,8 +65381,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "ZENODO",
-                "local_identifier": "opendoar____::358aee4cc897452c00244351e4d91f69",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -64826,8 +65418,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -69129,10 +69723,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100011245"
+                  }
+                ],
                 "name": "e-Prints Soton",
-                "local_identifier": "opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -69626,10 +70227,17 @@
               "number": null,
               "in": null,
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "re3data",
+                    "value": "r3d100011245"
+                  }
+                ],
                 "name": "e-Prints Soton",
-                "local_identifier": "opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -70867,8 +71475,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Environmental Science & Technology",
-                "local_identifier": "issn___print::d427a43caf29f5729a2d4cabfa776360",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -70925,8 +71535,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Environmental Science & Technology",
-                "local_identifier": "issn___print::d427a43caf29f5729a2d4cabfa776360",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -71002,8 +71614,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Environmental Science & Technology",
-                "local_identifier": "issn___print::d427a43caf29f5729a2d4cabfa776360",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -71055,8 +71669,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -71108,8 +71724,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -72124,8 +72742,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -72178,8 +72798,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -72255,8 +72877,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -72321,10 +72945,17 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wpt5mp"
+                  }
+                ],
                 "name": "PubMed Central",
-                "local_identifier": "opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -72391,8 +73022,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -72440,8 +73073,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -72489,8 +73124,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -73848,8 +74485,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -73902,8 +74541,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -73979,8 +74620,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -74045,10 +74688,17 @@
                 "entity_type": "venue"
               },
               "hosting_data_source": {
-                "identifiers": null,
+                "identifiers": [
+                  {
+                    "scheme": "doi",
+                    "value": "10.25504/fairsharing.wpt5mp"
+                  }
+                ],
                 "name": "PubMed Central",
-                "local_identifier": "opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -74120,8 +74770,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Recolector de Ciencia Abierta, RECOLECTA",
-                "local_identifier": "openaire____::4cb2a3eb94033446c37331f60fad0847",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::4cb2a3eb94033446c37331f60fad0847",
+                "entity_type": "datasource",
+                "data_source_classification": "aggregator",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -74188,8 +74840,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "PLoS ONE",
-                "local_identifier": "doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -74237,8 +74891,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -74309,9 +74965,11 @@
               },
               "hosting_data_source": {
                 "identifiers": null,
-                "name": "The University of Texas at Austin: Texas ScholarWorks",
-                "local_identifier": "opendoar____::effc299a1addb07e7089f9b269c31f2f",
-                "entity_type": "datasource"
+                "name": "Texas ScholarWorks",
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::effc299a1addb07e7089f9b269c31f2f",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -74359,8 +75017,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -75552,8 +76212,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Animal Biotelemetry",
-                "local_identifier": "doajarticles::bec048d05a81c13266c540fd00726186",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::bec048d05a81c13266c540fd00726186",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -75603,8 +76265,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Animal Biotelemetry",
-                "local_identifier": "doajarticles::bec048d05a81c13266c540fd00726186",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::bec048d05a81c13266c540fd00726186",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -75649,8 +76313,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Animal Biotelemetry",
-                "local_identifier": "doajarticles::bec048d05a81c13266c540fd00726186",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::bec048d05a81c13266c540fd00726186",
+                "entity_type": "datasource",
+                "data_source_classification": "journal archive",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -75695,8 +76361,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {
@@ -75741,8 +76409,10 @@
               "hosting_data_source": {
                 "identifiers": null,
                 "name": "Unknown Repository",
-                "local_identifier": "openaire____::55045bd2a65019fd8e6741a755395c8c",
-                "entity_type": "datasource"
+                "local_identifier": "https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c",
+                "entity_type": "datasource",
+                "data_source_classification": "repository",
+                "research_product_types": null
               }
             },
             "peer_review": {

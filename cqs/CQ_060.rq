@@ -18,7 +18,7 @@ WHERE {
         frapo:isFundedBy ?grant .
     ?grant a frapo:Grant ;
         frapo:hasCallIdentifier ?call .      # funding stream — e.g. a Horizon Europe call
-    FILTER ( CONTAINS(STR(?call), "H2020") )                     # removed LCASE and changed keyword string to H2020
+    FILTER ( CONTAINS(STR(?call), "H2020") )                     # removed LCASE and changed keyword string to "H2020"
     OPTIONAL { ?grant frapo:hasAcronym ?grant_acronym }
     OPTIONAL { ?grant dcterms:title ?grant_title }
     BIND ( COALESCE(?grant_acronym, ?grant_title) AS ?project_name )

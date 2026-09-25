@@ -32,7 +32,7 @@ Then run the orchestrator:
 uv run main.py
 ```
 
-Providers are configured in `config.yaml`. Products are streamed from GoTriple and looked up by DOI in the other providers; a provider with `required: false` (OpenAIRE, which also resolves the grants in `funding`) enriches the records it knows without causing any record to be dropped.
+Providers are configured in `config.yaml`. Products are streamed from GoTriple and looked up by DOI in the other providers; a provider with `required: false` (OpenAIRE, which also resolves the grants in `funding` and the data sources in `hosting_data_source`) enriches the records it knows without causing any record to be dropped.
 
 To complete an existing `data.json` with the providers it is missing (e.g. after adding a new one) without harvesting new records:
 
@@ -48,7 +48,7 @@ Finally, build the knowledge graph (`data.ttl`) from `data.json` with `mapping.y
 uv run materialize.py
 ```
 
-The same product, contributor, venue and topic coming from several providers is materialized once: works are matched by DOI (DOIs are lowercased, as they are case-insensitive), contributors by name within the same work and role, venues by ISSN, topics by term. When providers disagree on a single-valued field, OpenCitations wins over OpenAIRE, which wins over GoTriple.
+The same product, contributor, venue, data source and topic coming from several providers is materialized once: works are matched by DOI (DOIs are lowercased, as they are case-insensitive), contributors by name within the same work and role, venues by ISSN, data sources by any shared identifier (e.g. re3data, FAIRsharing DOI), topics by term. When providers disagree on a single-valued field, OpenCitations wins over OpenAIRE, which wins over GoTriple.
 
 ### Competency questions
 

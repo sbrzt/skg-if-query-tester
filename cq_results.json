@@ -1,8 +1,8 @@
 {
   "data": "data.ttl",
   "summary": {
-    "answered": 12,
-    "empty": 1,
+    "answered": 13,
+    "empty": 0,
     "error": 0
   },
   "results": [
@@ -11,7 +11,7 @@
       "question": "Given a publication PID, find all articles that cite it plus those cited in the publication itself.",
       "file": "cqs/CQ_001.rq",
       "status": "answered",
-      "seconds": 0.42,
+      "seconds": 0.411,
       "count": 322,
       "variables": [
         "pid_value"
@@ -1226,7 +1226,7 @@
       "question": "Given the PID of a publication, I want to align its bibliographic metadata across graphs, by also removing duplicated elements.",
       "file": "cqs/CQ_007.rq",
       "status": "answered",
-      "seconds": 0.254,
+      "seconds": 0.249,
       "count": 6,
       "variables": [
         "field",
@@ -1264,7 +1264,7 @@
       "question": "What are the topics and scientific domains covered in these graphs?",
       "file": "cqs/CQ_014.rq",
       "status": "answered",
-      "seconds": 0.012,
+      "seconds": 0.011,
       "count": 520,
       "variables": [
         "topic_label"
@@ -2837,7 +2837,7 @@
       "question": "I have to do a research on a specific place, or a specific geographic area, defined by keywords, and I need dataset for a specific subject, also defined by keywords. Give me the references of all the available datasets for that place and subject that are present in all the graphs.",
       "file": "cqs/CQ_022.rq",
       "status": "answered",
-      "seconds": 0.059,
+      "seconds": 0.055,
       "count": 1,
       "variables": [
         "pid_value"
@@ -2853,7 +2853,7 @@
       "question": "I want to know what authors are most key to read in relation to topic x and whom generally publish in immediate open access.",
       "file": "cqs/CQ_024.rq",
       "status": "answered",
-      "seconds": 2.89,
+      "seconds": 2.92,
       "count": 10,
       "variables": [
         "author_name",
@@ -2865,14 +2865,6 @@
           "tot_citations": "536"
         },
         {
-          "author_name": "Watson, Reg A.",
-          "tot_citations": "317"
-        },
-        {
-          "author_name": "Pauly, Daniel",
-          "tot_citations": "317"
-        },
-        {
           "author_name": "Swartz, Wilf",
           "tot_citations": "317"
         },
@@ -2881,19 +2873,27 @@
           "tot_citations": "317"
         },
         {
+          "author_name": "Watson, Reg A.",
+          "tot_citations": "317"
+        },
+        {
           "author_name": "Tracey, Sean",
           "tot_citations": "317"
         },
         {
-          "author_name": "Mascareñas-Osorio, Ismael",
-          "tot_citations": "219"
+          "author_name": "Pauly, Daniel",
+          "tot_citations": "317"
         },
         {
-          "author_name": "Galland, Grantly R.",
+          "author_name": "Aburto-Oropeza, Octavio",
           "tot_citations": "219"
         },
         {
           "author_name": "Ezcurra, Exequiel",
+          "tot_citations": "219"
+        },
+        {
+          "author_name": "Galland, Grantly R.",
           "tot_citations": "219"
         },
         {
@@ -2907,7 +2907,7 @@
       "question": "I want the list of journal papers which metadata consist the keywords {diamond oa, diamond Open Access model, Diamond business model}.",
       "file": "cqs/CQ_043.rq",
       "status": "answered",
-      "seconds": 0.056,
+      "seconds": 0.052,
       "count": 6,
       "variables": [
         "work",
@@ -2952,7 +2952,7 @@
       "question": "Which resources in the system identify societal issues linked to the SDGs for a specific geographic area (e.g., city, country, or region)?",
       "file": "cqs/CQ_051.rq",
       "status": "answered",
-      "seconds": 0.01,
+      "seconds": 0.009,
       "count": 1,
       "variables": [
         "work",
@@ -2970,7 +2970,7 @@
       "question": "Which outputs in the system are classified under Library and Information Science?",
       "file": "cqs/CQ_054_a.rq",
       "status": "answered",
-      "seconds": 8.186,
+      "seconds": 8.624,
       "count": 16,
       "variables": [
         "work",
@@ -3081,21 +3081,46 @@
       "id": "CQ_054_b",
       "question": "Which outputs in the system are classified under Library and Information Science?",
       "file": "cqs/CQ_054_b.rq",
-      "status": "empty",
-      "seconds": 0.0,
-      "count": 0,
+      "status": "answered",
+      "seconds": 0.027,
+      "count": 6,
       "variables": [
         "work",
         "title"
       ],
-      "rows": []
+      "rows": [
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/062503856221",
+          "title": "Data from: Species richness change across spatial scales"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06020539095",
+          "title": "Was Und Wie Lehren Und Lernen Sie Im Som- Mersemester 2020?"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06020539095",
+          "title": "Was und wie lehren und lernen Sie im Sommersemester 2020? Befragungen von Lehrenden und Studierenden der Technischen Universität Hamburg im Sommersemester 2020"
+        },
+        {
+          "work": "https://w3id.org/oc/meta/br/06020539095",
+          "title": "What and how do you teach and learn during the summer semester 2020? Interviews with teachers and students from the Technical University of Hamburg during the summer semester 2020"
+        }
+      ]
     },
     {
       "id": "CQ_056",
       "question": "Which authors are most frequently publishing on these topics?",
       "file": "cqs/CQ_056.rq",
       "status": "answered",
-      "seconds": 0.006,
+      "seconds": 0.008,
       "count": 20,
       "variables": [
         "author_name",
@@ -3107,55 +3132,11 @@
           "publications": "2"
         },
         {
-          "author_name": "Buchwald, Erik",
+          "author_name": "Yermokhin, Maxim",
           "publications": "1"
         },
         {
-          "author_name": "Atauri, José A.",
-          "publications": "1"
-        },
-        {
-          "author_name": "Pauly, Daniel",
-          "publications": "1"
-        },
-        {
-          "author_name": "Stillhard, Jonas",
-          "publications": "1"
-        },
-        {
-          "author_name": "Ibisch, Pierre L",
-          "publications": "1"
-        },
-        {
-          "author_name": "Swartz, Wilf",
-          "publications": "1"
-        },
-        {
-          "author_name": "Kiš, Alen",
-          "publications": "1"
-        },
-        {
-          "author_name": "Pisek, Rok",
-          "publications": "1"
-        },
-        {
-          "author_name": "Mikoláš, Martin",
-          "publications": "1"
-        },
-        {
-          "author_name": "Szwagrzyk, Jerzy",
-          "publications": "1"
-        },
-        {
-          "author_name": "Zagidullina, Asiya",
-          "publications": "1"
-        },
-        {
-          "author_name": "Ruete, Alejandro",
-          "publications": "1"
-        },
-        {
-          "author_name": "Diku, Abdulla",
+          "author_name": "Matovic, Bratislav",
           "publications": "1"
         },
         {
@@ -3163,23 +3144,67 @@
           "publications": "1"
         },
         {
+          "author_name": "Fernández López, Ángel B.",
+          "publications": "1"
+        },
+        {
+          "author_name": "Tikkanen, Olli-Pekka",
+          "publications": "1"
+        },
+        {
+          "author_name": "Mascareñas-Osorio, Ismael",
+          "publications": "1"
+        },
+        {
+          "author_name": "Grigoriadis, Nikolaos",
+          "publications": "1"
+        },
+        {
+          "author_name": "Nunes, Leónia",
+          "publications": "1"
+        },
+        {
+          "author_name": "Toromani, Elvin",
+          "publications": "1"
+        },
+        {
+          "author_name": "Kuemmerle, Tobias",
+          "publications": "1"
+        },
+        {
+          "author_name": "Swartz, Wilf",
+          "publications": "1"
+        },
+        {
+          "author_name": "Pisek, Rok",
+          "publications": "1"
+        },
+        {
+          "author_name": "Mozgeris, Gintautas",
+          "publications": "1"
+        },
+        {
+          "author_name": "Pauly, Daniel",
+          "publications": "1"
+        },
+        {
+          "author_name": "Atauri, José A.",
+          "publications": "1"
+        },
+        {
+          "author_name": "Kraut, Ann",
+          "publications": "1"
+        },
+        {
+          "author_name": "Stillhard, Jonas",
+          "publications": "1"
+        },
+        {
           "author_name": "Luiz Henrique Nunes",
           "publications": "1"
         },
         {
-          "author_name": "Panayotov, Momchil",
-          "publications": "1"
-        },
-        {
-          "author_name": "Garbarino, Matteo",
-          "publications": "1"
-        },
-        {
-          "author_name": "Mikac, Stjepan",
-          "publications": "1"
-        },
-        {
-          "author_name": "Larrieu, Laurent",
+          "author_name": "Aburto-Oropeza, Octavio",
           "publications": "1"
         }
       ]
@@ -3189,7 +3214,7 @@
       "question": "I want to find research papers (articles, books) that contain a set of keywords and were funded by the Horizon project.",
       "file": "cqs/CQ_060.rq",
       "status": "answered",
-      "seconds": 0.024,
+      "seconds": 0.03,
       "count": 2,
       "variables": [
         "work",

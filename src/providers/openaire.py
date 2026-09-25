@@ -9,6 +9,7 @@ class OpenAIREProvider(BaseSKGProvider):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._grants: dict[str, dict[str, Any] | None] = {}
+        self._datasources: dict[str, dict[str, Any] | None] = {}
         self._lock = threading.Lock()
 
     def fetch_by_doi(
@@ -43,6 +44,12 @@ class OpenAIREProvider(BaseSKGProvider):
         # 'funding' only embeds a grant summary: replace it with the full grant record
         if record.get("funding"):
             record["funding"] = [self._fetch_grant(g) or g for g in record["funding"]]
+
+        # 'hosting_data_source' only embeds a data source summary: replace it with the full data source record
+        for manifestation in record.get("manifestations") or []:
+            biblio = manifestation.get("biblio") or {}
+            if isinstance(biblio.get("hosting_data_source"), dict):
+                biblio["hosting_data_source"] = self._fetch_datasource(biblio["hosting_data_source"]) or biblio["hosting_data_source"]
         return record
 
     def _scope_otf_identifiers(self, node: Any, product_id: str) -> None:
@@ -61,15 +68,31 @@ class OpenAIREProvider(BaseSKGProvider):
         grant: dict[str, Any]
         ) -> dict[str, Any] | None:
 
-        lid = grant.get("local_identifier", "")
+        return self._fetch_entity(grant, "grant", self._grants)
+
+    def _fetch_datasource(
+        self,
+        datasource: dict[str, Any]
+        ) -> dict[str, Any] | None:
+
+        return self._fetch_entity(datasource, "datasource", self._datasources)
+
+    def _fetch_entity(
+        self,
+        entity: dict[str, Any],
+        endpoint: str,
+        cache: dict[str, dict[str, Any] | None]
+        ) -> dict[str, Any] | None:
+
+        lid = entity.get("local_identifier", "")
         if not lid:
             return None
-        grant_id = lid.rstrip("/").rsplit("/", 1)[-1]
+        entity_id = lid.rstrip("/").rsplit("/", 1)[-1]
         with self._lock:
-            if grant_id in self._grants:
-                return self._grants[grant_id]
+            if entity_id in cache:
+                return cache[entity_id]
 
-        url = self.config.get("base_url") + self.config.get("endpoints").get("grant").format(local_id=grant_id)
+        url = self.config.get("base_url") + self.config.get("endpoints").get(endpoint).format(local_id=entity_id)
         full = None
         try:
             res = self.session.get(url, timeout=self.timeout)
@@ -79,7 +102,7 @@ class OpenAIREProvider(BaseSKGProvider):
         except (requests.RequestException, ValueError):
             full = None
         if full:
-            self._scope_otf_identifiers(full, grant_id)
+            self._scope_otf_identifiers(full, entity_id)
         with self._lock:
-            self._grants[grant_id] = full
+            cache[entity_id] = full
         return full

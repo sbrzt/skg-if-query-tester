@@ -11,6 +11,7 @@ prefixes = {
     "bido": "http://purl.org/spar/bido/",
     "fabio": "http://purl.org/spar/fabio/",
     "datacite": "http://purl.org/spar/datacite/",
+    "dcat": "http://www.w3.org/ns/dcat#",
     "dcterms": "http://purl.org/dc/terms/",
     "literal": "http://www.essepuntato.it/2010/06/literalreification/",
     "cito": "http://purl.org/spar/cito/",
@@ -23,6 +24,11 @@ prefixes = {
     "prism": "http://prismstandard.org/namespaces/basic/2.0/",
     "co": "http://purl.org/co/",
     "ti": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "schema": "https://schema.org/",
+    "coar": "http://purl.org/coar/access_right/",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "lcc": "http://id.loc.gov/authorities/classification/",
 }
 
 for prefix, uri in prefixes.items():

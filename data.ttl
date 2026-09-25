@@ -17,6 +17,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+
 
 <https://w3id.org/oc/meta/br/06010139774> a fabio:ScholarlyWork,
         fabio:Work ;
@@ -60936,6 +60938,116 @@
         <https://w3id.org/oc/meta/br/06904472350/contribution/4> ;
     frbr:realization <https://w3id.org/oc/meta/br/06904472350/manifestation/1> .
 
+<https://api.openaire.eu/graph/skg-if/v1/datasources/eurocrisdris::9ae43d14471c4b33661fedda6f06b539> a dcat:DataService ;
+    dcterms:subject lcc:Z ;
+    dcat:theme frapo:ResearchInformationSystem ;
+    foaf:name "TUHH Open Research (TORE)" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::c3a690be93aa602ee2dc0ccab5b7b67e> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.kwzydf>,
+        <https://example.org/skg-if/data/identifier/re3data/r3d100010691> ;
+    dcat:theme fabio:Repository ;
+    dcterms:subject lcc:Z ;
+    foaf:name "Borealis, the Canadian Dataverse Repository" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::9c2ffbdfdc48f6df69a6a3e6a280fae1> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Digital Scholarship in the Humanities" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::1c7cbe234effd9945d7a4fefb90be48e> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.b17c70> ;
+    dcat:theme fabio:Database ;
+    foaf:name "zbMATH Open" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::d8b68cc0a53121f6f896883a7d60c1db> a dcat:DataService ;
+    foaf:name "DBLP" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::ddcdf7dcef98c2a7626bbb11d1a7b534> a dcat:DataService ;
+    foaf:name "Research.fi" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::f19d2f12ac82ff06994dd8efb73a2178> a dcat:DataService ;
+    dcat:theme fabio:Catalog ;
+    foaf:name "Project Euclid" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::1ce927f875864094e3906a4a0b5ece68> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Diposit Digital de la Universitat de Barcelona" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::1eaa260fddcc15e3c1f09453b8d5bd92> a dcat:DataService ;
+    dcterms:subject lcc:Z ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Digital Object Repository at WSL" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::649d45bf179296e31731adfd4df25588> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Български портал за отворена наука" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::64c53a52cb3bd1a01c03a64db985c0cc> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Archivio istituzionale della ricerca - Alma Mater Studiorum Università di Bologna" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::7a614fd06c325499f1680b9896beedeb> a dcat:DataService ;
+    dcat:theme fabio:Catalog ;
+    foaf:name "Research Repository of Catalonia" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::7bb060764a818184ebb1cc0d43d382aa> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Open Research Newcastle" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::827a9e878169d065f4a9a6c451ba0207> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Gazi Üniversitesi - AVESIS" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::88a199611ac2b85bd3f76e8ee7e55650> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Archivio Istituzionale Università di Bergamo" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::89fcd07f20b6785b92134bd6c1d0fa42> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    dcterms:subject lcc:Z ;
+    foaf:name "Archivio Istituzionale della Ricerca (AperTO) - Università di Torino" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::9fc3d7152ba9336a670e36d0ed79bc43> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "edoc-Server. Open-Access-Publikationsserver der Humboldt-Universität zu Berlin " .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::a03fa30821986dff10fc66647c84c9c3> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Institutional Repository Universiteit Antwerpen" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::b5baa9c23ac3e015ad287b17a3d4afa3> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "T-Stór" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::b710915795b9e9c02cf10d6d2bdb688c> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "ProdInra" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c7a9f13a6c0940277d46706c7ca32601> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "HAL INRAE" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::dc6e224a8d74ce03bf301152d6e33e97> a dcat:DataService ;
+    dcat:theme fabio:Catalog ;
+    foaf:name "LAReferencia - Red Federada de Repositorios Institucionales de Publicaciones Científicas Latinoamericanas" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::effc299a1addb07e7089f9b269c31f2f> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Texas ScholarWorks" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::f0dd4a99fba6075a9494772b58f95280> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Archive ouverte UNIGE" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::89b3e06dddf04c8b54897f832bdf5505> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/re3data/r3d100011121> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "cIRcle" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::b3e274fae7bd155cc59d79428066e38f> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "TUHH Open Research - Research Data TUHH" .
+
 <https://api.openaire.eu/graph/skg-if/v1/grants/501100001584::1e5e62235d094afd01cd56e65112fc63> a frapo:Grant ;
     frapo:hasFundingAgency <https://example.org/skg-if/data/501100001584%3A%3A501100001584> .
 
@@ -69016,6 +69128,34 @@
 <https://example.org/skg-if/data/identifier/doi/10.25300%2Fmisq> a datacite:Identifier ;
     datacite:usesIdentifierScheme datacite:doi ;
     literal:hasLiteralValue "10.25300/misq" .
+
+<https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.b17c70> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:doi ;
+    literal:hasLiteralValue "10.25504/fairsharing.b17c70" .
+
+<https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.drtwnh> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:doi ;
+    literal:hasLiteralValue "10.25504/fairsharing.drtwnh" .
+
+<https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.kwzydf> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:doi ;
+    literal:hasLiteralValue "10.25504/fairsharing.kwzydf" .
+
+<https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.t2e1ss> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:doi ;
+    literal:hasLiteralValue "10.25504/fairsharing.t2e1ss" .
+
+<https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.wkggtx> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:doi ;
+    literal:hasLiteralValue "10.25504/fairsharing.wkggtx" .
+
+<https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.wpt5mp> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:doi ;
+    literal:hasLiteralValue "10.25504/fairsharing.wpt5mp" .
+
+<https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.x68mjp> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:doi ;
+    literal:hasLiteralValue "10.25504/fairsharing.x68mjp" .
 
 <https://example.org/skg-if/data/identifier/doi/10.26881%2Foahs-2022.1.04> a datacite:Identifier ;
     datacite:usesIdentifierScheme datacite:doi ;
@@ -107441,6 +107581,38 @@
     datacite:usesIdentifierScheme datacite:pmid ;
     literal:hasLiteralValue "9860498" .
 
+<https://example.org/skg-if/data/identifier/re3data/r3d100000044> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100000044" .
+
+<https://example.org/skg-if/data/identifier/re3data/r3d100010051> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100010051" .
+
+<https://example.org/skg-if/data/identifier/re3data/r3d100010066> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100010066" .
+
+<https://example.org/skg-if/data/identifier/re3data/r3d100010691> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100010691" .
+
+<https://example.org/skg-if/data/identifier/re3data/r3d100010750> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100010750" .
+
+<https://example.org/skg-if/data/identifier/re3data/r3d100011121> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100011121" .
+
+<https://example.org/skg-if/data/identifier/re3data/r3d100011245> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100011245" .
+
+<https://example.org/skg-if/data/identifier/re3data/r3d100012604> a datacite:Identifier ;
+    datacite:usesIdentifierScheme datacite:re3data ;
+    literal:hasLiteralValue "r3d100012604" .
+
 <https://example.org/skg-if/data/identifier/ringgold/1190> a datacite:Identifier ;
     datacite:usesIdentifierScheme datacite:ringgold ;
     literal:hasLiteralValue "1190" .
@@ -116089,7 +116261,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.6092%2Funibo%2Famsacta%2F6210> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06010076454/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06010076454/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeccbc87e4b5ce2fe28308fd9f2a7baf3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3> .
 
 <https://w3id.org/oc/meta/br/06010076454/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -116101,7 +116273,7 @@
         fabio:Expression ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06010076454/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06010076454/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06010076454/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -116115,7 +116287,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%20BY> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06010076454/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06010076454/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeccbc87e4b5ce2fe28308fd9f2a7baf3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3> .
 
 <https://w3id.org/oc/meta/br/06010076454/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -121521,7 +121693,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.15480%2F336.2833> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06020539095/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06020539095/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3Ab3e274fae7bd155cc59d79428066e38f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::b3e274fae7bd155cc59d79428066e38f> .
 
 <https://w3id.org/oc/meta/br/06020539095/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -121533,7 +121705,7 @@
         fabio:Expression ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06020539095/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06020539095/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/eurocrisdris%3A%3A9ae43d14471c4b33661fedda6f06b539> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/eurocrisdris::9ae43d14471c4b33661fedda6f06b539> .
 
 <https://w3id.org/oc/meta/br/06020539095/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -122619,7 +122791,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.4119%2Funibi%2F2673424> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263700/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263700/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060263700/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -122633,7 +122805,7 @@
     dcterms:license <https://opendatacommons.org/licenses/by/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263700/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263700/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A536a76f94cf7535158f66cfbd4b113b6> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6> .
 
 <https://w3id.org/oc/meta/br/060263700/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -122647,7 +122819,7 @@
     dcterms:license <https://opendatacommons.org/licenses/by/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263700/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263700/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A229754d7799160502a143a72f6789927> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> .
 
 <https://w3id.org/oc/meta/br/060263700/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -122769,7 +122941,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.4119%2Funibi%2F2701116> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263729/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263729/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060263729/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -122783,7 +122955,7 @@
     dcterms:license <https://opendatacommons.org/licenses/odbl/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263729/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263729/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A536a76f94cf7535158f66cfbd4b113b6> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6> .
 
 <https://w3id.org/oc/meta/br/060263729/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -122797,7 +122969,7 @@
     dcterms:license <https://opendatacommons.org/licenses/odbl/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263729/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263729/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A229754d7799160502a143a72f6789927> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> .
 
 <https://w3id.org/oc/meta/br/060263729/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -122929,7 +123101,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.4119%2Funibi%2F2900146> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263746/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263746/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060263746/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -122943,7 +123115,7 @@
     dcterms:license <https://opendatacommons.org/licenses/odbl/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263746/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263746/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A536a76f94cf7535158f66cfbd4b113b6> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6> .
 
 <https://w3id.org/oc/meta/br/060263746/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -122957,7 +123129,7 @@
     dcterms:license <https://opendatacommons.org/licenses/odbl/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263746/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263746/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A229754d7799160502a143a72f6789927> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> .
 
 <https://w3id.org/oc/meta/br/060263746/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -123142,7 +123314,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.4119%2Funibi%2F2932844> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263766/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263766/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060263766/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -123156,7 +123328,7 @@
     dcterms:license <https://example.org/skg-if/data/%22In%20Copyright%22%20Rights%20Statement> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263766/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263766/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A229754d7799160502a143a72f6789927> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> .
 
 <https://w3id.org/oc/meta/br/060263766/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -123337,7 +123509,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.4119%2Funibi%2F2935425> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263768/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263768/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060263768/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -123351,7 +123523,7 @@
     dcterms:license <https://example.org/skg-if/data/%22In%20Copyright%22%20Rights%20Statement> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060263768/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060263768/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A229754d7799160502a143a72f6789927> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> .
 
 <https://w3id.org/oc/meta/br/060263768/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -123859,7 +124031,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.1tc43> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060266934/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060266934/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060266934/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -123873,7 +124045,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060266934/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060266934/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060266934/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -124171,7 +124343,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.4g9g0> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060272527/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060272527/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060272527/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -124185,7 +124357,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060272527/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060272527/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060272527/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -124322,7 +124494,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.4s7t3> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060272998/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060272998/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060272998/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -124336,7 +124508,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060272998/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060272998/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060272998/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -124480,7 +124652,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.75j0k9c> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060277272/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060277272/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060277272/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -124494,7 +124666,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060277272/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060277272/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060277272/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -125228,7 +125400,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.d1f0d> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060284929/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060284929/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060284929/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -125243,7 +125415,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060284929/manifestation/3/access_rights>,
         <https://w3id.org/oc/meta/br/060284929/manifestation/3/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060284929/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A4cb2a3eb94033446c37331f60fad0847> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::4cb2a3eb94033446c37331f60fad0847> .
 
 <https://w3id.org/oc/meta/br/060284929/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -125258,7 +125430,7 @@
         fabio:Expression ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060284929/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060284929/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060284929/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -125272,7 +125444,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060284929/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060284929/manifestation/5/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060284929/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -125284,7 +125456,7 @@
         fabio:Expression ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060284929/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060284929/manifestation/6/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060284929/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -125437,7 +125609,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.ffbg79ct2> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060286618/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060286618/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060286618/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -125451,7 +125623,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060286618/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060286618/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060286618/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -125976,7 +126148,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.n581t> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060293588/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060293588/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060293588/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -125990,7 +126162,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060293588/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060293588/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060293588/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -126548,7 +126720,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.pr10c20> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060295301/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060295301/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/060295301/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -126560,7 +126732,7 @@
         fabio:Expression ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060295301/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060295301/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060295301/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -126574,7 +126746,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060295301/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060295301/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/060295301/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -126586,7 +126758,7 @@
         fabio:Expression ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/060295301/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/060295301/manifestation/5/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/060295301/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -128775,7 +128947,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5258%2Fsoton%2Fwp00020> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0606487120/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0606487120/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A01386bd6d8e091c2ab4c7c7de644d37b> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b> .
 
 <https://w3id.org/oc/meta/br/0606487120/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -129222,7 +129394,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5258%2Fsoton%2Fwp00735> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0607068228/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0607068228/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A01386bd6d8e091c2ab4c7c7de644d37b> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b> .
 
 <https://w3id.org/oc/meta/br/0607068228/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -133110,7 +133282,7 @@
         <https://w3id.org/oc/meta/br/06103466795/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06103466795/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad427a43caf29f5729a2d4cabfa776360> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360> .
 
 <https://w3id.org/oc/meta/br/06103466795/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -133130,7 +133302,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06103466795/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06103466795/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad427a43caf29f5729a2d4cabfa776360> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360> .
 
 <https://w3id.org/oc/meta/br/06103466795/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -133148,7 +133320,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06103466795/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06103466795/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad427a43caf29f5729a2d4cabfa776360> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360> .
 
 <https://w3id.org/oc/meta/br/06103466795/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -133164,7 +133336,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06103466795/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06103466795/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06103466795/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -133182,7 +133354,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06103466795/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06103466795/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aa03fa30821986dff10fc66647c84c9c3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::a03fa30821986dff10fc66647c84c9c3> .
 
 <https://w3id.org/oc/meta/br/06103466795/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation cannot be accessed" ;
@@ -133198,7 +133370,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06103466795/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06103466795/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06103466795/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -133792,7 +133964,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.6092%2Funibo%2Famsacta%2F6400> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06104011056/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06104011056/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeccbc87e4b5ce2fe28308fd9f2a7baf3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3> .
 
 <https://w3id.org/oc/meta/br/06104011056/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -133804,7 +133976,7 @@
         fabio:Expression ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06104011056/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06104011056/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06104011056/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -133818,7 +133990,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%20BY> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06104011056/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06104011056/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeccbc87e4b5ce2fe28308fd9f2a7baf3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3> .
 
 <https://w3id.org/oc/meta/br/06104011056/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -134009,7 +134181,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25500%2Fedata.bham.00000306> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06104282390/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06104282390/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06104282390/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -135972,7 +136144,7 @@
         <https://w3id.org/oc/meta/br/061101531895/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061101531895/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/061101531895/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -135992,7 +136164,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061101531895/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061101531895/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/061101531895/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -136010,7 +136182,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061101531895/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061101531895/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/061101531895/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -136027,7 +136199,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061101531895/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061101531895/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeda80a3d5b344bc40f3bc04f65b7a357> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357> .
 
 <https://w3id.org/oc/meta/br/061101531895/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -136043,7 +136215,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061101531895/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061101531895/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/061101531895/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -136058,7 +136230,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061101531895/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061101531895/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061101531895/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -136073,7 +136245,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061101531895/manifestation/8/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061101531895/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061101531895/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -140136,7 +140308,7 @@
         <https://w3id.org/oc/meta/br/061201936205/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061201936205/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0605751516> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3A9c2ffbdfdc48f6df69a6a3e6a280fae1> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::9c2ffbdfdc48f6df69a6a3e6a280fae1> .
 
 <https://w3id.org/oc/meta/br/061201936205/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -140156,7 +140328,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061201936205/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061201936205/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0605751516> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3Ad8b68cc0a53121f6f896883a7d60c1db> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::d8b68cc0a53121f6f896883a7d60c1db> .
 
 <https://w3id.org/oc/meta/br/061201936205/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -140172,7 +140344,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061201936205/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061201936205/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0605751516> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061201936205/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -140188,7 +140360,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061201936205/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061201936205/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0605751516> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061201936205/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -142206,7 +142378,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.7910%2Fdvn%2Frauihg> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061203577930/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061203577930/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3Aeb2df13ed4d743c1c15ea7353525124a> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::eb2df13ed4d743c1c15ea7353525124a> .
 
 <https://w3id.org/oc/meta/br/061203577930/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -142360,7 +142532,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.7910%2Fdvn%2Fs1594s> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061203582752/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061203582752/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3Aeb2df13ed4d743c1c15ea7353525124a> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::eb2df13ed4d743c1c15ea7353525124a> .
 
 <https://w3id.org/oc/meta/br/061203582752/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -144209,7 +144381,7 @@
         <https://w3id.org/oc/meta/br/061301826596/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301826596/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0614039667> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Abae2c2d837774afff9b58d692b5a0e60> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::bae2c2d837774afff9b58d692b5a0e60> .
 
 <https://w3id.org/oc/meta/br/061301826596/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation cannot be accessed" ;
@@ -144230,7 +144402,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301826596/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301826596/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0614039667> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Abae2c2d837774afff9b58d692b5a0e60> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::bae2c2d837774afff9b58d692b5a0e60> .
 
 <https://w3id.org/oc/meta/br/061301826596/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -144248,7 +144420,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301826596/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301826596/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0614039667> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061301826596/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -144264,7 +144436,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301826596/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301826596/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0614039667> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061301826596/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -144280,7 +144452,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301826596/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301826596/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0614039667> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061301826596/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -144705,7 +144877,7 @@
         <https://w3id.org/oc/meta/br/061301923382/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301923382/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061301924479> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A6156306167f41a4329043cdbd8cd4dd2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::6156306167f41a4329043cdbd8cd4dd2> .
 
 <https://w3id.org/oc/meta/br/061301923382/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -144724,7 +144896,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301923382/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301923382/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061301924479> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A6156306167f41a4329043cdbd8cd4dd2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::6156306167f41a4329043cdbd8cd4dd2> .
 
 <https://w3id.org/oc/meta/br/061301923382/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -144739,7 +144911,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301923382/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301923382/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061301924479> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A6156306167f41a4329043cdbd8cd4dd2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::6156306167f41a4329043cdbd8cd4dd2> .
 
 <https://w3id.org/oc/meta/br/061301923382/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -144752,7 +144924,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301923382/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301923382/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061301924479> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061301923382/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -144765,7 +144937,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061301923382/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061301923382/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061301924479> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061301923382/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -145837,7 +146009,7 @@
         <https://w3id.org/oc/meta/br/061302582354/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061302582354/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06010437549> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3Ac15b62793e8d2cbe39ca5ddf780be6b4> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4> .
 
 <https://w3id.org/oc/meta/br/061302582354/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -145858,7 +146030,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061302582354/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061302582354/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06010437549> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3Ac15b62793e8d2cbe39ca5ddf780be6b4> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4> .
 
 <https://w3id.org/oc/meta/br/061302582354/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -145876,7 +146048,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061302582354/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061302582354/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06010437549> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3Ac15b62793e8d2cbe39ca5ddf780be6b4> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4> .
 
 <https://w3id.org/oc/meta/br/061302582354/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -145892,7 +146064,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061302582354/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061302582354/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06010437549> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061302582354/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -145911,7 +146083,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061302582354/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061302582354/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06010437549> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A88a199611ac2b85bd3f76e8ee7e55650> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::88a199611ac2b85bd3f76e8ee7e55650> .
 
 <https://w3id.org/oc/meta/br/061302582354/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -145930,7 +146102,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061302582354/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061302582354/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06010437549> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Ab5baa9c23ac3e015ad287b17a3d4afa3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::b5baa9c23ac3e015ad287b17a3d4afa3> .
 
 <https://w3id.org/oc/meta/br/061302582354/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -145946,7 +146118,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061302582354/manifestation/8/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061302582354/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06010437549> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061302582354/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -146707,6 +146879,63 @@
     prism:volume "9" ;
     dcterms:issued "2022-11-14T00:00:00"^^xsd:dateTime ;
     frbr:partOf <https://w3id.org/oc/meta/br/0619043721> .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/1> a pro:RoleInTime ;
+    co:index "1"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127483> ;
+    pro:withRole pro:author .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/2> a pro:RoleInTime ;
+    co:index "2"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127484> ;
+    pro:withRole pro:author .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/3> a pro:RoleInTime ;
+    co:index "3"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127485> ;
+    pro:withRole pro:author .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/4> a pro:RoleInTime ;
+    co:index "1"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127486> ;
+    pro:withRole pro:publisher .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/5> a pro:RoleInTime ;
+    co:index "1"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/063704780> ;
+    pro:withRole pro:author .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/6> a pro:RoleInTime ;
+    co:index "2"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/063704781> ;
+    pro:withRole pro:author .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/7> a pro:RoleInTime ;
+    co:index "3"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/063704782> ;
+    pro:withRole pro:author .
+
+<https://w3id.org/oc/meta/br/061303703706/contribution/8> a pro:RoleInTime ;
+    co:index "1"^^xsd:positiveInteger ;
+    pro:isHeldBy <https://w3id.org/oc/meta/ra/0610116009> ;
+    pro:withRole pro:publisher .
+
+<https://w3id.org/oc/meta/br/061303703706/manifestation/1> a fabio:Expression,
+        fabio:JournalArticle ;
+    dcterms:issued "2000-01-01T00:00:00"^^xsd:dateTime ;
+    frbr:partOf <https://w3id.org/oc/meta/br/0616022987> .
+
+<https://w3id.org/oc/meta/br/061303703706/manifestation/2> a fabio:Expression,
+        fabio:JournalArticle ;
+    prism:issueIdentifier "9232" ;
+    prism:volume "356" ;
+    dcterms:issued "2000-09-01T00:00:00"^^xsd:dateTime ;
+    frbr:embodiment <https://w3id.org/oc/meta/br/061303703706/manifestation/2/pages> ;
+    frbr:partOf <https://w3id.org/oc/meta/br/0616022987> .
+
+<https://w3id.org/oc/meta/br/061303703706/manifestation/2/pages> a fabio:Manifestation ;
+    prism:endingPage "819" ;
+    prism:startingPage "814" .
 
 <https://w3id.org/oc/meta/br/061303705844> a fabio:ScholarlyWork,
         fabio:Work ;
@@ -148196,7 +148425,7 @@
         <https://w3id.org/oc/meta/br/061401275949/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061401275949/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0616036074> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3A0a1ed0a34ad8bd077d4ef39072706e2f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0a1ed0a34ad8bd077d4ef39072706e2f> .
 
 <https://w3id.org/oc/meta/br/061401275949/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation cannot be accessed" ;
@@ -148216,7 +148445,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061401275949/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061401275949/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0616036074> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3A0a1ed0a34ad8bd077d4ef39072706e2f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0a1ed0a34ad8bd077d4ef39072706e2f> .
 
 <https://w3id.org/oc/meta/br/061401275949/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -148234,7 +148463,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061401275949/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061401275949/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0616036074> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3A0a1ed0a34ad8bd077d4ef39072706e2f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0a1ed0a34ad8bd077d4ef39072706e2f> .
 
 <https://w3id.org/oc/meta/br/061401275949/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -148250,7 +148479,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061401275949/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061401275949/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0616036074> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061401275949/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -148266,7 +148495,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061401275949/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061401275949/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0616036074> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061401275949/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -151679,7 +151908,7 @@
         <https://w3id.org/oc/meta/br/061501398237/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061501398237/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061501398601> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A47b6384965a3bce4aa0c8ab5297997a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::47b6384965a3bce4aa0c8ab5297997a2> .
 
 <https://w3id.org/oc/meta/br/061501398237/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -151699,7 +151928,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061501398237/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061501398237/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061501398601> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A47b6384965a3bce4aa0c8ab5297997a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::47b6384965a3bce4aa0c8ab5297997a2> .
 
 <https://w3id.org/oc/meta/br/061501398237/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -151716,7 +151945,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061501398237/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061501398237/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061501398601> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A47b6384965a3bce4aa0c8ab5297997a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::47b6384965a3bce4aa0c8ab5297997a2> .
 
 <https://w3id.org/oc/meta/br/061501398237/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -151733,7 +151962,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061501398237/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061501398237/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061501398601> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeda80a3d5b344bc40f3bc04f65b7a357> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357> .
 
 <https://w3id.org/oc/meta/br/061501398237/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -151748,7 +151977,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061501398237/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061501398237/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061501398601> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061501398237/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -151766,7 +151995,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061501398237/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061501398237/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061501398601> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A7bb060764a818184ebb1cc0d43d382aa> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::7bb060764a818184ebb1cc0d43d382aa> .
 
 <https://w3id.org/oc/meta/br/061501398237/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -151781,7 +152010,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/061501398237/manifestation/8/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/061501398237/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/061501398601> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/061501398237/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -172702,7 +172931,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06201531855/manifestation/10/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/10/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/10/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -172747,7 +172976,7 @@
         <https://w3id.org/oc/meta/br/06201531855/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -172767,7 +172996,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06201531855/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -172785,7 +173014,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06201531855/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -172802,7 +173031,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06201531855/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeda80a3d5b344bc40f3bc04f65b7a357> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -172820,7 +173049,7 @@
         <https://w3id.org/oc/meta/br/06201531855/manifestation/6/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A4cb2a3eb94033446c37331f60fad0847> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::4cb2a3eb94033446c37331f60fad0847> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -172839,7 +173068,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06201531855/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A830e55b42c4aaa815c19cfa4f2e5855e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -172854,7 +173083,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06201531855/manifestation/8/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -172872,7 +173101,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06201531855/manifestation/9/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06201531855/manifestation/9/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/068038897> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeffc299a1addb07e7089f9b269c31f2f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::effc299a1addb07e7089f9b269c31f2f> .
 
 <https://w3id.org/oc/meta/br/06201531855/manifestation/9/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -175230,7 +175459,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5258%2Fsoton%2Fwp00004> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06204002616/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06204002616/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A01386bd6d8e091c2ab4c7c7de644d37b> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b> .
 
 <https://w3id.org/oc/meta/br/06204002616/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -179439,7 +179668,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062201123392/manifestation/10/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/10/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Ac5866e93cab1776890fe343c9e7063fb> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c5866e93cab1776890fe343c9e7063fb> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/10/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation cannot be accessed" ;
@@ -179455,7 +179684,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062201123392/manifestation/11/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/11/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/11/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -179500,7 +179729,7 @@
         <https://w3id.org/oc/meta/br/062201123392/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ae19a3f639325224687547c932d5b7c32> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::e19a3f639325224687547c932d5b7c32> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -179520,7 +179749,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062201123392/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ae19a3f639325224687547c932d5b7c32> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::e19a3f639325224687547c932d5b7c32> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -179539,7 +179768,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062201123392/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ae19a3f639325224687547c932d5b7c32> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::e19a3f639325224687547c932d5b7c32> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -179555,7 +179784,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062201123392/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -179572,7 +179801,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062201123392/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A827a9e878169d065f4a9a6c451ba0207> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::827a9e878169d065f4a9a6c451ba0207> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation cannot be accessed" ;
@@ -179589,7 +179818,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062201123392/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Af0dd4a99fba6075a9494772b58f95280> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::f0dd4a99fba6075a9494772b58f95280> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "only allowed users can access the manifestation" ;
@@ -179608,7 +179837,7 @@
         <https://w3id.org/oc/meta/br/062201123392/manifestation/8/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Ac5866e93cab1776890fe343c9e7063fb> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c5866e93cab1776890fe343c9e7063fb> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -179629,7 +179858,7 @@
         <https://w3id.org/oc/meta/br/062201123392/manifestation/9/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062201123392/manifestation/9/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0625022949> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Adb98dc0dbafde48e8f74c0de001d35e4> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::db98dc0dbafde48e8f74c0de001d35e4> .
 
 <https://w3id.org/oc/meta/br/062201123392/manifestation/9/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -182486,7 +182715,7 @@
         <https://w3id.org/oc/meta/br/062203031151/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203031151/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad427a43caf29f5729a2d4cabfa776360> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360> .
 
 <https://w3id.org/oc/meta/br/062203031151/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -182507,7 +182736,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062203031151/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203031151/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad427a43caf29f5729a2d4cabfa776360> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360> .
 
 <https://w3id.org/oc/meta/br/062203031151/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -182525,7 +182754,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062203031151/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203031151/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad427a43caf29f5729a2d4cabfa776360> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360> .
 
 <https://w3id.org/oc/meta/br/062203031151/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -182541,7 +182770,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062203031151/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203031151/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062203031151/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -182557,7 +182786,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062203031151/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203031151/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0613058668> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062203031151/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -184555,7 +184784,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5281%2Fzenodo.6818050> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062203959149/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203959149/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/062203959149/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -184570,7 +184799,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5281%2Fzenodo.6818051> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062203959149/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203959149/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/062203959149/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -184585,7 +184814,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5281%2Fzenodo.6818051> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062203959149/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062203959149/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/062203959149/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -186788,7 +187017,7 @@
         <https://w3id.org/oc/meta/br/062301600667/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062301600667/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062301600957> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3Abec048d05a81c13266c540fd00726186> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::bec048d05a81c13266c540fd00726186> .
 
 <https://w3id.org/oc/meta/br/062301600667/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -186807,7 +187036,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062301600667/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062301600667/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062301600957> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3Abec048d05a81c13266c540fd00726186> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::bec048d05a81c13266c540fd00726186> .
 
 <https://w3id.org/oc/meta/br/062301600667/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -186821,7 +187050,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062301600667/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062301600667/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062301600957> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3Abec048d05a81c13266c540fd00726186> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::bec048d05a81c13266c540fd00726186> .
 
 <https://w3id.org/oc/meta/br/062301600667/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -186835,7 +187064,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062301600667/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062301600667/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062301600957> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062301600667/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -186849,7 +187078,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062301600667/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062301600667/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062301600957> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062301600667/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -188081,7 +188310,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/10/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/10/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/10/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -188128,7 +188357,7 @@
         <https://w3id.org/oc/meta/br/062302392349/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3A0f456ec08b6dc2bb479aec28bd461385> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0f456ec08b6dc2bb479aec28bd461385> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -188149,7 +188378,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3A0f456ec08b6dc2bb479aec28bd461385> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0f456ec08b6dc2bb479aec28bd461385> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -188167,7 +188396,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/fairsharing_%3A%3A4888241374e8c62ddd9b4c3cfd091f96> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::4888241374e8c62ddd9b4c3cfd091f96> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -188185,7 +188414,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/fairsharing_%3A%3A4888241374e8c62ddd9b4c3cfd091f96> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::4888241374e8c62ddd9b4c3cfd091f96> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -188203,7 +188432,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A4cb2a3eb94033446c37331f60fad0847> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::4cb2a3eb94033446c37331f60fad0847> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -188219,7 +188448,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -188237,7 +188466,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/8/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A7a614fd06c325499f1680b9896beedeb> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::7a614fd06c325499f1680b9896beedeb> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "only allowed users can access the manifestation" ;
@@ -188255,7 +188484,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062302392349/manifestation/9/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062302392349/manifestation/9/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0611056939> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A1ce927f875864094e3906a4a0b5ece68> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::1ce927f875864094e3906a4a0b5ece68> .
 
 <https://w3id.org/oc/meta/br/062302392349/manifestation/9/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -193412,7 +193641,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.4119%2Funibi%2F2958327> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062403904667/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062403904667/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062403904667/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -193426,7 +193655,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%20BY> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062403904667/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062403904667/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A536a76f94cf7535158f66cfbd4b113b6> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6> .
 
 <https://w3id.org/oc/meta/br/062403904667/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -193440,7 +193669,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%20BY> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062403904667/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062403904667/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A229754d7799160502a143a72f6789927> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> .
 
 <https://w3id.org/oc/meta/br/062403904667/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -193566,7 +193795,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5258%2Fsoton%2Fd2414> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062403907898/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062403907898/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A01386bd6d8e091c2ab4c7c7de644d37b> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b> .
 
 <https://w3id.org/oc/meta/br/062403907898/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -198549,7 +198778,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.4119%2Funibi%2F2715997> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062503828274/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062503828274/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062503828274/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -198563,7 +198792,7 @@
     dcterms:license <https://opendatacommons.org/licenses/pddl/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062503828274/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062503828274/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A536a76f94cf7535158f66cfbd4b113b6> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6> .
 
 <https://w3id.org/oc/meta/br/062503828274/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -198577,7 +198806,7 @@
     dcterms:license <https://opendatacommons.org/licenses/pddl/summary/index.html> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062503828274/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062503828274/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A229754d7799160502a143a72f6789927> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> .
 
 <https://w3id.org/oc/meta/br/062503828274/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -198871,7 +199100,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.14288%2F1.0398036> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062503856221/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062503856221/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/062503856221/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -198886,7 +199115,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5061%2Fdryad.2jk717g> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062503856221/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062503856221/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A94816e6421eeb072e7742ce6a9decc5f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> .
 
 <https://w3id.org/oc/meta/br/062503856221/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -198900,7 +199129,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5683%2Fsp2%2Fzdf9rp> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062503856221/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062503856221/manifestation/4/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/fairsharing_%3A%3Ac3a690be93aa602ee2dc0ccab5b7b67e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::c3a690be93aa602ee2dc0ccab5b7b67e> .
 
 <https://w3id.org/oc/meta/br/062503856221/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -198914,7 +199143,7 @@
     dcterms:license <https://example.org/skg-if/data/CC%200> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/062503856221/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/062503856221/manifestation/5/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A358aee4cc897452c00244351e4d91f69> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> .
 
 <https://w3id.org/oc/meta/br/062503856221/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205414,7 +205643,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/10/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/10/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/10/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205428,7 +205657,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/11/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/11/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/11/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -205444,7 +205673,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/12/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/12/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A64c53a52cb3bd1a01c03a64db985c0cc> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::64c53a52cb3bd1a01c03a64db985c0cc> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/12/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205461,7 +205690,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/13/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/13/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A1eaa260fddcc15e3c1f09453b8d5bd92> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::1eaa260fddcc15e3c1f09453b8d5bd92> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/13/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205476,7 +205705,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/14/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/14/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A649d45bf179296e31731adfd4df25588> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::649d45bf179296e31731adfd4df25588> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/14/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -205492,7 +205721,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/15/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/15/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Ac7a9f13a6c0940277d46706c7ca32601> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c7a9f13a6c0940277d46706c7ca32601> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/15/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205508,7 +205737,7 @@
         <https://w3id.org/oc/meta/br/06260695455/manifestation/16/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/16/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A9fc3d7152ba9336a670e36d0ed79bc43> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::9fc3d7152ba9336a670e36d0ed79bc43> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/16/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205527,7 +205756,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/17/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/17/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A89fcd07f20b6785b92134bd6c1d0fa42> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::89fcd07f20b6785b92134bd6c1d0fa42> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/17/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205543,7 +205772,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/18/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/18/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3Aa0c4f0c7cd984472a012978e412b8a4f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::a0c4f0c7cd984472a012978e412b8a4f> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/18/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205559,7 +205788,7 @@
         <https://w3id.org/oc/meta/br/06260695455/manifestation/19/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/19/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3Addcdf7dcef98c2a7626bbb11d1a7b534> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::ddcdf7dcef98c2a7626bbb11d1a7b534> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/19/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205580,7 +205809,7 @@
         <https://w3id.org/oc/meta/br/06260695455/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205599,7 +205828,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/20/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/20/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3Aa0c4f0c7cd984472a012978e412b8a4f> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::a0c4f0c7cd984472a012978e412b8a4f> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/20/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205614,7 +205843,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/21/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/21/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Ab710915795b9e9c02cf10d6d2bdb688c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::b710915795b9e9c02cf10d6d2bdb688c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/21/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205628,7 +205857,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/22/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/22/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/22/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -205672,7 +205901,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205689,7 +205918,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -205706,7 +205935,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -205722,7 +205951,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Aeda80a3d5b344bc40f3bc04f65b7a357> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205737,7 +205966,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205752,7 +205981,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/8/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -205767,7 +205996,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06260695455/manifestation/9/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06260695455/manifestation/9/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0612012086> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06260695455/manifestation/9/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation cannot be accessed" ;
@@ -212660,63 +212889,6 @@
     prism:endingPage "9224" ;
     prism:startingPage "9224" .
 
-<https://w3id.org/oc/meta/br/063701273/contribution/1> a pro:RoleInTime ;
-    co:index "1"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/063704780> ;
-    pro:withRole pro:author .
-
-<https://w3id.org/oc/meta/br/063701273/contribution/2> a pro:RoleInTime ;
-    co:index "2"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/063704781> ;
-    pro:withRole pro:author .
-
-<https://w3id.org/oc/meta/br/063701273/contribution/3> a pro:RoleInTime ;
-    co:index "3"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/063704782> ;
-    pro:withRole pro:author .
-
-<https://w3id.org/oc/meta/br/063701273/contribution/4> a pro:RoleInTime ;
-    co:index "1"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/0610116009> ;
-    pro:withRole pro:publisher .
-
-<https://w3id.org/oc/meta/br/063701273/contribution/5> a pro:RoleInTime ;
-    co:index "1"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127483> ;
-    pro:withRole pro:author .
-
-<https://w3id.org/oc/meta/br/063701273/contribution/6> a pro:RoleInTime ;
-    co:index "2"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127484> ;
-    pro:withRole pro:author .
-
-<https://w3id.org/oc/meta/br/063701273/contribution/7> a pro:RoleInTime ;
-    co:index "3"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127485> ;
-    pro:withRole pro:author .
-
-<https://w3id.org/oc/meta/br/063701273/contribution/8> a pro:RoleInTime ;
-    co:index "1"^^xsd:positiveInteger ;
-    pro:isHeldBy <https://w3id.org/oc/meta/ra/0613010127486> ;
-    pro:withRole pro:publisher .
-
-<https://w3id.org/oc/meta/br/063701273/manifestation/1> a fabio:Expression,
-        fabio:JournalArticle ;
-    prism:issueIdentifier "9232" ;
-    prism:volume "356" ;
-    dcterms:issued "2000-09-01T00:00:00"^^xsd:dateTime ;
-    frbr:embodiment <https://w3id.org/oc/meta/br/063701273/manifestation/1/pages> ;
-    frbr:partOf <https://w3id.org/oc/meta/br/0616022987> .
-
-<https://w3id.org/oc/meta/br/063701273/manifestation/1/pages> a fabio:Manifestation ;
-    prism:endingPage "819" ;
-    prism:startingPage "814" .
-
-<https://w3id.org/oc/meta/br/063701273/manifestation/2> a fabio:Expression,
-        fabio:JournalArticle ;
-    dcterms:issued "2000-01-01T00:00:00"^^xsd:dateTime ;
-    frbr:partOf <https://w3id.org/oc/meta/br/0616022987> .
-
 <https://w3id.org/oc/meta/br/06370154938/contribution/1> a pro:RoleInTime ;
     co:index "1"^^xsd:positiveInteger ;
     pro:isHeldBy <https://w3id.org/oc/meta/ra/0690101544> ;
@@ -215555,7 +215727,7 @@
         <https://w3id.org/oc/meta/br/0640431260/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad29c9040884413bd83e8081724ad39a3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d29c9040884413bd83e8081724ad39a3> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -215574,7 +215746,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0640431260/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ad29c9040884413bd83e8081724ad39a3> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d29c9040884413bd83e8081724ad39a3> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -215589,7 +215761,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0640431260/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -215604,7 +215776,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0640431260/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A1c7cbe234effd9945d7a4fefb90be48e> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::1c7cbe234effd9945d7a4fefb90be48e> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation cannot be accessed" ;
@@ -215618,7 +215790,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0640431260/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -215632,7 +215804,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0640431260/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3Af19d2f12ac82ff06994dd8efb73a2178> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::f19d2f12ac82ff06994dd8efb73a2178> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -215649,7 +215821,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0640431260/manifestation/8/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/8/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/re3data_____%3A%3A89b3e06dddf04c8b54897f832bdf5505> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::89b3e06dddf04c8b54897f832bdf5505> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/8/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -215663,7 +215835,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0640431260/manifestation/9/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0640431260/manifestation/9/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/062407095> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/0640431260/manifestation/9/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -217516,7 +217688,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.31273%2Fdata.2022.161945> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06470170015/manifestation/1/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06470170015/manifestation/1/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06470170015/manifestation/1/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -217530,7 +217702,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.31273%2Fdata.2022.161945> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06470170015/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06470170015/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06470170015/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -218607,7 +218779,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.14224%2F1.37693> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06501908493/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06501908493/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06501908493/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -218620,7 +218792,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.14224%2F1.37693> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06501908493/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06501908493/manifestation/3/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06501908493/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -219972,7 +220144,7 @@
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.5258%2Fsoton%2Fd2413> ;
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06504279064/manifestation/2/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06504279064/manifestation/2/pages> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A01386bd6d8e091c2ab4c7c7de644d37b> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b> .
 
 <https://w3id.org/oc/meta/br/06504279064/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -222201,7 +222373,7 @@
         <https://w3id.org/oc/meta/br/06602274277/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274277/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A556ae0e766dea3587880d1d0c86644a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2> .
 
 <https://w3id.org/oc/meta/br/06602274277/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -222220,7 +222392,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274277/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274277/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A556ae0e766dea3587880d1d0c86644a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2> .
 
 <https://w3id.org/oc/meta/br/06602274277/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -222234,7 +222406,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274277/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274277/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06602274277/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -222249,7 +222421,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274277/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274277/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Adc6e224a8d74ce03bf301152d6e33e97> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::dc6e224a8d74ce03bf301152d6e33e97> .
 
 <https://w3id.org/oc/meta/br/06602274277/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -222265,7 +222437,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274277/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274277/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A996a7fa078cc36c46d02f9af3bef918b> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::996a7fa078cc36c46d02f9af3bef918b> .
 
 <https://w3id.org/oc/meta/br/06602274277/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -222279,7 +222451,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274277/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274277/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06602274277/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -222443,7 +222615,7 @@
         <https://w3id.org/oc/meta/br/06602274279/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274279/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A556ae0e766dea3587880d1d0c86644a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2> .
 
 <https://w3id.org/oc/meta/br/06602274279/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -222462,7 +222634,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274279/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274279/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A556ae0e766dea3587880d1d0c86644a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2> .
 
 <https://w3id.org/oc/meta/br/06602274279/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -222477,7 +222649,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274279/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274279/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A556ae0e766dea3587880d1d0c86644a2> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2> .
 
 <https://w3id.org/oc/meta/br/06602274279/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -222491,7 +222663,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274279/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274279/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06602274279/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -222507,7 +222679,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274279/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274279/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3A996a7fa078cc36c46d02f9af3bef918b> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::996a7fa078cc36c46d02f9af3bef918b> .
 
 <https://w3id.org/oc/meta/br/06602274279/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -222521,7 +222693,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/06602274279/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/06602274279/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06602274896> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/06602274279/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -232990,7 +233162,7 @@
         <https://w3id.org/oc/meta/br/0690243212/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690243212/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06011474552> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A3f54d5cb3fe3b51ab2cd8115f6415a11> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11> .
 
 <https://w3id.org/oc/meta/br/0690243212/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -233011,7 +233183,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690243212/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690243212/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06011474552> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A3f54d5cb3fe3b51ab2cd8115f6415a11> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11> .
 
 <https://w3id.org/oc/meta/br/0690243212/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -233028,7 +233200,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690243212/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690243212/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06011474552> ;
-    dcat:accessService <https://example.org/skg-if/data/doajarticles%3A%3A3f54d5cb3fe3b51ab2cd8115f6415a11> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11> .
 
 <https://w3id.org/oc/meta/br/0690243212/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -233044,7 +233216,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690243212/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690243212/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06011474552> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/0690243212/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -233062,7 +233234,7 @@
         <https://w3id.org/oc/meta/br/0690243212/manifestation/6/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690243212/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06011474552> ;
-    dcat:accessService <https://example.org/skg-if/data/opendoar____%3A%3Adb98dc0dbafde48e8f74c0de001d35e4> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::db98dc0dbafde48e8f74c0de001d35e4> .
 
 <https://w3id.org/oc/meta/br/0690243212/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -233081,7 +233253,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690243212/manifestation/7/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690243212/manifestation/7/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/06011474552> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/0690243212/manifestation/7/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -235292,7 +235464,7 @@
         <https://w3id.org/oc/meta/br/0690819024/manifestation/2/peer_review> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690819024/manifestation/2/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0690819537> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ade6f4a3280d009aa6b607094dd019840> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::de6f4a3280d009aa6b607094dd019840> .
 
 <https://w3id.org/oc/meta/br/0690819024/manifestation/2/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -235310,7 +235482,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690819024/manifestation/3/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690819024/manifestation/3/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0690819537> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ade6f4a3280d009aa6b607094dd019840> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::de6f4a3280d009aa6b607094dd019840> .
 
 <https://w3id.org/oc/meta/br/0690819024/manifestation/3/access_rights> a pso:StatusInTime ;
     dcterms:description "the manifestation is freely accessible" ;
@@ -235327,7 +235499,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690819024/manifestation/4/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690819024/manifestation/4/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0690819537> ;
-    dcat:accessService <https://example.org/skg-if/data/issn___print%3A%3Ade6f4a3280d009aa6b607094dd019840> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::de6f4a3280d009aa6b607094dd019840> .
 
 <https://w3id.org/oc/meta/br/0690819024/manifestation/4/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -235341,7 +235513,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690819024/manifestation/5/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690819024/manifestation/5/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0690819537> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/0690819024/manifestation/5/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -235355,7 +235527,7 @@
     pso:holdsStatusInTime <https://w3id.org/oc/meta/br/0690819024/manifestation/6/access_rights> ;
     frbr:embodiment <https://w3id.org/oc/meta/br/0690819024/manifestation/6/pages> ;
     frbr:partOf <https://w3id.org/oc/meta/br/0690819537> ;
-    dcat:accessService <https://example.org/skg-if/data/openaire____%3A%3A55045bd2a65019fd8e6741a755395c8c> .
+    dcat:accessService <https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> .
 
 <https://w3id.org/oc/meta/br/0690819024/manifestation/6/access_rights> a pso:StatusInTime ;
     dcterms:description "unavailable access status" ;
@@ -294867,6 +295039,46 @@ fabio:Preprint a skos:Concept ;
     skos:inScheme <http://purl.org/spar/fabio> ;
     skos:prefLabel "preprint"@en .
 
+<https://api.openaire.eu/graph/skg-if/v1/datasources/fairsharing_::4888241374e8c62ddd9b4c3cfd091f96> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.drtwnh>,
+        <https://example.org/skg-if/data/identifier/re3data/r3d100010066> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "figshare" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0f456ec08b6dc2bb479aec28bd461385> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Regional Studies" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::bae2c2d837774afff9b58d692b5a0e60> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Wilderness and Environmental Medicine" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d29c9040884413bd83e8081724ad39a3> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Statistical Science" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::996a7fa078cc36c46d02f9af3bef918b> a dcat:DataService ;
+    dcat:theme fabio:Catalog ;
+    foaf:name "Scientific Electronic Library Online - Brazil" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::c5866e93cab1776890fe343c9e7063fb> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "DI-fusion" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::db98dc0dbafde48e8f74c0de001d35e4> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "OAR@UM" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::a0c4f0c7cd984472a012978e412b8a4f> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Share_it" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::eb2df13ed4d743c1c15ea7353525124a> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.t2e1ss>,
+        <https://example.org/skg-if/data/identifier/re3data/r3d100010051> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Harvard Dataverse" .
+
 <https://example.org/skg-if/data/0000-0003-3313-3910> a foaf:Agent,
         foaf:Person ;
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/orcid_pending/0000-0003-3313-3910> ;
@@ -296158,7 +296370,6 @@ fabio:Preprint a skos:Concept ;
 
 <https://w3id.org/oc/meta/br/060293588> a fabio:Dataset,
         fabio:Work ;
-        prism:keyword "poverty", "Greece" ;
     dcterms:abstract "DataThis file contains the  data of our experiment",
         "Groups make decisions on both the production and the distribution of  resources. These decisions typically involve a tension between increasing  the total level of group resources (i.e. social efficiency) and  distributing these resources among group members (i.e. individuals'  relative shares). This is the case because the redistribution process may  destroy part of the resources, thus resulting in socially inefficient  allocations. Here we apply a dual-process approach to understand the  cognitive underpinnings of this fundamental tension. We conducted a set of  experiments to examine the extent to which different allocation decisions  respond to intuition or deliberation. In a newly developed approach, we  assess intuition and deliberation at both the trait level (using the  Cognitive Reflection Test, henceforth CRT) and the state level (through  the experimental manipulation of response times). To test for robustness,  experiments were conducted in two countries: the USA and India. Despite  absolute-level differences across countries, in both locations we show  that: (i) time pressure and low CRT scores are associated with  individuals' concerns for their relative shares and (ii) time delay  and high CRT scores are associated with individuals' concerns for  social efficiency. These findings demonstrate that deliberation favours  social efficiency by overriding individuals' intuitive tendency to  focus on relative shares.",
         "Groups make decisions on both the production and the distribution of resources. These decisions typically involve a tension between increasing the total level of group resources (i.e. social efficiency) and distributing these resources among group members (i.e. individuals' relative shares). This is the case because the redistribution process may destroy part of the resources, thus resulting in socially inefficient allocations. Here we apply a dual-process approach to understand the cognitive underpinnings of this fundamental tension. We conducted a set of experiments to examine the extent to which different allocation decisions respond to intuition or deliberation. In a newly developed approach, we assess intuition and deliberation at both the trait level (using the Cognitive Reflection Test, henceforth CRT) and the state level (through the experimental manipulation of response times). To test for robustness, experiments were conducted in two countries: the USA and India. Despite absolute-level differences across countries, in both locations we show that: (i) time pressure and low CRT scores are associated with individuals' concerns for their relative shares and (ii) time delay and high CRT scores are associated with individuals' concerns for social efficiency. These findings demonstrate that deliberation favours social efficiency by overriding individuals' intuitive tendency to focus on relative shares.,DataThis file contains the data of our experiment"@en ;
@@ -296194,7 +296405,6 @@ fabio:Preprint a skos:Concept ;
 
 <https://w3id.org/oc/meta/br/0605416599> a fabio:ScholarlyWork,
         fabio:Work ;
-        prism:keyword "diamond oa", "diamond open access model", "diamond business model" ;
     dcterms:title "Marine Protected Areas That Preserve Trophic Cascades Promote Resilience Of Kelp Forests To Marine Heatwaves" ;
     cito:cites <https://w3id.org/oc/meta/br/0610491921>,
         <https://w3id.org/oc/meta/br/0610646057>,
@@ -296262,7 +296472,6 @@ fabio:Preprint a skos:Concept ;
 
 <https://w3id.org/oc/meta/br/0605641954> a fabio:ScholarlyWork,
         fabio:Work ;
-        prism:keyword "diamond oa" ;
     dcterms:title "Marine Prosperity Areas: A Framework For Aligning Ecological Restoration And Human Well-Being Using Area-Based Protections" ;
     cito:cites <https://w3id.org/oc/meta/br/06101477273>,
         <https://w3id.org/oc/meta/br/06101477548>,
@@ -296440,7 +296649,6 @@ fabio:Preprint a skos:Concept ;
 
 <https://w3id.org/oc/meta/br/06101497387> a fabio:ScholarlyWork,
         fabio:Work ;
-        prism:keyword "diamond business model" ;
     dcterms:title "Multivariate Relative Importance: Extending Relative Weight Analysis To Multivariate Criterion Spaces." ;
     cito:cites <https://w3id.org/oc/meta/br/06101497581>,
         <https://w3id.org/oc/meta/br/061802652092>,
@@ -296570,7 +296778,6 @@ fabio:Preprint a skos:Concept ;
 
 <https://w3id.org/oc/meta/br/0610328099> a fabio:ScholarlyWork,
         fabio:Work ;
-        prism:keyword "diamond oa" ;
     dcterms:title "An Analysis Of Variance Test For Normality (Complete Samples)" ;
     datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.1093%2Fbiomet%2F52.3-4.591>,
         <https://example.org/skg-if/data/identifier/openalex/W2168745915> ;
@@ -307849,6 +308056,42 @@ fabio:Preprint a skos:Concept ;
     foaf:givenName "Carolina" ;
     foaf:name "Olguín-Jacobson, Carolina" .
 
+<https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::3f54d5cb3fe3b51ab2cd8115f6415a11> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Spanish Journal of Marketing-ESIC" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::47b6384965a3bce4aa0c8ab5297997a2> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "JMIR Public Health and Surveillance" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::6156306167f41a4329043cdbd8cd4dd2> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Ecological Solutions and Evidence" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::bec048d05a81c13266c540fd00726186> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Animal Biotelemetry" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::c15b62793e8d2cbe39ca5ddf780be6b4> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Journal of Dairy Science" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::0a1ed0a34ad8bd077d4ef39072706e2f> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Quality of Life Research" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::de6f4a3280d009aa6b607094dd019840> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Epidemiologic Reviews" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::e19a3f639325224687547c932d5b7c32> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Circulation" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::4cb2a3eb94033446c37331f60fad0847> a dcat:DataService ;
+    dcat:theme fabio:Catalog ;
+    foaf:name "Recolector de Ciencia Abierta, RECOLECTA" .
+
 <https://example.org/skg-if/data/University%20of%20Southampton> a foaf:Agent ;
     foaf:name "University of Southampton" .
 
@@ -309340,6 +309583,23 @@ fabio:Preprint a skos:Concept ;
         <https://w3id.org/oc/meta/br/061303121019/contribution/4>,
         <https://w3id.org/oc/meta/br/061303121019/contribution/5> ;
     frbr:realization <https://w3id.org/oc/meta/br/061303121019/manifestation/1> .
+
+<https://w3id.org/oc/meta/br/061303703706> a fabio:ScholarlyWork,
+        fabio:Work ;
+    dcterms:title "Intergenerational Continuity Of Child Physical Abuse: How Good Is The Evidence?" ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.1016%2Fs0140-6736%2800%2902656-8>,
+        <https://example.org/skg-if/data/identifier/openalex/W2040439128>,
+        <https://example.org/skg-if/data/identifier/pmid/11022929> ;
+    pro:isRelatedToRoleInTime <https://w3id.org/oc/meta/br/061303703706/contribution/1>,
+        <https://w3id.org/oc/meta/br/061303703706/contribution/2>,
+        <https://w3id.org/oc/meta/br/061303703706/contribution/3>,
+        <https://w3id.org/oc/meta/br/061303703706/contribution/4>,
+        <https://w3id.org/oc/meta/br/061303703706/contribution/5>,
+        <https://w3id.org/oc/meta/br/061303703706/contribution/6>,
+        <https://w3id.org/oc/meta/br/061303703706/contribution/7>,
+        <https://w3id.org/oc/meta/br/061303703706/contribution/8> ;
+    frbr:realization <https://w3id.org/oc/meta/br/061303703706/manifestation/1>,
+        <https://w3id.org/oc/meta/br/061303703706/manifestation/2> .
 
 <https://w3id.org/oc/meta/br/06130478518> a fabio:ScholarlyWork,
         fabio:Work ;
@@ -313647,23 +313907,6 @@ fabio:Preprint a skos:Concept ;
         <https://w3id.org/oc/meta/br/06350576620/contribution/3> ;
     frbr:realization <https://w3id.org/oc/meta/br/06350576620/manifestation/1> .
 
-<https://w3id.org/oc/meta/br/063701273> a fabio:ScholarlyWork,
-        fabio:Work ;
-    dcterms:title "Intergenerational Continuity Of Child Physical Abuse: How Good Is The Evidence?" ;
-    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.1016%2Fs0140-6736%2800%2902656-8>,
-        <https://example.org/skg-if/data/identifier/openalex/W2040439128>,
-        <https://example.org/skg-if/data/identifier/pmid/11022929> ;
-    pro:isRelatedToRoleInTime <https://w3id.org/oc/meta/br/063701273/contribution/1>,
-        <https://w3id.org/oc/meta/br/063701273/contribution/2>,
-        <https://w3id.org/oc/meta/br/063701273/contribution/3>,
-        <https://w3id.org/oc/meta/br/063701273/contribution/4>,
-        <https://w3id.org/oc/meta/br/063701273/contribution/5>,
-        <https://w3id.org/oc/meta/br/063701273/contribution/6>,
-        <https://w3id.org/oc/meta/br/063701273/contribution/7>,
-        <https://w3id.org/oc/meta/br/063701273/contribution/8> ;
-    frbr:realization <https://w3id.org/oc/meta/br/063701273/manifestation/1>,
-        <https://w3id.org/oc/meta/br/063701273/manifestation/2> .
-
 <https://w3id.org/oc/meta/br/0637057673> a fabio:ScholarlyWork,
         fabio:Work ;
     dcterms:title "Shark Movement Strategies Influence Poaching Risk And Can Guide Enforcement Decisions In A Large, Remote Marine Protected Area" ;
@@ -316273,6 +316516,16 @@ fabio:Preprint a skos:Concept ;
     foaf:familyName "Kumagai" ;
     foaf:givenName "Joy" ;
     foaf:name "Kumagai, Joy" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eccbc87e4b5ce2fe28308fd9f2a7baf3> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/re3data/r3d100012604> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "AMS Acta" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::eda80a3d5b344bc40f3bc04f65b7a357> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.wpt5mp> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "PubMed Central" .
 
 <https://example.org/skg-if/data/identifier/doi/10.1093%2Fllc%2Ffqu011> a datacite:Identifier ;
     datacite:usesIdentifierScheme datacite:doi ;
@@ -320211,6 +320464,19 @@ fabio:Preprint a skos:Concept ;
     foaf:givenName "Heike K." ;
     foaf:name "Lotze, Heike K." .
 
+<https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::556ae0e766dea3587880d1d0c86644a2> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Anais do Museu Paulista: História e Cultura Material" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::01386bd6d8e091c2ab4c7c7de644d37b> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/re3data/r3d100011245> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "e-Prints Soton" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::536a76f94cf7535158f66cfbd4b113b6> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "BiPrints" .
+
 <https://example.org/skg-if/data/identifier/doi/10.1002%2F2688-8319.12096> a datacite:Identifier ;
     datacite:usesIdentifierScheme datacite:doi ;
     literal:hasLiteralValue "10.1002/2688-8319.12096" .
@@ -323472,6 +323738,10 @@ fabio:Preprint a skos:Concept ;
     foaf:givenName "Alessandro" ;
     foaf:name "Casa, Alessandro" .
 
+<https://api.openaire.eu/graph/skg-if/v1/datasources/issn___print::d427a43caf29f5729a2d4cabfa776360> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "Environmental Science & Technology" .
+
 <https://example.org/skg-if/data/identifier/doi/10.2196%2Fpublichealth.7333> a datacite:Identifier ;
     datacite:usesIdentifierScheme datacite:doi ;
     literal:hasLiteralValue "10.2196/publichealth.7333" .
@@ -325766,6 +326036,12 @@ fabio:Preprint a skos:Concept ;
     foaf:givenName "Frédéric" ;
     foaf:name "Le Manach, Frédéric" .
 
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::229754d7799160502a143a72f6789927> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.x68mjp>,
+        <https://example.org/skg-if/data/identifier/re3data/r3d100010750> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Publications at Bielefeld University" .
+
 <https://example.org/skg-if/data/openorgs____%3A%3Ac08634f0a6b0081c3dc6e6c93a4314f3> a foaf:Agent,
         foaf:Organization ;
     frapo:hasAcronym "Bielefeld University" ;
@@ -327851,6 +328127,10 @@ fabio:ReportDocument a skos:Concept ;
     skos:inScheme <http://purl.org/spar/fabio> ;
     skos:prefLabel "report document"@en .
 
+<https://api.openaire.eu/graph/skg-if/v1/datasources/doajarticles::830e55b42c4aaa815c19cfa4f2e5855e> a dcat:DataService ;
+    dcat:theme fabio:Journal ;
+    foaf:name "PLoS ONE" .
+
 <https://example.org/skg-if/data/topic/fos/03%20medical%20and%20health%20sciences> a fabio:SubjectTerm ;
     skos:prefLabel "03 medical and health sciences" .
 
@@ -329055,6 +329335,12 @@ fabio:ReportDocument a skos:Concept ;
     foaf:familyName "Gascuel" ;
     foaf:givenName "Didier" ;
     foaf:name "Gascuel, Didier" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/re3data_____::94816e6421eeb072e7742ce6a9decc5f> a dcat:DataService ;
+    datacite:hasIdentifier <https://example.org/skg-if/data/identifier/doi/10.25504%2Ffairsharing.wkggtx>,
+        <https://example.org/skg-if/data/identifier/re3data/r3d100000044> ;
+    dcat:theme fabio:Repository ;
+    foaf:name "DRYAD" .
 
 <https://example.org/skg-if/data/topic/sdg/13.%20Climate%20action> a fabio:SubjectTerm ;
     skos:prefLabel "13. Climate action" .
@@ -331935,6 +332221,10 @@ fabio:ReportDocument a skos:Concept ;
     foaf:familyName "Coll" ;
     foaf:givenName "Marta" ;
     foaf:name "Coll, Marta" .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/opendoar____::358aee4cc897452c00244351e4d91f69> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "ZENODO" .
 
 <https://gotriple.eu/ontology/triple/Discipline/stat> a fabio:SubjectTerm ;
     skos:prefLabel "https://gotriple.eu/ontology/triple/Discipline/stat" .
@@ -339269,7 +339559,6 @@ fabio:WebContent a skos:Concept ;
 
 <https://w3id.org/oc/meta/br/06260695455> a fabio:ScholarlyWork,
         fabio:Work ;
-        prism:keyword "power", "poverty" ;
     frapo:isFundedBy <https://api.openaire.eu/graph/skg-if/v1/grants/corda__h2020::76fbd013bc637579e5a6ad87b91e4ecc>,
         <https://api.openaire.eu/graph/skg-if/v1/grants/mestd_______::ac355a45cd25780fae1ea4cd4ffe7ba3> ;
     dcterms:abstract "<jats:title>Abstract</jats:title><jats:p>Primary forests, defined here as forests where the signs of human impacts, if any, are strongly blurred due to decades without forest management, are scarce in Europe and continue to disappear. Despite these losses, we know little about where these forests occur. Here, we present a comprehensive geodatabase and map of Europe’s known primary forests. Our geodatabase harmonizes 48 different, mostly field-based datasets of primary forests, and contains 18,411 individual patches (41.1 Mha) spread across 33 countries. When available, we provide information on each patch (name, location, naturalness, extent and dominant tree species) and the surrounding landscape (biogeographical regions, protection status, potential natural vegetation, current forest extent). Using Landsat satellite-image time series (1985–2018) we checked each patch for possible disturbance events since primary forests were identified, resulting in 94% of patches free of significant disturbances in the last 30 years. Although knowledge gaps remain, ours is the most comprehensive dataset on primary forests in Europe, and will be useful for ecological studies, and conservation planning to safeguard these unique forests.</jats:p>",
@@ -339623,6 +339912,10 @@ fabio:WebContent a skos:Concept ;
         <https://w3id.org/oc/meta/br/06220479302/contribution/8>,
         <https://w3id.org/oc/meta/br/06220479302/contribution/9> ;
     frbr:realization <https://w3id.org/oc/meta/br/06220479302/manifestation/1> .
+
+<https://api.openaire.eu/graph/skg-if/v1/datasources/openaire____::55045bd2a65019fd8e6741a755395c8c> a dcat:DataService ;
+    dcat:theme fabio:Repository ;
+    foaf:name "Unknown Repository" .
 
 <https://w3id.org/oc/meta/br/06120352846> a fabio:ScholarlyWork,
         fabio:Work ;
@@ -340562,3 +340855,14 @@ fabio:JournalArticle a skos:Concept ;
     skos:inScheme <http://purl.org/spar/fabio> ;
     skos:prefLabel "journal article"@en .
 
+
+<https://w3id.org/oc/meta/br/0605416599> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond oa" .
+<https://w3id.org/oc/meta/br/0605416599> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond open access model" .
+<https://w3id.org/oc/meta/br/0605416599> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond business model" .
+<https://w3id.org/oc/meta/br/06260695455> <http://prismstandard.org/namespaces/basic/2.0/keyword> "poverty" .
+<https://w3id.org/oc/meta/br/06260695455> <http://prismstandard.org/namespaces/basic/2.0/keyword> "power" .
+<https://w3id.org/oc/meta/br/0605641954> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond oa" .
+<https://w3id.org/oc/meta/br/06101497387> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond business model" .
+<https://w3id.org/oc/meta/br/0610328099> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond oa" .
+<https://w3id.org/oc/meta/br/060293588> <http://prismstandard.org/namespaces/basic/2.0/keyword> "Greece" .
+<https://w3id.org/oc/meta/br/060293588> <http://prismstandard.org/namespaces/basic/2.0/keyword> "poverty" .

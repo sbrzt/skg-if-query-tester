@@ -6,14 +6,25 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
 PREFIX lcc: <http://id.loc.gov/authorities/classification/>
-PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+
 
 SELECT DISTINCT ?work ?title
 WHERE {
+    ?work a fabio:Work ;
+        frbr:realization [
+            dcat:accessService ?ds
+        ] .
     ?ds a dcat:DataService ;
-        dcterms:subject lcc:Z ;                  # confirm the exact LCC code for LIS
-        odrl:hasPolicy [ odrl:target ?work ] .
-    ?work a fabio:Work .
+        dcterms:subject lcc:Z .                  # confirm the exact LCC code for LIS
+            
     OPTIONAL { ?work dcterms:title ?title }
 }
+
+### changed the logic: instead of starting from dcat:DataService, we start from fabio:Work
+### from the work we go to its manifestation, then to the data source, then to dcterms:subject
+### odrl:hasPolicy and odrl:hasTarget were not necessary
+
+### had to add lcc:Z manually
+### no field "disciplines" to materialize
