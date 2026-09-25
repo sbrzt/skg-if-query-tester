@@ -36,16 +36,12 @@ class OpenAIREProvider(BaseSKGProvider):
         if not record:
             return None
 
-        # on-the-fly identifiers ('otf___<timestamp>___person-1') are neither stable nor unique
-        # across responses: scope them to the product they belong to
         product_id = record.get("local_identifier", "").rstrip("/").rsplit("/", 1)[-1]
         self._scope_otf_identifiers(record, product_id)
 
-        # 'funding' only embeds a grant summary: replace it with the full grant record
         if record.get("funding"):
             record["funding"] = [self._fetch_grant(g) or g for g in record["funding"]]
 
-        # 'hosting_data_source' only embeds a data source summary: replace it with the full data source record
         for manifestation in record.get("manifestations") or []:
             biblio = manifestation.get("biblio") or {}
             if isinstance(biblio.get("hosting_data_source"), dict):

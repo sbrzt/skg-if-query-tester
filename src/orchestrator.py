@@ -47,7 +47,6 @@ class Harvester:
                 initial_source: initial_data
             }
         })
-        # only required providers decide whether a record is kept
         required = {l.name for l in self.lookups if l.required} | {initial_source}
         matched = required & bundle["sources"].keys()
         mode = self.policy_config.get("mode", "all")
@@ -61,7 +60,6 @@ class Harvester:
         self,
         bundles: list[dict[str, Any]]
         ) -> list[dict[str, Any]]:
-        """Complete already harvested records with the lookup providers they are missing."""
         main = [b for b in bundles if not b.get("context")]
         with ThreadPoolExecutor(max_workers=self.workers) as executor:
             list(tqdm(executor.map(self._lookup_missing, main), total=len(main)))
@@ -86,11 +84,6 @@ class Harvester:
         self,
         bundles: list[dict[str, Any]]
         ) -> list[dict[str, Any]]:
-        """Add the products citing, or cited by, the harvested ones as citation context.
-
-        Context products are single-source records marked with "context": "citation": they
-        make citations resolvable (types, identifiers) without being enriched themselves.
-        """
         if not self.citers:
             return bundles
         known = {

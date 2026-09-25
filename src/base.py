@@ -14,12 +14,10 @@ class BaseSKGProvider(ABC):
         self.name = name
         self.config = config
         self.session = session
-        # a provider may override the global timeout (e.g. for slow citation searches)
         self.timeout = config.get("timeout", timeout)
         self.capabilities = {
             c.lower() for c in config.get("capabilities", [])
         }
-        # optional providers enrich a record when they know it, but never cause it to be dropped
         self.required = config.get("required", True)
 
     def stream_records(
@@ -44,5 +42,4 @@ class BaseSKGProvider(ABC):
         self,
         record: dict[str, Any]
         ) -> list[dict[str, Any]] | None:
-        """Products citing, or cited by, one of this provider's records (None if the search failed)."""
         raise NotImplementedError()
