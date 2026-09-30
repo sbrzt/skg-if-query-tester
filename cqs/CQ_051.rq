@@ -7,15 +7,46 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX fabio: <http://purl.org/spar/fabio/>
 PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bido: <http://purl.org/spar/bido/>
 
-SELECT DISTINCT ?work ?title
+#SELECT DISTINCT ?work ?title
+#WHERE {
+#    VALUES ?sdg_keyword { "poverty" }              # e.g. "poverty", "climate action", "gender equality"
+#    VALUES ?geo_keyword { "Europe" }               # e.g. "Greece", "Athens", "Mediterranean"
+#    ?work a fabio:Work ;
+#        prism:keyword ?sdg_keyword ;               # ⚠ prism:keyword on a Work = proposed SKG-IF extension
+#        prism:keyword ?geo_keyword ;
+#        dcterms:title ?title .
+#}
+
+### added the keywords manually
+### !IMPORTANT! MODEL REQUIRES EXTENSION DUE TO prism:keyword TO WORK
+
+## ALTERNATIVE: use the Topic pattern
+
+SELECT DISTINCT ?work (MIN(?t) AS ?title)
 WHERE {
-    VALUES ?sdg_keyword { "poverty" }              # e.g. "poverty", "climate action", "gender equality"
-    VALUES ?geo_keyword { "Greece" }               # e.g. "Greece", "Athens", "Mediterranean"
     ?work a fabio:Work ;
-        prism:keyword ?sdg_keyword ;               # ⚠ prism:keyword on a Work = proposed SKG-IF extension
-        prism:keyword ?geo_keyword ;
-        dcterms:title ?title .
+        bido:holdsBibliometricDataInTime [
+            bido:withBibliometricData [
+                skos:prefLabel ?sdg_keyword
+            ]
+        ] ,
+        [
+            bido:withBibliometricData [
+                skos:prefLabel ?geo_keyword
+            ]
+        ] ;
+        dcterms:title ?t .
+    FILTER ( LCASE(STR(?sdg_keyword)) IN (
+        "poverty"
+    ) )
+    FILTER ( LCASE(STR(?geo_keyword)) IN (
+        "europe"
+    ) )
 }
+GROUP BY ?work
 
-### added some keywords manually
+### added the keywords manually
+### added MIN for deterministic pick of titles, since there could be multiple

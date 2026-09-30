@@ -8,19 +8,48 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX fabio: <http://purl.org/spar/fabio/>
 PREFIX frbr: <http://purl.org/vocab/frbr/core#>
 PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bido: <http://purl.org/spar/bido/>
 
-SELECT DISTINCT ?work ?title ?keyword
+#SELECT DISTINCT ?work ?title ?keyword
+#WHERE {
+#    ?work a fabio:ScholarlyWork ;
+#        prism:keyword ?keyword ;                 # ⚠ prism:keyword on a Work = proposed SKG-IF extension
+#        dcterms:title ?title ;
+#        frbr:realization [
+#            frbr:partOf [ a fabio:ExpressionCollection ]       # restrict to journal papers -> changed from fabio:Journal to fabio:ExpressionCollection
+#        ] .
+#    FILTER ( LCASE(STR(?keyword)) IN (
+#        "diamond oa", "diamond open access model", "diamond business model"
+#    ) )
+#}
+#ORDER BY ?title
+
+### added the keywords manually
+### !IMPORTANT! MODEL REQUIRES EXTENSION DUE TO prism:keyword TO WORK
+
+## ALTERNATIVE: use the Topic pattern
+
+SELECT DISTINCT ?work (MIN(?t) AS ?title) ?keyword
 WHERE {
     ?work a fabio:ScholarlyWork ;
-        prism:keyword ?keyword ;                 # ⚠ prism:keyword on a Work = proposed SKG-IF extension
-        dcterms:title ?title ;
+        dcterms:title ?t ;
         frbr:realization [
-            frbr:partOf [ a fabio:ExpressionCollection ]       # restrict to journal papers -> changed from fabio:Journal to fabio:ExpressionCollection
+            frbr:partOf [ 
+                a fabio:ExpressionCollection 
+            ]
+        ] ;
+        bido:holdsBibliometricDataInTime [
+            bido:withBibliometricData [
+                skos:prefLabel ?keyword
+            ]
         ] .
     FILTER ( LCASE(STR(?keyword)) IN (
         "diamond oa", "diamond open access model", "diamond business model"
     ) )
 }
-ORDER BY ?title
+GROUP BY ?work ?keyword
 
-### added some keywords manually
+### added the keywords manually
+### added MIN for deterministic pick of titles, since there could be multiple
+

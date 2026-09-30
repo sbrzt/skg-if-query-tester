@@ -10,21 +10,23 @@ PREFIX frbr: <http://purl.org/vocab/frbr/core#>
 PREFIX lcc: <http://id.loc.gov/authorities/classification/>
 
 
-SELECT DISTINCT ?work ?title
+SELECT DISTINCT ?work (MIN(?t) AS ?title)
 WHERE {
     ?work a fabio:Work ;
         frbr:realization [
             dcat:accessService ?ds
         ] .
     ?ds a dcat:DataService ;
-        dcterms:subject lcc:Z .                  # confirm the exact LCC code for LIS
+        dcterms:subject lcc:Z .
             
-    OPTIONAL { ?work dcterms:title ?title }
+    OPTIONAL { ?work dcterms:title ?t }
 }
+GROUP BY ?work
 
 ### changed the logic: instead of starting from dcat:DataService, we start from fabio:Work
 ### from the work we go to its manifestation, then to the data source, then to dcterms:subject
 ### odrl:hasPolicy and odrl:hasTarget were not necessary
 
 ### had to add lcc:Z manually
+### added MIN for deterministic pick of titles, since there could be multiple
 ### no field "disciplines" to materialize

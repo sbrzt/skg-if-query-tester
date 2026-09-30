@@ -3,12 +3,12 @@
 #   Given the PID of a publication, I want to align its bibliographic metadata across graphs,
 #   by also removing duplicated elements.
 
-PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX datacite: <http://purl.org/spar/datacite/>
-PREFIX literal:  <http://www.essepuntato.it/2010/06/literalreification/>
-PREFIX fabio:    <http://purl.org/spar/fabio/>
-PREFIX frbr:     <http://purl.org/vocab/frbr/core#>
-PREFIX pro:      <http://purl.org/spar/pro/>
+PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX pro: <http://purl.org/spar/pro/>
 
 SELECT DISTINCT ?field ?canonicalValue
 WHERE {

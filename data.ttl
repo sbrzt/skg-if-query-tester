@@ -115808,6 +115808,15 @@
 <https://example.org/skg-if/data/topic/keyword/ddc%3A006> a fabio:SubjectTerm ;
     skos:prefLabel "ddc:006" .
 
+<https://example.org/skg-if/data/topic/keyword/diamond-oa> a fabio:SubjectTerm ;
+    skos:prefLabel "diamond oa" .
+
+<https://example.org/skg-if/data/topic/keyword/diamond-oam> a fabio:SubjectTerm ;
+    skos:prefLabel "diamond open access model" .
+
+<https://example.org/skg-if/data/topic/keyword/diamond-bm> a fabio:SubjectTerm ;
+    skos:prefLabel "diamond business model" .
+
 <https://example.org/skg-if/data/topic/keyword/ddc%3A550> a fabio:SubjectTerm ;
     skos:prefLabel "ddc:550" .
 
@@ -136316,7 +136325,8 @@
 <https://w3id.org/oc/meta/br/061101531895/topic/16/provenance/1> a prov:Activity .
 
 <https://w3id.org/oc/meta/br/061101531895/topic/17> a bido:BibliometricDataInTime ;
-    bido:withBibliometricData <https://example.org/skg-if/data/topic/sdg/12.%20Responsible%20consumption> ;
+    bido:withBibliometricData <https://example.org/skg-if/data/topic/sdg/12.%20Responsible%20consumption> ,
+        <https://example.org/skg-if/data/topic/keyword/poverty> ;
     prov:wasGeneratedBy <https://w3id.org/oc/meta/br/061101531895/topic/17/provenance/1> .
 
 <https://w3id.org/oc/meta/br/061101531895/topic/17/provenance/1> a prov:Activity .
@@ -136334,7 +136344,8 @@
 <https://w3id.org/oc/meta/br/061101531895/topic/19/provenance/1> a prov:Activity .
 
 <https://w3id.org/oc/meta/br/061101531895/topic/2> a bido:BibliometricDataInTime ;
-    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/Conservation%20of%20Natural%20Resources> ;
+    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/Conservation%20of%20Natural%20Resources> ,
+        <https://example.org/skg-if/data/topic/keyword/power> ;
     prov:wasGeneratedBy <https://w3id.org/oc/meta/br/061101531895/topic/2/provenance/1> .
 
 <https://w3id.org/oc/meta/br/061101531895/topic/2/provenance/1> a prov:Activity .
@@ -198887,7 +198898,8 @@
     prov:wasAssociatedWith <https://example.org/skg-if/data/GoTriple> .
 
 <https://w3id.org/oc/meta/br/062503828274/topic/15> a bido:BibliometricDataInTime ;
-    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/ddc%3A006> .
+    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/ddc%3A006> ,
+        <https://example.org/skg-if/data/topic/keyword/diamond-oa> .
 
 <https://w3id.org/oc/meta/br/062503828274/topic/2> a bido:BibliometricDataInTime ;
     bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/QALD> ;
@@ -206005,7 +206017,8 @@
 <https://w3id.org/oc/meta/br/06260695455/manifestation/9/pages> a fabio:Manifestation .
 
 <https://w3id.org/oc/meta/br/06260695455/topic/1> a bido:BibliometricDataInTime ;
-    bido:withBibliometricData <https://example.org/skg-if/data/topic/fos/0106%20biological%20sciences> ;
+    bido:withBibliometricData <https://example.org/skg-if/data/topic/fos/0106%20biological%20sciences> ,
+        <https://example.org/skg-if/data/topic/keyword/poverty> ;
     prov:wasGeneratedBy <https://w3id.org/oc/meta/br/06260695455/topic/1/provenance/1> .
 
 <https://w3id.org/oc/meta/br/06260695455/topic/1/provenance/1> a prov:Activity .
@@ -206077,7 +206090,8 @@
 <https://w3id.org/oc/meta/br/06260695455/topic/2/provenance/1> a prov:Activity .
 
 <https://w3id.org/oc/meta/br/06260695455/topic/20> a bido:BibliometricDataInTime ;
-    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/ddc%3A550> ;
+    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/ddc%3A550> ,
+        <https://example.org/skg-if/data/topic/keyword/diamond-oam> ;
     prov:wasGeneratedBy <https://w3id.org/oc/meta/br/06260695455/topic/20/provenance/1> .
 
 <https://w3id.org/oc/meta/br/06260695455/topic/20/provenance/1> a prov:Activity .
@@ -206173,7 +206187,8 @@
 <https://w3id.org/oc/meta/br/06260695455/topic/34/provenance/1> a prov:Activity .
 
 <https://w3id.org/oc/meta/br/06260695455/topic/35> a bido:BibliometricDataInTime ;
-    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/ddc%3A570> ;
+    bido:withBibliometricData <https://example.org/skg-if/data/topic/keyword/ddc%3A570> ,
+        <https://example.org/skg-if/data/topic/keyword/diamond-bm> ;
     prov:wasGeneratedBy <https://w3id.org/oc/meta/br/06260695455/topic/35/provenance/1> .
 
 <https://w3id.org/oc/meta/br/06260695455/topic/35/provenance/1> a prov:Activity .
@@ -308732,6 +308747,12 @@ fabio:Preprint a skos:Concept ;
 <https://example.org/skg-if/data/topic/keyword/Conservation%20of%20Natural%20Resources> a fabio:SubjectTerm ;
     skos:prefLabel "Conservation of Natural Resources" .
 
+<https://example.org/skg-if/data/topic/keyword/power> a fabio:SubjectTerm ;
+    skos:prefLabel "power" .
+
+<https://example.org/skg-if/data/topic/keyword/poverty> a fabio:SubjectTerm ;
+    skos:prefLabel "Poverty" .
+
 <https://example.org/skg-if/data/topic/keyword/Energy%20and%20Environment> a fabio:SubjectTerm ;
     skos:prefLabel "Energy and Environment" .
 
@@ -340864,5 +340885,5 @@ fabio:JournalArticle a skos:Concept ;
 <https://w3id.org/oc/meta/br/0605641954> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond oa" .
 <https://w3id.org/oc/meta/br/06101497387> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond business model" .
 <https://w3id.org/oc/meta/br/0610328099> <http://prismstandard.org/namespaces/basic/2.0/keyword> "diamond oa" .
-<https://w3id.org/oc/meta/br/060293588> <http://prismstandard.org/namespaces/basic/2.0/keyword> "Greece" .
+<https://w3id.org/oc/meta/br/060293588> <http://prismstandard.org/namespaces/basic/2.0/keyword> "Europe" .
 <https://w3id.org/oc/meta/br/060293588> <http://prismstandard.org/namespaces/basic/2.0/keyword> "poverty" .

@@ -16,7 +16,6 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?author_name (SUM(?citations) AS ?tot_citations)
 WHERE {
-    # each (article, author) once, however many open-access manifestations the article has
     {
         SELECT DISTINCT ?article ?author_name
         WHERE {

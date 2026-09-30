@@ -11,7 +11,7 @@
       "question": "Given a publication PID, find all articles that cite it plus those cited in the publication itself.",
       "file": "cqs/CQ_001.rq",
       "status": "answered",
-      "seconds": 0.411,
+      "seconds": 0.422,
       "count": 322,
       "variables": [
         "pid_value"
@@ -1183,7 +1183,7 @@
       "question": "Give me the list of identifiers of all the available datasets related to topic X.",
       "file": "cqs/CQ_003.rq",
       "status": "answered",
-      "seconds": 0.041,
+      "seconds": 0.048,
       "count": 10,
       "variables": [
         "pid_value"
@@ -1226,7 +1226,7 @@
       "question": "Given the PID of a publication, I want to align its bibliographic metadata across graphs, by also removing duplicated elements.",
       "file": "cqs/CQ_007.rq",
       "status": "answered",
-      "seconds": 0.249,
+      "seconds": 0.256,
       "count": 6,
       "variables": [
         "field",
@@ -1264,8 +1264,8 @@
       "question": "What are the topics and scientific domains covered in these graphs?",
       "file": "cqs/CQ_014.rq",
       "status": "answered",
-      "seconds": 0.011,
-      "count": 520,
+      "seconds": 0.013,
+      "count": 525,
       "variables": [
         "topic_label"
       ],
@@ -1754,6 +1754,9 @@
           "topic_label": "Population"
         },
         {
+          "topic_label": "Poverty"
+        },
+        {
           "topic_label": "Predicación"
         },
         {
@@ -1931,6 +1934,9 @@
           "topic_label": "deliberation"
         },
         {
+          "topic_label": "diamond oa"
+        },
+        {
           "topic_label": "diet"
         },
         {
@@ -2004,6 +2010,9 @@
         },
         {
           "topic_label": "phosphorus"
+        },
+        {
+          "topic_label": "power"
         },
         {
           "topic_label": "primary forests"
@@ -2345,6 +2354,9 @@
           "topic_label": "https://gotriple.eu/ontology/triple/Discipline/droit"
         },
         {
+          "topic_label": "diamond open access model"
+        },
+        {
           "topic_label": "Obesity/economics/epidemiology/etiology"
         },
         {
@@ -2376,6 +2388,9 @@
         },
         {
           "topic_label": "prediction accuracy"
+        },
+        {
+          "topic_label": "diamond business model"
         },
         {
           "topic_label": "innovation policy design"
@@ -2837,7 +2852,7 @@
       "question": "I have to do a research on a specific place, or a specific geographic area, defined by keywords, and I need dataset for a specific subject, also defined by keywords. Give me the references of all the available datasets for that place and subject that are present in all the graphs.",
       "file": "cqs/CQ_022.rq",
       "status": "answered",
-      "seconds": 0.055,
+      "seconds": 0.058,
       "count": 1,
       "variables": [
         "pid_value"
@@ -2853,7 +2868,7 @@
       "question": "I want to know what authors are most key to read in relation to topic x and whom generally publish in immediate open access.",
       "file": "cqs/CQ_024.rq",
       "status": "answered",
-      "seconds": 2.92,
+      "seconds": 3.012,
       "count": 10,
       "variables": [
         "author_name",
@@ -2865,15 +2880,7 @@
           "tot_citations": "536"
         },
         {
-          "author_name": "Swartz, Wilf",
-          "tot_citations": "317"
-        },
-        {
           "author_name": "Watson, Robert",
-          "tot_citations": "317"
-        },
-        {
-          "author_name": "Watson, Reg A.",
           "tot_citations": "317"
         },
         {
@@ -2881,15 +2888,23 @@
           "tot_citations": "317"
         },
         {
+          "author_name": "Swartz, Wilf",
+          "tot_citations": "317"
+        },
+        {
+          "author_name": "Watson, Reg A.",
+          "tot_citations": "317"
+        },
+        {
           "author_name": "Pauly, Daniel",
           "tot_citations": "317"
         },
         {
-          "author_name": "Aburto-Oropeza, Octavio",
+          "author_name": "Erisman, Brad",
           "tot_citations": "219"
         },
         {
-          "author_name": "Ezcurra, Exequiel",
+          "author_name": "Mascareñas-Osorio, Ismael",
           "tot_citations": "219"
         },
         {
@@ -2897,7 +2912,7 @@
           "tot_citations": "219"
         },
         {
-          "author_name": "Erisman, Brad",
+          "author_name": "Aburto-Oropeza, Octavio",
           "tot_citations": "219"
         }
       ]
@@ -2907,8 +2922,8 @@
       "question": "I want the list of journal papers which metadata consist the keywords {diamond oa, diamond Open Access model, Diamond business model}.",
       "file": "cqs/CQ_043.rq",
       "status": "answered",
-      "seconds": 0.052,
-      "count": 6,
+      "seconds": 0.16,
+      "count": 2,
       "variables": [
         "work",
         "title",
@@ -2916,34 +2931,14 @@
       ],
       "rows": [
         {
-          "work": "https://w3id.org/oc/meta/br/0610328099",
-          "title": "An Analysis Of Variance Test For Normality (Complete Samples)",
-          "keyword": "diamond oa"
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
+          "keyword": "diamond business model"
         },
         {
-          "work": "https://w3id.org/oc/meta/br/0605641954",
-          "title": "Marine Prosperity Areas: A Framework For Aligning Ecological Restoration And Human Well-Being Using Area-Based Protections",
-          "keyword": "diamond oa"
-        },
-        {
-          "work": "https://w3id.org/oc/meta/br/0605416599",
-          "title": "Marine Protected Areas That Preserve Trophic Cascades Promote Resilience Of Kelp Forests To Marine Heatwaves",
-          "keyword": "diamond oa"
-        },
-        {
-          "work": "https://w3id.org/oc/meta/br/0605416599",
-          "title": "Marine Protected Areas That Preserve Trophic Cascades Promote Resilience Of Kelp Forests To Marine Heatwaves",
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0",
           "keyword": "diamond open access model"
-        },
-        {
-          "work": "https://w3id.org/oc/meta/br/0605416599",
-          "title": "Marine Protected Areas That Preserve Trophic Cascades Promote Resilience Of Kelp Forests To Marine Heatwaves",
-          "keyword": "diamond business model"
-        },
-        {
-          "work": "https://w3id.org/oc/meta/br/06101497387",
-          "title": "Multivariate Relative Importance: Extending Relative Weight Analysis To Multivariate Criterion Spaces.",
-          "keyword": "diamond business model"
         }
       ]
     },
@@ -2952,7 +2947,7 @@
       "question": "Which resources in the system identify societal issues linked to the SDGs for a specific geographic area (e.g., city, country, or region)?",
       "file": "cqs/CQ_051.rq",
       "status": "answered",
-      "seconds": 0.009,
+      "seconds": 0.602,
       "count": 1,
       "variables": [
         "work",
@@ -2960,8 +2955,8 @@
       ],
       "rows": [
         {
-          "work": "https://w3id.org/oc/meta/br/060293588",
-          "title": "Data from: Deliberation favours social efficiency by making people disregard their relative shares: evidence from USA and India"
+          "work": "https://w3id.org/oc/meta/br/06260695455",
+          "title": "European Primary Forest Database V2.0"
         }
       ]
     },
@@ -2970,7 +2965,7 @@
       "question": "Which outputs in the system are classified under Library and Information Science?",
       "file": "cqs/CQ_054_a.rq",
       "status": "answered",
-      "seconds": 8.624,
+      "seconds": 10.381,
       "count": 16,
       "variables": [
         "work",
@@ -3082,8 +3077,8 @@
       "question": "Which outputs in the system are classified under Library and Information Science?",
       "file": "cqs/CQ_054_b.rq",
       "status": "answered",
-      "seconds": 0.027,
-      "count": 6,
+      "seconds": 0.035,
+      "count": 3,
       "variables": [
         "work",
         "title"
@@ -3094,24 +3089,12 @@
           "title": "European Primary Forest Database V2.0"
         },
         {
-          "work": "https://w3id.org/oc/meta/br/06260695455",
-          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0"
-        },
-        {
           "work": "https://w3id.org/oc/meta/br/062503856221",
           "title": "Data from: Species richness change across spatial scales"
         },
         {
           "work": "https://w3id.org/oc/meta/br/06020539095",
           "title": "Was Und Wie Lehren Und Lernen Sie Im Som- Mersemester 2020?"
-        },
-        {
-          "work": "https://w3id.org/oc/meta/br/06020539095",
-          "title": "Was und wie lehren und lernen Sie im Sommersemester 2020? Befragungen von Lehrenden und Studierenden der Technischen Universität Hamburg im Sommersemester 2020"
-        },
-        {
-          "work": "https://w3id.org/oc/meta/br/06020539095",
-          "title": "What and how do you teach and learn during the summer semester 2020? Interviews with teachers and students from the Technical University of Hamburg during the summer semester 2020"
         }
       ]
     },
@@ -3120,7 +3103,7 @@
       "question": "Which authors are most frequently publishing on these topics?",
       "file": "cqs/CQ_056.rq",
       "status": "answered",
-      "seconds": 0.008,
+      "seconds": 0.009,
       "count": 20,
       "variables": [
         "author_name",
@@ -3132,63 +3115,15 @@
           "publications": "2"
         },
         {
-          "author_name": "Yermokhin, Maxim",
-          "publications": "1"
-        },
-        {
-          "author_name": "Matovic, Bratislav",
-          "publications": "1"
-        },
-        {
-          "author_name": "Zlatanov, Tzvetan",
-          "publications": "1"
-        },
-        {
-          "author_name": "Fernández López, Ángel B.",
-          "publications": "1"
-        },
-        {
-          "author_name": "Tikkanen, Olli-Pekka",
-          "publications": "1"
-        },
-        {
-          "author_name": "Mascareñas-Osorio, Ismael",
-          "publications": "1"
-        },
-        {
-          "author_name": "Grigoriadis, Nikolaos",
-          "publications": "1"
-        },
-        {
-          "author_name": "Nunes, Leónia",
-          "publications": "1"
-        },
-        {
-          "author_name": "Toromani, Elvin",
-          "publications": "1"
-        },
-        {
-          "author_name": "Kuemmerle, Tobias",
-          "publications": "1"
-        },
-        {
-          "author_name": "Swartz, Wilf",
-          "publications": "1"
-        },
-        {
-          "author_name": "Pisek, Rok",
-          "publications": "1"
-        },
-        {
-          "author_name": "Mozgeris, Gintautas",
-          "publications": "1"
-        },
-        {
-          "author_name": "Pauly, Daniel",
-          "publications": "1"
-        },
-        {
           "author_name": "Atauri, José A.",
+          "publications": "1"
+        },
+        {
+          "author_name": "Midteng, Rein",
+          "publications": "1"
+        },
+        {
+          "author_name": "Yermokhin, Maxim",
           "publications": "1"
         },
         {
@@ -3196,7 +3131,35 @@
           "publications": "1"
         },
         {
-          "author_name": "Stillhard, Jonas",
+          "author_name": "Kiš, Alen",
+          "publications": "1"
+        },
+        {
+          "author_name": "Duarte, Inês",
+          "publications": "1"
+        },
+        {
+          "author_name": "Matovic, Bratislav",
+          "publications": "1"
+        },
+        {
+          "author_name": "Bluhm, Hendrik",
+          "publications": "1"
+        },
+        {
+          "author_name": "Galland, Grantly R.",
+          "publications": "1"
+        },
+        {
+          "author_name": "Pisek, Rok",
+          "publications": "1"
+        },
+        {
+          "author_name": "Tracey, Sean",
+          "publications": "1"
+        },
+        {
+          "author_name": "Kuemmerle, Tobias",
           "publications": "1"
         },
         {
@@ -3204,7 +3167,27 @@
           "publications": "1"
         },
         {
+          "author_name": "Fernández López, Ángel B.",
+          "publications": "1"
+        },
+        {
+          "author_name": "Panayotov, Momchil",
+          "publications": "1"
+        },
+        {
           "author_name": "Aburto-Oropeza, Octavio",
+          "publications": "1"
+        },
+        {
+          "author_name": "Mikoláš, Martin",
+          "publications": "1"
+        },
+        {
+          "author_name": "Horváth, Ferenc",
+          "publications": "1"
+        },
+        {
+          "author_name": "Toromani, Elvin",
           "publications": "1"
         }
       ]
@@ -3214,8 +3197,8 @@
       "question": "I want to find research papers (articles, books) that contain a set of keywords and were funded by the Horizon project.",
       "file": "cqs/CQ_060.rq",
       "status": "answered",
-      "seconds": 0.03,
-      "count": 2,
+      "seconds": 0.042,
+      "count": 1,
       "variables": [
         "work",
         "title",
@@ -3225,11 +3208,6 @@
         {
           "work": "https://w3id.org/oc/meta/br/06260695455",
           "title": "European Primary Forest Database V2.0",
-          "project_name": "Forests and CO"
-        },
-        {
-          "work": "https://w3id.org/oc/meta/br/06260695455",
-          "title": "European primary forest database v2.0 ; European primary forest database (EPFD) v2.0",
           "project_name": "Forests and CO"
         }
       ]
